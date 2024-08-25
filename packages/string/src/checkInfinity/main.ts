@@ -9,48 +9,48 @@
  *
  * @example
  * // Returns true
- * checkStringIsInfinity('Infinity'); // The string is "Infinity"
+ * checkIsInfinityString('Infinity'); // The string is "Infinity"
  *
  * @example
  * // Returns true
- * checkStringIsInfinity('-Infinity'); // The string is "-Infinity"
+ * checkIsInfinityString('-Infinity'); // The string is "-Infinity"
  *
  * @example
  * // Returns false
- * checkStringIsInfinity('123'); // The string is a regular numeric string, not infinity
+ * checkIsInfinityString('123'); // The string is a regular numeric string, not infinity
  *
  * @example
  * // Returns false
- * checkStringIsInfinity('infinity'); // The string is not exactly "Infinity" or "-Infinity"
+ * checkIsInfinityString('infinity'); // The string is not exactly "Infinity" or "-Infinity"
  */
-export const checkStringIsInfinity = (str: string): boolean => {
+export const checkIsInfinityString = (str: string): boolean => {
   return str === "Infinity" || str === "-Infinity";
 };
 
 /**
  * Checks if a given string does not represent infinity.
  *
- * This is the inverse of `checkStringIsInfinity`.
+ * This is the inverse of `checkIsInfinityString`.
  *
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string does not represent infinity, otherwise false.
  *
  * @example
  * // Returns true
- * checkStringIsNotInfinity('123'); // The string is a regular numeric string, not infinity
+ * checkIsNotInfinityString('123'); // The string is a regular numeric string, not infinity
  *
  * @example
  * // Returns true
- * checkStringIsNotInfinity('infinity'); // The string is not exactly "Infinity" or "-Infinity"
+ * checkIsNotInfinityString('infinity'); // The string is not exactly "Infinity" or "-Infinity"
  *
  * @example
  * // Returns false
- * checkStringIsNotInfinity('Infinity'); // The string is "Infinity"
+ * checkIsNotInfinityString('Infinity'); // The string is "Infinity"
  *
  * @example
  * // Returns false
- * checkStringIsNotInfinity('-Infinity'); // The string is "-Infinity"
+ * checkIsNotInfinityString('-Infinity'); // The string is "-Infinity"
  */
-export const checkStringIsNotInfinity = (str: string): boolean => {
-  return !checkStringIsInfinity(str);
+export const checkIsNotInfinityString = (str: string): boolean => {
+  return !checkIsInfinityString(str);
 };
