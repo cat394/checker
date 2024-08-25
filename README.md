@@ -5,14 +5,14 @@ This is a library of commonly used validation logic for Typescript.
 Every function has an inverse, for example `checkIsString` and
 `checkIsNotString`.
 
-| **Data type** | **Library**                     |
-| ------------- | ------------------------------- |
-| string        | [@checker/string]('./string')   |
-| number        | [@checker/number]('./number')   |
-| boolean       | [@checker/boolean]('./boolean') |
-| nullish       | [@checker/nullish]('./nullish') |
-| array         | [@checker/array]('./array')     |
-| object        | [@checker/object]('./object')   |
+| **Data type** | **Library**                                      |
+| ------------- | ------------------------------------------------ |
+| string        | [@checker/string](./tree/main/packages/string)   |
+| number        | [@checker/number](./tree/main/packages/number)   |
+| boolean       | [@checker/boolean](./tree/main/packages/boolean) |
+| nullish       | [@checker/nullish](./tree/main/packages/nullish) |
+| array         | [@checker/array](./tree/main/packages/array)     |
+| object        | [@checker/object](./tree/main/packages/object)   |
 
 Examples:
 
@@ -26,11 +26,11 @@ Examples:
   let value: Value = null;
 
   if (someCondition) {
-    value = "hello";
+  	value = "hello";
   }
 
   if (checkIsString(value)) {
-    value; // value is Hello and this type is string
+  	value; // value is Hello and this type is string
   }
   ```
 
@@ -42,7 +42,7 @@ Examples:
   const index = words.indexOf("hello");
 
   if (checkIsIndexFound(index)) {
-    // When index is not -1
+  	// When index is not -1
   }
   ```
 
@@ -53,7 +53,7 @@ Examples:
   const trimmed = value.trim();
 
   if (checkIsEmptyString(trimmed)) {
-    // When value is empty string
+  	// When value is empty string
   }
   ```
 
@@ -98,10 +98,10 @@ Examples:
   const array = [1, 2, 3];
 
   const mapped = array.map((item, index) => {
-    if (checkIsLastIteration(index, array)) {
-      return item + 1;
-    }
-    return item;
+  	if (checkIsLastIteration(index, array)) {
+  		return item + 1;
+  	}
+  	return item;
   });
   // mapped = [1, 2, 4]
   ```
@@ -118,11 +118,11 @@ Examples:
   const value: Value = {};
 
   if (someCondition) {
-    value["key"] = true;
+  	value["key"] = true;
   }
 
   if (checkIsEmptyObject(value)) {
-    // When value is empty object
+  	// When value is empty object
   }
   ```
 
@@ -130,11 +130,11 @@ Examples:
   import { checkIsInstance } from "@checker/object";
 
   try {
-    // some action
+  	// some action
   } catch (err) {
-    if (checkIsInstance(err, DatabaseError)) {
-      // err is DatabaseError instance
-    }
+  	if (checkIsInstance(err, DatabaseError)) {
+  		// err is DatabaseError instance
+  	}
   }
   ```
 
