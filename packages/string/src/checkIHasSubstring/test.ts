@@ -1,7 +1,7 @@
 import { assertEquals } from "../../deps.ts";
 import { checkDoesNotHaveSubstring, checkHasSubstring } from "./main.ts";
 
-Deno.test("checkIncludes", async (t) => {
+Deno.test("checkHasSubstring", async (t) => {
   await t.step(
     "should return true if the string includes the substring",
     () => {
@@ -25,7 +25,7 @@ Deno.test("checkIncludes", async (t) => {
   );
 });
 
-Deno.test("checkNotInclude", async (t) => {
+Deno.test("checkDoesNotHaveSubstring", async (t) => {
   await t.step(
     "should return true if the string does not include the substring",
     () => {
