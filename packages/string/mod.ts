@@ -14,7 +14,7 @@ import {
 import {
 	checkDoesNotHaveSubstring,
 	checkHasSubstring,
-} from "./src/checkIHasSubstring/main.ts";
+} from "./src/checkIsHasSubstring/main.ts";
 import {
 	checkIsIntegerOrDecimalString,
 	checkIsNotIntegerOrDecimalString,
