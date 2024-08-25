@@ -195,7 +195,7 @@ checkIsGreaterThanOrEqual(10, 5); // false
 
 Checks if the given value is Infinity.
 
-If you want to know if a string is Infinity, use the `checkStringIsInifinity()`
+If you want to know if a string is Infinity, use the `checkIsInifinityString()`
 function.
 
 ```ts

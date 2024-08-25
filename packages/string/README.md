@@ -149,28 +149,28 @@ const anotherIndex = words.indexOf("world");
 checkIsIndexFound(anotherIndex); // false
 ```
 
-### `checkStringIsInfinity`
+### `checkIsInfinityString`
 
 Checks if a given string represents infinity.
 
 ```ts
-checkStringIsInfinity("Infinity"); // true
-checkStringIsInfinity("-Infinity"); // true
+checkIsInfinityString("Infinity"); // true
+checkIsInfinityString("-Infinity"); // true
 
-checkStringIsInfinity("infinity"); // false, the string is not exactly "Infinity" or "-Infinity"
-checkStringIsInfinity("123"); // false
+checkIsInfinityString("infinity"); // false, the string is not exactly "Infinity" or "-Infinity"
+checkIsInfinityString("123"); // false
 ```
 
-### `checkStringIsNotInfinity`
+### `checkIsNotInfinityString`
 
 Checks if a given string does not represent infinity.
 
 ```ts
-checkStringIsInfinity("infinity"); // true
-checkStringIsInfinity("123"); // true
+checkIsInfinityString("infinity"); // true
+checkIsInfinityString("123"); // true
 
-checkStringIsInfinity("Infinity"); // false
-checkStringIsInfinity("-Infinity"); // false
+checkIsInfinityString("Infinity"); // false
+checkIsInfinityString("-Infinity"); // false
 ```
 
 ### `checkIsIntegerOrDecimalString`
