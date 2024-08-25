@@ -20,8 +20,8 @@
  * checkIsIntegerOrDecimalString('123abc'); // The string contains non-numeric characters
  */
 export const checkIsIntegerOrDecimalString = (str: string): boolean => {
-	const numericRegex = /^-?\d+(\.\d+)?$/;
-	return numericRegex.test(str);
+  const numericRegex = /^-?\d+(\.\d+)?$/;
+  return numericRegex.test(str);
 };
 
 /**
@@ -41,5 +41,5 @@ export const checkIsIntegerOrDecimalString = (str: string): boolean => {
  * checkIsNotIntegerOrDecimalString('123'); // The string represents a positive integer
  */
 export const checkIsNotIntegerOrDecimalString = (str: string): boolean => {
-	return !checkIsIntegerOrDecimalString(str);
+  return !checkIsIntegerOrDecimalString(str);
 };

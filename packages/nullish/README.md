@@ -1,8 +1,8 @@
 # @checker/nullish
 
-A collection of ts utility functions for performing common nullish
-checks. This package provides tools to help you manage `null`, `undefined`, and
-nullish values in your code with ease.
+A collection of ts utility functions for performing common nullish checks. This
+package provides tools to help you manage `null`, `undefined`, and nullish
+values in your code with ease.
 
 ## Functions
 

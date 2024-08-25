@@ -55,10 +55,10 @@ checkIsFirstIteration(1); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-    if (checkIsFirstIteration(index)) {
-        return number + 1;
-    }
-    return number;
+  if (checkIsFirstIteration(index)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [2, 2, 3]
 ```
@@ -76,10 +76,10 @@ checkIsNotFirstIteration(0); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-    if (checkIsNotFirstIteration(index)) {
-        return number + 1;
-    }
-    return number;
+  if (checkIsNotFirstIteration(index)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [1, 3, 4]
 ```
@@ -133,10 +133,10 @@ checkIsSpecificIteration(2, 3); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-    if (checkIsSpecificIteration(index, 1)) {
-        return number + 1;
-    }
-    return number;
+  if (checkIsSpecificIteration(index, 1)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [1, 3, 3]
 ```
@@ -154,10 +154,10 @@ checkIsNotSpecificIteration(3, 3); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-    if (checkIsSpecificIteration(index, 1)) {
-        return number + 1;
-    }
-    return number;
+  if (checkIsSpecificIteration(index, 1)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [2, 2, 4]
 ```

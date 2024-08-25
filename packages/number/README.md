@@ -1,6 +1,11 @@
 # @checker/number
 
-A TypeScript utility library providing a comprehensive set of functions to validate, verify, and perform checks on numbers. This library includes functions to determine divisibility, check number properties like evenness or primality, and assess numeric ranges, among others. Designed with clean, descriptive function names, it’s an essential toolkit for any TypeScript project dealing with numeric validations.
+A TypeScript utility library providing a comprehensive set of functions to
+validate, verify, and perform checks on numbers. This library includes functions
+to determine divisibility, check number properties like evenness or primality,
+and assess numeric ranges, among others. Designed with clean, descriptive
+function names, it’s an essential toolkit for any TypeScript project dealing
+with numeric validations.
 
 ## Functions
 
@@ -18,8 +23,8 @@ checkIsCleanDivible(10, 3); // 10 % 3 = 1
 Checks if a given number is not cleanly divisible by a divisor.
 
 ```ts
-checkIsNotCleanDisible(10, 3); // true, 10 % 3 = 1 
-checkIsNotCleanDisible(10, 2); // false, 10 % 2 = 0 
+checkIsNotCleanDisible(10, 3); // true, 10 % 3 = 1
+checkIsNotCleanDisible(10, 2); // false, 10 % 2 = 0
 ```
 
 ### `checkIsCubeRoot`
@@ -28,7 +33,7 @@ Checks if a given number is the cube root of a target number.
 
 ```ts
 checkIsCubeRoot(3, 27); // true, 3 * 3 * 3 = 27
-checkIsCubeRoot(2, 27); // false, 2 * 2 * 2 = 8 ≠ 27 
+checkIsCubeRoot(2, 27); // false, 2 * 2 * 2 = 8 ≠ 27
 ```
 
 ### `checkIsNotCubeRoot`
@@ -49,7 +54,7 @@ checkIsDivisor(3, 9);
 // true, 9 % 3 = 0 => 3 is a divisor of 9
 
 checkIsDivisor(2, 9);
-// false, 9 % 2 = 1 => 2 is not a divisor of 9 
+// false, 9 % 2 = 1 => 2 is not a divisor of 9
 ```
 
 ### `checkIsNotDivisor`
@@ -127,7 +132,8 @@ checkIsNotFloat(1.2); // false
 
 ### `checkIsGeometricSequence`
 
-Checks if the given array of numbers forms a geometric sequence with the specified ratio.
+Checks if the given array of numbers forms a geometric sequence with the
+specified ratio.
 
 ```ts
 checkIsGeometricSequence([2, 4, 8], 2); // true
@@ -136,7 +142,8 @@ checkIsGeometricSequence([2, 4, 9], 2); // false
 
 ### `checkIsNotGeometricSequence`
 
-Checks if the given array of numbers does not form a geometric sequence with the specified ratio.
+Checks if the given array of numbers does not form a geometric sequence with the
+specified ratio.
 
 ```ts
 checkIsNotGeometricSequence([2, 4, 9], 2); // false
@@ -188,13 +195,14 @@ checkIsGreaterThanOrEqual(10, 5); // false
 
 Checks if the given value is Infinity.
 
-If you want to know if a string is Infinity, use the `checkStringIsInifinity()` function.
+If you want to know if a string is Infinity, use the `checkStringIsInifinity()`
+function.
 
 ```ts
 checkIsInfinity(Infinity); // true
 checkIsInfinity(-Infinity); // true
 
-checkIsInfinity('hello'); // false
+checkIsInfinity("hello"); // false
 checkIsInifinity(123); // false
 ```
 
@@ -203,7 +211,7 @@ checkIsInifinity(123); // false
 Checks if the given value is not Infinity.
 
 ```ts
-checkIsNotInfinity('hello'); // true
+checkIsNotInfinity("hello"); // true
 checkIsNotInifinity(123); // true
 
 checkIsNotInfinity(Infinity); // false
@@ -251,7 +259,7 @@ checkIsNotLessThan(5, 10); // false
 Checks if the given number is less than or equal to the specified threshold.
 
 ```ts
-checkIsLessTHanOrEqual(10, 10); // true 
+checkIsLessTHanOrEqual(10, 10); // true
 checkIsLessThanOrEqual(15, 10); // true
 
 checkIsLessThanOrEqual(5, 10); // false
@@ -264,13 +272,14 @@ Checks if the given number is not less than or equal to the specified threshold.
 ```ts
 checkIsNotLessThanOrEqual(5, 10); // true
 
-checkIsLessTHanOrEqual(10, 10); // true 
+checkIsLessTHanOrEqual(10, 10); // true
 checkIsNotLessThanOrEqual(15, 5); // false
 ```
 
 ### `checkIsLogarithm`
 
-Checks if a given number matches the logarithm of a target with a specified base.
+Checks if a given number matches the logarithm of a target with a specified
+base.
 
 ```ts
 checkIsLogarithm(4, 2, 16); // log2(16) = 4
@@ -279,7 +288,8 @@ checkIsLogarithm(4, 2, 8); // log2(8) = 3 ≠ 4
 
 ### `checkIsNotLogarithm`
 
-Checks if a given number does not match the logarithm of a target with a specified base.
+Checks if a given number does not match the logarithm of a target with a
+specified base.
 
 ```ts
 checkIsNotLogarithm(4, 2, 8); // true
@@ -472,7 +482,7 @@ checkIsWithinRange(15, 1, 10); // false, 15 is not within the range [1, 10]
 Checks if a given number is not within a specified range.
 
 ```ts
-checkIsNotWithinRange(15, 1, 10); // 
+checkIsNotWithinRange(15, 1, 10); //
 checkIsNotWithinRange(5, 1, 10);
 ```
 

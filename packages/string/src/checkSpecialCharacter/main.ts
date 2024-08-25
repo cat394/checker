@@ -32,10 +32,9 @@
  * checkHasSpecialCharacter('123456'); // The string contains only numbers and no special characters
  */
 export const checkHasSpecialCharacter = (str: string): boolean => {
-	const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>~`'\-_=+\[\];/\\]/;
-	return specialCharacterRegex.test(str);
+  const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>~`'\-_=+\[\];/\\]/;
+  return specialCharacterRegex.test(str);
 };
-
 
 /**
  * Checks if a given string does not contain any special characters.
@@ -54,5 +53,5 @@ export const checkHasSpecialCharacter = (str: string): boolean => {
  * checkDoesNotHaveSpecialCharacter('hello@world'); // The string contains the special character '@'
  */
 export const checkDoesNotHaveSpecialCharacter = (str: string): boolean => {
-	return !checkHasSpecialCharacter(str);
+  return !checkHasSpecialCharacter(str);
 };

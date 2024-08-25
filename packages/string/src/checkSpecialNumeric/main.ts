@@ -30,11 +30,11 @@ import { checkStringIsInfinity } from "../checkInfinity/main.ts";
  * checkIsSpecialNumeric('123'); // The string is a regular number
  */
 export const checkIsSpecialNumeric = (str: string): boolean => {
-	return (
-		checkIsExponentialNotation(str) ||
-		checkIsBinary(str) ||
-		checkStringIsInfinity(str)
-	);
+  return (
+    checkIsExponentialNotation(str) ||
+    checkIsBinary(str) ||
+    checkStringIsInfinity(str)
+  );
 };
 
 /**
@@ -54,5 +54,5 @@ export const checkIsSpecialNumeric = (str: string): boolean => {
  * checkIsNotSpecialNumeric('1e5'); // The string is in exponential notation
  */
 export const checkIsNotSpecialNumeric = (str: string): boolean => {
-	return !checkIsSpecialNumeric(str);
+  return !checkIsSpecialNumeric(str);
 };

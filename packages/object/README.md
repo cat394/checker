@@ -1,6 +1,11 @@
 # @checker/object
 
-A TypeScript utility library that provides a variety of functions for validating and inspecting objects. This library includes utilities for deep equality checks, verifying object properties like emptiness, sealed or frozen states, and more. With clear and descriptive function names, this library is ideal for developers looking to perform robust object validations in their TypeScript projects.
+A TypeScript utility library that provides a variety of functions for validating
+and inspecting objects. This library includes utilities for deep equality
+checks, verifying object properties like emptiness, sealed or frozen states, and
+more. With clear and descriptive function names, this library is ideal for
+developers looking to perform robust object validations in their TypeScript
+projects.
 
 ## Functions
 
@@ -47,7 +52,8 @@ checkIsNotEmptyObject({}); // false
 Checks if a given key exists in an object.
 
 > [!NOTE]
-> This function does not type guard, if you need type guarding please use the `key in object` syntax.
+> This function does not type guard, if you need type guarding please use the
+> `key in object` syntax.
 
 ```ts
 checkKeyExistsInObject({ a: 1, b: 2 }, "a"); // true, The key 'a' exists in the object
@@ -55,16 +61,16 @@ checkKeyExistsInObject({ a: 1, b: 2 }, "c"); // false
 ```
 
 ```ts
-type Obj = { a: 1, b: 2 } | { c: 3, d: 4 };
+type Obj = { a: 1; b: 2 } | { c: 3; d: 4 };
 
 const obj = {} as Obj;
 
-if ('c' in obj) {
-    obj // obj type is { c: 3, d: 4 }
+if ("c" in obj) {
+  obj; // obj type is { c: 3, d: 4 }
 }
 
-if (checkKeyExistsInObject(obj, 'c')) {
-    obj // obj type is Obj
+if (checkKeyExistsInObject(obj, "c")) {
+  obj; // obj type is Obj
 }
 ```
 

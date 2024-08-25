@@ -1,6 +1,10 @@
 # @checker/string
 
-A TypeScript utility library offering a comprehensive collection of functions for validating and manipulating strings. This library includes functions to check for alphanumeric content, numeric values, special characters, prefixes, suffixes, and more. Designed for developers who need reliable and descriptive utilities to handle various string operations in their TypeScript projects.
+A TypeScript utility library offering a comprehensive collection of functions
+for validating and manipulating strings. This library includes functions to
+check for alphanumeric content, numeric values, special characters, prefixes,
+suffixes, and more. Designed for developers who need reliable and descriptive
+utilities to handle various string operations in their TypeScript projects.
 
 ## Functions
 
@@ -173,7 +177,9 @@ checkStringIsInfinity("-Infinity"); // false
 
 Checks if a given string is a numeric value.
 
-The function checks if the string represents a valid numeric value, including optional negative signs and decimal points. The string can represent an integer or a floating-point number.
+The function checks if the string represents a valid numeric value, including
+optional negative signs and decimal points. The string can represent an integer
+or a floating-point number.
 
 ```ts
 checkIsIntegerOrDecimal("123"); // true

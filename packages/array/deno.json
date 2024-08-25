@@ -1,6 +1,6 @@
 {
-	"name": "@checker/array",
-	"version": "1.0.0",
-	"exports": "./mod.ts",
-	"license": "MIT"
+  "name": "@checker/array",
+  "version": "1.0.0",
+  "exports": "./mod.ts",
+  "license": "MIT"
 }
