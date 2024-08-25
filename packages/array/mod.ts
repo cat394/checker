@@ -1,30 +1,36 @@
 import { checkIsArray, checkIsNotArray } from "./src/checkArray/main.ts";
 import {
-  checkIsEmptyArray,
-  checkIsNotEmptyArray,
+	checkIsEmptyArray,
+	checkIsNotEmptyArray,
 } from "./src/checkEmptyArray/main.ts";
 import {
-  checkIsFirstIteration,
-  checkIsNotFirstIteration,
+	checkIsFirstIteration,
+	checkIsNotFirstIteration,
 } from "./src/checkFirstIteration/main.ts";
 import {
-  checkIsLastIteration,
-  checkIsNotLastIteration,
+	checkIsLastIteration,
+	checkIsNotLastIteration,
 } from "./src/checkLastIteration/main.ts";
 import {
-  checkIsNotSpecificIteration,
-  checkIsSpecificIteration,
+	checkIsNotSpecificIteration,
+	checkIsSpecificIteration,
 } from "./src/checkSpecificIteration/main.ts";
+import {
+	checkArrayHasValue,
+	checkArrayDoesNotHaveValue,
+} from "./src/checkHasValue/main.ts";
 
 export {
-  checkIsArray,
-  checkIsEmptyArray,
-  checkIsFirstIteration,
-  checkIsLastIteration,
-  checkIsNotArray,
-  checkIsNotEmptyArray,
-  checkIsNotFirstIteration,
-  checkIsNotLastIteration,
-  checkIsNotSpecificIteration,
-  checkIsSpecificIteration,
+	checkIsArray,
+	checkIsEmptyArray,
+	checkIsFirstIteration,
+	checkIsLastIteration,
+	checkIsNotArray,
+	checkIsNotEmptyArray,
+	checkIsNotFirstIteration,
+	checkIsNotLastIteration,
+	checkIsNotSpecificIteration,
+	checkIsSpecificIteration,
+	checkArrayHasValue,
+	checkArrayDoesNotHaveValue,
 };
