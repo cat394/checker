@@ -1,6 +1,6 @@
 import { checkIsExponentialNotation } from "../checkExponentialNotation/main.ts";
 import { checkIsBinary } from "../checkBinary/main.ts";
-import { checkStringIsInfinity } from "../checkInfinity/main.ts";
+import { checkIsInfinityString } from "../checkInfinity/main.ts";
 
 /**
  * Checks if a given string is a special numeric value.
@@ -33,7 +33,7 @@ export const checkIsSpecialNumeric = (str: string): boolean => {
   return (
     checkIsExponentialNotation(str) ||
     checkIsBinary(str) ||
-    checkStringIsInfinity(str)
+    checkIsInfinityString(str)
   );
 };
 

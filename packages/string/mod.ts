@@ -12,13 +12,13 @@ import {
   checkHasSuffix,
 } from "./src/checkSuffix/main.ts";
 import {
-  checkDoesNotIncludeSubstring,
-  checkIncludesSubstring,
-} from "./src/checkIncludeSubstring/main.ts";
+  checkDoesNotHaveSubstring,
+  checkHasSubstring,
+} from "./src/checkIHasSubstring/main.ts";
 import {
   checkIsIntegerOrDecimalString,
   checkIsNotIntegerOrDecimalString,
-} from "./src/checkIntegerOrFloat/main.ts";
+} from "./src/checkIntegerOrDecimalString/main.ts";
 import {
   checkDoesNotHaveSpecialCharacter,
   checkHasSpecialCharacter,
@@ -27,22 +27,49 @@ import {
   checkDoesNotHavePrefix,
   checkHasPrefix,
 } from "./src/checkPrefix/main.ts";
+import {
+  checkIsAnyNumeric,
+  checkIsNotAnyNumeric,
+} from "./src/checkAnyNumeric/main.ts";
+import {
+  checkIsExponentialNotation,
+  checkIsNotExponentialNotation,
+} from "./src/checkExponentialNotation/main.ts";
+import {
+  checkIsIndexFound,
+  checkIsIndexNotFound,
+} from "./src/checkIndex/main.ts";
+import { checkIsBinary, checkIsNotBinary } from "./src/checkBinary/main.ts";
+import {
+  checkIsNotSpecialNumeric,
+  checkIsSpecialNumeric,
+} from "./src/checkSpecialNumeric/main.ts";
 
 export {
   checkDoesNotHavePrefix,
   checkDoesNotHaveSpecialCharacter,
+  checkDoesNotHaveSubstring,
   checkDoesNotHaveSuffix,
-  checkDoesNotIncludeSubstring,
   checkHasPrefix,
   checkHasSpecialCharacter,
+  checkHasSubstring,
   checkHasSuffix,
-  checkIncludesSubstring,
   checkIsAlphanumeric,
+  checkIsAnyNumeric,
+  checkIsBinary,
   checkIsEmptryString,
+  checkIsExponentialNotation,
+  checkIsIndexFound,
+  checkIsIndexNotFound,
   checkIsIntegerOrDecimalString,
   checkIsNotAlphanumeric,
+  checkIsNotAnyNumeric,
+  checkIsNotBinary,
   checkIsNotEmptyString,
+  checkIsNotExponentialNotation,
   checkIsNotIntegerOrDecimalString,
+  checkIsNotSpecialNumeric,
   checkIsNotString,
+  checkIsSpecialNumeric,
   checkIsString,
 };

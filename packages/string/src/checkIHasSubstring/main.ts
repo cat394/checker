@@ -9,16 +9,13 @@
  *
  * @example
  * // Returns true
- * checkIncludesSubstring('hello world', 'world'); // The string contains the substring 'world'
+ * checkHasSubstring('hello world', 'world'); // The string contains the substring 'world'
  *
  * @example
  * // Returns false
- * checkIncludesSubstring('hello world', 'planet'); // The string does not contain the substring 'planet'
+ * checkHasSubstring('hello world', 'planet'); // The string does not contain the substring 'planet'
  */
-export const checkIncludesSubstring = (
-  str: string,
-  substring: string,
-): str is string => {
+export const checkHasSubstring = (str: string, substring: string): boolean => {
   return str.includes(substring);
 };
 
@@ -33,15 +30,15 @@ export const checkIncludesSubstring = (
  *
  * @example
  * // Returns true
- * checkDoesNotIncludeSubstring('hello world', 'planet'); // The string does not contain the substring 'planet'
+ * checkDoesNotHaveSubstring('hello world', 'planet'); // The string does not contain the substring 'planet'
  *
  * @example
  * // Returns false
- * checkDoesNotIncludeSubstring('hello world', 'world'); // The string contains the substring 'world'
+ * checkDoesNotHaveSubstring('hello world', 'world'); // The string contains the substring 'world'
  */
-export const checkDoesNotIncludeSubstring = (
+export const checkDoesNotHaveSubstring = (
   str: string,
   substring: string,
-): str is string => {
-  return !checkIncludesSubstring(str, substring);
+): boolean => {
+  return !checkHasSubstring(str, substring);
 };
