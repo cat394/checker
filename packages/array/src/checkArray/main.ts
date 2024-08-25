@@ -33,7 +33,7 @@ export const checkIsArray = <T>(value: unknown): value is T[] => {
  * checkIsNotArray([1, 2, 3]); // The value is an array
  */
 export const checkIsNotArray = <T>(
-  value: unknown,
+  value: T,
 ): value is Exclude<T, T[]> => {
   return !checkIsArray(value);
 };
