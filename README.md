@@ -7,12 +7,12 @@ Every function has an inverse, for example `checkIsString` and
 
 | **Data type** | **Library**                                      |
 | ------------- | ------------------------------------------------ |
-| string        | [@checker/string](./tree/main/packages/string)   |
-| number        | [@checker/number](./tree/main/packages/number)   |
-| boolean       | [@checker/boolean](./tree/main/packages/boolean) |
-| nullish       | [@checker/nullish](./tree/main/packages/nullish) |
-| array         | [@checker/array](./tree/main/packages/array)     |
-| object        | [@checker/object](./tree/main/packages/object)   |
+| string        | [@checker/string](./packages/string)   |
+| number        | [@checker/number](./packages/number)   |
+| boolean       | [@checker/boolean](./packages/boolean) |
+| nullish       | [@checker/nullish](./packages/nullish) |
+| array         | [@checker/array](./packages/array)     |
+| object        | [@checker/object](./packages/object)   |
 
 Examples:
 
