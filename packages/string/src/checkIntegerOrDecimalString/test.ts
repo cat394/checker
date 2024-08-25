@@ -1,7 +1,7 @@
 import { assertEquals } from "../../deps.ts";
 import {
-  checkIsNotIntegerOrDecimalString,
   checkIsIntegerOrDecimalString,
+  checkIsNotIntegerOrDecimalString,
 } from "./main.ts";
 
 Deno.test("checkIsNumeric", async (t) => {
