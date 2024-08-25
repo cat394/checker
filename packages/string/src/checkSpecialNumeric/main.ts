@@ -1,6 +1,6 @@
 import { checkIsExponentialNotation } from "../checkExponentialNotation/main.ts";
 import { checkIsBinary } from "../checkBinary/main.ts";
-import { checkIsInfinityString } from "../checkInfinity/main.ts";
+import { checkIsInfinityString } from "../checkInfinityString/main.ts";
 
 /**
  * Checks if a given string is a special numeric value.
