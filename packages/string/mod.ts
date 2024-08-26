@@ -1,81 +1,81 @@
 import { checkIsNotString, checkIsString } from "./src/checkString/main.ts";
 import {
-	checkIsAlphanumeric,
-	checkIsNotAlphanumeric,
+  checkIsAlphanumeric,
+  checkIsNotAlphanumeric,
 } from "./src/checkAlphanumeric/main.ts";
 import {
-	checkIsEmptryString,
-	checkIsNotEmptyString,
+  checkIsEmptryString,
+  checkIsNotEmptyString,
 } from "./src/checkEmptyString/main.ts";
 import {
-	checkDoesNotHaveSuffix,
-	checkHasSuffix,
+  checkDoesNotHaveSuffix,
+  checkHasSuffix,
 } from "./src/checkSuffix/main.ts";
 import {
-	checkDoesNotHaveSubstring,
-	checkHasSubstring,
+  checkDoesNotHaveSubstring,
+  checkHasSubstring,
 } from "./src/checkIsHasSubstring/main.ts";
 import {
-	checkIsIntegerOrDecimalString,
-	checkIsNotIntegerOrDecimalString,
+  checkIsIntegerOrDecimalString,
+  checkIsNotIntegerOrDecimalString,
 } from "./src/checkIntegerOrDecimalString/main.ts";
 import {
-	checkDoesNotHaveSpecialCharacter,
-	checkHasSpecialCharacter,
+  checkDoesNotHaveSpecialCharacter,
+  checkHasSpecialCharacter,
 } from "./src/checkSpecialCharacter/main.ts";
 import {
-	checkDoesNotHavePrefix,
-	checkHasPrefix,
+  checkDoesNotHavePrefix,
+  checkHasPrefix,
 } from "./src/checkPrefix/main.ts";
 import {
-	checkIsAnyNumeric,
-	checkIsNotAnyNumeric,
+  checkIsAnyNumeric,
+  checkIsNotAnyNumeric,
 } from "./src/checkAnyNumeric/main.ts";
 import {
-	checkIsExponentialNotation,
-	checkIsNotExponentialNotation,
+  checkIsExponentialNotation,
+  checkIsNotExponentialNotation,
 } from "./src/checkExponentialNotation/main.ts";
 import {
-	checkIsIndexFound,
-	checkIsIndexNotFound,
+  checkIsIndexFound,
+  checkIsIndexNotFound,
 } from "./src/checkIndex/main.ts";
 import { checkIsBinary, checkIsNotBinary } from "./src/checkBinary/main.ts";
 import {
-	checkIsNotSpecialNumeric,
-	checkIsSpecialNumeric,
+  checkIsNotSpecialNumeric,
+  checkIsSpecialNumeric,
 } from "./src/checkSpecialNumeric/main.ts";
 import {
-	checkIsInfinityString,
-	checkIsNotInfinityString,
+  checkIsInfinityString,
+  checkIsNotInfinityString,
 } from "./src/checkInfinityString/main.ts";
 
 export {
-	checkDoesNotHavePrefix,
-	checkDoesNotHaveSpecialCharacter,
-	checkDoesNotHaveSubstring,
-	checkDoesNotHaveSuffix,
-	checkHasPrefix,
-	checkHasSpecialCharacter,
-	checkHasSubstring,
-	checkHasSuffix,
-	checkIsAlphanumeric,
-	checkIsAnyNumeric,
-	checkIsBinary,
-	checkIsEmptryString,
-	checkIsExponentialNotation,
-	checkIsIndexFound,
-	checkIsIndexNotFound,
-	checkIsIntegerOrDecimalString,
-	checkIsNotAlphanumeric,
-	checkIsNotAnyNumeric,
-	checkIsNotBinary,
-	checkIsNotEmptyString,
-	checkIsNotExponentialNotation,
-	checkIsNotIntegerOrDecimalString,
-	checkIsNotSpecialNumeric,
-	checkIsNotString,
-	checkIsSpecialNumeric,
-	checkIsString,
-	checkIsInfinityString,
-	checkIsNotInfinityString,
+  checkDoesNotHavePrefix,
+  checkDoesNotHaveSpecialCharacter,
+  checkDoesNotHaveSubstring,
+  checkDoesNotHaveSuffix,
+  checkHasPrefix,
+  checkHasSpecialCharacter,
+  checkHasSubstring,
+  checkHasSuffix,
+  checkIsAlphanumeric,
+  checkIsAnyNumeric,
+  checkIsBinary,
+  checkIsEmptryString,
+  checkIsExponentialNotation,
+  checkIsIndexFound,
+  checkIsIndexNotFound,
+  checkIsInfinityString,
+  checkIsIntegerOrDecimalString,
+  checkIsNotAlphanumeric,
+  checkIsNotAnyNumeric,
+  checkIsNotBinary,
+  checkIsNotEmptyString,
+  checkIsNotExponentialNotation,
+  checkIsNotInfinityString,
+  checkIsNotIntegerOrDecimalString,
+  checkIsNotSpecialNumeric,
+  checkIsNotString,
+  checkIsSpecialNumeric,
+  checkIsString,
 };

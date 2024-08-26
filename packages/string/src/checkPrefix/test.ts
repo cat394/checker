@@ -26,10 +26,10 @@ Deno.test("checkStartsWith", async (t) => {
 
   await t.step("should narrow string with prefix type", () => {
     const value: string = "hl";
-    if (checkHasPrefix(value, 'prefix')) {
+    if (checkHasPrefix(value, "prefix")) {
       assertType<IsExact<typeof value, `prefix${string}`>>(true);
     }
-  })
+  });
 });
 
 Deno.test("checkNotStartWith", async (t) => {

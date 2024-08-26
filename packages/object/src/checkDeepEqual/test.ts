@@ -26,7 +26,7 @@ Deno.test("checkIsDeepEqual", async (t) => {
     if (checkIsDeepEqual(obj1, obj2)) {
       assertType<IsExact<typeof obj1, typeof obj2>>(true);
     }
-  })
+  });
 });
 
 Deno.test("checkIsNotDeepEqual", async (t) => {

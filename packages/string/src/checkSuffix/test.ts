@@ -26,10 +26,10 @@ Deno.test("checkEndsWith", async (t) => {
 
   await t.step("should narrow string with suffix type", () => {
     const value: string = "";
-    if (checkHasSuffix(value, 'suffix')) {
+    if (checkHasSuffix(value, "suffix")) {
       assertType<IsExact<typeof value, `${string}suffix`>>(true);
     }
-  })
+  });
 });
 
 Deno.test("checkNotEndWith", async (t) => {

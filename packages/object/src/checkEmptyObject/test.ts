@@ -19,7 +19,7 @@ Deno.test("checkIsEmptyObject", async (t) => {
     if (checkIsEmptyObject(value)) {
       assertType<IsExact<typeof value, EmptyObject>>(true);
     }
-  })
+  });
 });
 
 Deno.test("checkIsNotEmptyObject", async (t) => {
@@ -38,5 +38,5 @@ Deno.test("checkIsNotEmptyObject", async (t) => {
     type Value = Record<string, string> | EmptyObject;
     const value = {} as Value;
     assertType<IsExact<typeof value, Record<string, string>>>(true);
-  })
+  });
 });
