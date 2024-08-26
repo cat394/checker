@@ -11,7 +11,7 @@ Deno.test("checkIsEmptyArray", async (t) => {
 		assertEquals(checkIsEmptyArray(["a", "b", "c"]), false);
 	});
 
-	await t.step("should be narrowed down to an empty array type", () => {
+	await t.step("should narrow down to an empty array type", () => {
 		const value = {} as string[];
 		if (checkIsEmptyArray(value)) {
 			assertType<IsExact<typeof value, []>>(true);
@@ -29,7 +29,7 @@ Deno.test("checkIsNotEmptyArray", async (t) => {
 		assertEquals(checkIsNotEmptyArray([]), false);
 	});
 
-	await t.step("should be excluded from the argument types", () => {
+	await t.step("should exclude empty array type", () => {
 		type Value = string[] | [];
 		const value = {} as Value;
 		if (checkIsNotEmptyArray(value)) {

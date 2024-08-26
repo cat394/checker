@@ -15,7 +15,7 @@ Deno.test("checkIsArray", async (t) => {
 		assertEquals(checkIsArray(undefined), false);
 	});
 
-	await t.step("should be narrowed down to array type", () => {
+	await t.step("should narrow down to array type", () => {
 		type Value = [] | string;
 		const value = {} as Value;
 		if (checkIsArray(value)) {
@@ -38,7 +38,7 @@ Deno.test("checkIsNotArray", async (t) => {
 		assertEquals(checkIsNotArray<number[]>([]), false);
 	});
 
-	await t.step("should exclude array types", () => {
+	await t.step("should exclude array type", () => {
 		type Value = [] | string;
 		const value = {} as Value;
 		if (checkIsNotArray(value)) {
