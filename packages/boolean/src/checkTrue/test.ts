@@ -1,4 +1,4 @@
-import { assertEquals, assertType, IsExact } from "../../deps.ts";
+import { assertEquals, assertType, type IsExact } from "../../deps.ts";
 import { checkIsNotTrue, checkIsTrue } from "./main.ts";
 
 Deno.test("checkIsTrue", async (t) => {
