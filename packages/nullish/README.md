@@ -1,6 +1,7 @@
 # @checker/nullish
 
-A collection of ts utility functions for performing common nullish checks. This
+A TypeScript utility library providing a comprehensive set of functions to
+validate, verify, and perform checks on nullish. This
 package provides tools to help you manage `null`, `undefined`, and nullish
 values in your code with ease.
 
