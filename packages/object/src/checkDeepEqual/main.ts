@@ -17,8 +17,11 @@
  * // Returns false
  * checkIsDeepEqual({ a: 1, b: 2 }, { a: 2, b: 3 }); // The objects have different values
  */
-export const checkIsDeepEqual = (obj1: object, obj2: object): boolean => {
-  return JSON.stringify(obj1) === JSON.stringify(obj2);
+export const checkIsDeepEqual = <T1 extends object, T2 extends T1>(
+	obj1: T1,
+	obj2: T2
+): obj1 is T2 => {
+	return JSON.stringify(obj1) === JSON.stringify(obj2);
 };
 
 /**
@@ -39,5 +42,5 @@ export const checkIsDeepEqual = (obj1: object, obj2: object): boolean => {
  * checkIsNotDeepEqual({ a: 1, b: 2 }, { a: 1, b: 2 }); // The objects have the same structure and values
  */
 export const checkIsNotDeepEqual = (obj1: object, obj2: object): boolean => {
-  return !checkIsDeepEqual(obj1, obj2);
+	return !checkIsDeepEqual(obj1, obj2);
 };

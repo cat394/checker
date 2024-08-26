@@ -19,7 +19,7 @@
  */
 export const checkHasPrefix = <Prefix extends string>(
   str: string,
-  prefix: string,
+  prefix: Prefix,
 ): str is `${Prefix}${string}` => {
   return str.startsWith(prefix);
 };

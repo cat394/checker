@@ -20,7 +20,7 @@ import type { InstancedClass } from "../types.ts";
 export const checkIsInstance = <T extends InstancedClass>(
   value: unknown,
   constructor: T,
-): value is T => {
+): value is InstanceType<InstancedClass> => {
   return value instanceof constructor;
 };
 

@@ -1,4 +1,4 @@
-import { assertEquals } from "../../deps.ts";
+import { assertEquals, assertType, type IsExact } from "../../deps.ts";
 import { checkDoesNotHaveSuffix, checkHasSuffix } from "./main.ts";
 
 Deno.test("checkEndsWith", async (t) => {
@@ -23,6 +23,13 @@ Deno.test("checkEndsWith", async (t) => {
       assertEquals(checkHasSuffix("end", "start"), false);
     },
   );
+
+  await t.step("should narrow string with suffix type", () => {
+    const value: string = "";
+    if (checkHasSuffix(value, 'suffix')) {
+      assertType<IsExact<typeof value, `${string}suffix`>>(true);
+    }
+  })
 });
 
 Deno.test("checkNotEndWith", async (t) => {

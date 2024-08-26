@@ -1,4 +1,4 @@
-import { assertEquals } from "../../deps.ts";
+import { assertEquals, assertType, type IsExact } from "../../deps.ts";
 import { checkIsDeepEqual, checkIsNotDeepEqual } from "./main.ts";
 
 Deno.test("checkIsDeepEqual", async (t) => {
@@ -18,6 +18,15 @@ Deno.test("checkIsDeepEqual", async (t) => {
       assertEquals(checkIsDeepEqual({ a: 1, b: 2 }, { b: 2, a: 1 }), false); // Different key order
     },
   );
+
+  await t.step("should obj1 type narrow obj2 type", () => {
+    const obj1: Record<string, unknown> = { a: 1, b: 2 };
+    const obj2: Record<string, boolean> = { c: true, d: false };
+
+    if (checkIsDeepEqual(obj1, obj2)) {
+      assertType<IsExact<typeof obj1, typeof obj2>>(true);
+    }
+  })
 });
 
 Deno.test("checkIsNotDeepEqual", async (t) => {

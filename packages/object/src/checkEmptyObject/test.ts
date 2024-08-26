@@ -1,4 +1,5 @@
-import { assertEquals } from "../../deps.ts";
+import { assertEquals, assertType, type IsExact } from "../../deps.ts";
+import { EmptyObject } from "../types.ts";
 import { checkIsEmptyObject, checkIsNotEmptyObject } from "./main.ts";
 
 Deno.test("checkIsEmptyObject", async (t) => {
@@ -12,6 +13,13 @@ Deno.test("checkIsEmptyObject", async (t) => {
     assertEquals(checkIsEmptyObject({ a: 1 }), false); // Another non-empty object
     assertEquals(checkIsEmptyObject(new Date()), false); // Date instance, considered non-empty
   });
+
+  await t.step("should narrow non-empty object type", () => {
+    const value: object = {};
+    if (checkIsEmptyObject(value)) {
+      assertType<IsExact<typeof value, EmptyObject>>(true);
+    }
+  })
 });
 
 Deno.test("checkIsNotEmptyObject", async (t) => {
@@ -25,4 +33,10 @@ Deno.test("checkIsNotEmptyObject", async (t) => {
     assertEquals(checkIsNotEmptyObject({}), false); // Regular empty object
     assertEquals(checkIsNotEmptyObject(Object.create(null)), false); // Object with no prototype
   });
+
+  await t.step("should exclude non-empty object", () => {
+    type Value = Record<string, string> | EmptyObject;
+    const value = {} as Value;
+    assertType<IsExact<typeof value, Record<string, string>>>(true);
+  })
 });

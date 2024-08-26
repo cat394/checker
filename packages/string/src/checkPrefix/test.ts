@@ -1,4 +1,4 @@
-import { assertEquals } from "../../deps.ts";
+import { assertEquals, assertType, type IsExact } from "../../deps.ts";
 import { checkDoesNotHavePrefix, checkHasPrefix } from "./main.ts";
 
 Deno.test("checkStartsWith", async (t) => {
@@ -23,6 +23,13 @@ Deno.test("checkStartsWith", async (t) => {
       assertEquals(checkHasPrefix("test", "e"), false);
     },
   );
+
+  await t.step("should narrow string with prefix type", () => {
+    const value: string = "hl";
+    if (checkHasPrefix(value, 'prefix')) {
+      assertType<IsExact<typeof value, `prefix${string}`>>(true);
+    }
+  })
 });
 
 Deno.test("checkNotStartWith", async (t) => {
