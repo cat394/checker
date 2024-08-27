@@ -1,8 +1,8 @@
 # @checker/array
 
 A TypeScript utility library providing a comprehensive set of functions to
-validate, verify, and perform checks on array. This package provides simple and effective tools to help you
-manage arrays and iteration logic with ease.
+validate, verify, and perform checks on array. This package provides simple and
+effective tools to help you manage arrays and iteration logic with ease.
 
 ## Installation
 
@@ -35,7 +35,6 @@ Bun:
 ```bash
 bunx jsr add @checker/array
 ```
-
 
 ## Functions
 
@@ -88,10 +87,10 @@ checkIsFirstIteration(1); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-	if (checkIsFirstIteration(index)) {
-		return number + 1;
-	}
-	return number;
+  if (checkIsFirstIteration(index)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [2, 2, 3]
 ```
@@ -109,10 +108,10 @@ checkIsNotFirstIteration(0); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-	if (checkIsNotFirstIteration(index)) {
-		return number + 1;
-	}
-	return number;
+  if (checkIsNotFirstIteration(index)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [1, 3, 4]
 ```
@@ -166,10 +165,10 @@ checkIsSpecificIteration(2, 3); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-	if (checkIsSpecificIteration(index, 1)) {
-		return number + 1;
-	}
-	return number;
+  if (checkIsSpecificIteration(index, 1)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [1, 3, 3]
 ```
@@ -187,10 +186,10 @@ checkIsNotSpecificIteration(3, 3); // false
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-	if (checkIsSpecificIteration(index, 1)) {
-		return number + 1;
-	}
-	return number;
+  if (checkIsSpecificIteration(index, 1)) {
+    return number + 1;
+  }
+  return number;
 });
 // => [2, 2, 4]
 ```

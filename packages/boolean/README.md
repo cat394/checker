@@ -1,8 +1,9 @@
 # @checker/boolean
 
 A TypeScript utility library providing a comprehensive set of functions to
-validate, verify, and perform checks on boolean. This package provides tools to help you manage boolean values,
-truthiness, and falsiness in your code with ease.
+validate, verify, and perform checks on boolean. This package provides tools to
+help you manage boolean values, truthiness, and falsiness in your code with
+ease.
 
 ## Installation
 
