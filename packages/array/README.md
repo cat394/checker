@@ -4,6 +4,39 @@ A TypeScript utility library providing a comprehensive set of functions to
 validate, verify, and perform checks on array. This package provides simple and effective tools to help you
 manage arrays and iteration logic with ease.
 
+## Installation
+
+NPM:
+
+```bash
+npx jsr add @checker/array
+```
+
+PNPM:
+
+```bash
+pnpm dlx jsr add @checker/array
+```
+
+Deno:
+
+```bash
+deno add @checker/array
+```
+
+Yarn:
+
+```bash
+yarn dlx jsr add @checker/array
+```
+
+Bun:
+
+```bash
+bunx jsr add @checker/array
+```
+
+
 ## Functions
 
 ### `checkIsArray`

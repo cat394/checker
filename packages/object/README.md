@@ -7,6 +7,38 @@ more. With clear and descriptive function names, this library is ideal for
 developers looking to perform robust object validations in their TypeScript
 projects.
 
+## Installation
+
+NPM:
+
+```bash
+npx jsr add @checker/object
+```
+
+PNPM:
+
+```bash
+pnpm dlx jsr add @checker/object
+```
+
+Deno:
+
+```bash
+deno add @checker/object
+```
+
+Yarn:
+
+```bash
+yarn dlx jsr add @checker/object
+```
+
+Bun:
+
+```bash
+bunx jsr add @checker/object
+```
+
 ## Functions
 
 ### `checkIsDeepEqual`

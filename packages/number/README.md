@@ -7,6 +7,38 @@ and assess numeric ranges, among others. Designed with clean, descriptive
 function names, it’s an essential toolkit for any TypeScript project dealing
 with numeric validations.
 
+## Installation
+
+NPM:
+
+```bash
+npx jsr add @checker/number
+```
+
+PNPM:
+
+```bash
+pnpm dlx jsr add @checker/number
+```
+
+Deno:
+
+```bash
+deno add @checker/number
+```
+
+Yarn:
+
+```bash
+yarn dlx jsr add @checker/number
+```
+
+Bun:
+
+```bash
+bunx jsr add @checker/number
+```
+
 ## Functions
 
 ### `checkIsCleanlyDivisible`

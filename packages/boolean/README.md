@@ -4,6 +4,38 @@ A TypeScript utility library providing a comprehensive set of functions to
 validate, verify, and perform checks on boolean. This package provides tools to help you manage boolean values,
 truthiness, and falsiness in your code with ease.
 
+## Installation
+
+NPM:
+
+```bash
+npx jsr add @checker/boolean
+```
+
+PNPM:
+
+```bash
+pnpm dlx jsr add @checker/boolean
+```
+
+Deno:
+
+```bash
+deno add @checker/boolean
+```
+
+Yarn:
+
+```bash
+yarn dlx jsr add @checker/boolean
+```
+
+Bun:
+
+```bash
+bunx jsr add @checker/boolean
+```
+
 ## Functions
 
 ### `checkIsBoolean`

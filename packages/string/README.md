@@ -6,6 +6,38 @@ check for alphanumeric content, numeric values, special characters, prefixes,
 suffixes, and more. Designed for developers who need reliable and descriptive
 utilities to handle various string operations in their TypeScript projects.
 
+## Installation
+
+NPM:
+
+```bash
+npx jsr add @checker/string
+```
+
+PNPM:
+
+```bash
+pnpm dlx jsr add @checker/string
+```
+
+Deno:
+
+```bash
+deno add @checker/string
+```
+
+Yarn:
+
+```bash
+yarn dlx jsr add @checker/string
+```
+
+Bun:
+
+```bash
+bunx jsr add @checker/string
+```
+
 ## Functions
 
 ### `checkIsAlphanumeric`
