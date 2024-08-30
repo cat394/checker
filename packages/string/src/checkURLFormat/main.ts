@@ -15,8 +15,8 @@
  * checkIsURLFormat('invalid-url'); // The string is not a valid URL
  */
 export const checkIsURLFormat = (str: string): boolean => {
-	const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-	return urlRegex.test(str);
+  const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+  return urlRegex.test(str);
 };
 
 /**
@@ -36,5 +36,5 @@ export const checkIsURLFormat = (str: string): boolean => {
  * checkIsNotURLFormat('https://www.example.com'); // Valid URL
  */
 export const checkIsNotURLFormat = (str: string): boolean => {
-	return !checkIsURLFormat(str);
+  return !checkIsURLFormat(str);
 };

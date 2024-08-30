@@ -15,8 +15,8 @@
  * checkIsEnterKey('enter'); // The string is not exactly 'Enter'
  */
 export const checkIsEnterKey = (str: string): boolean => {
-    return str === 'Enter';
-}
+  return str === "Enter";
+};
 
 /**
  * Checks if a given string does not represent the "Enter" key.
@@ -35,5 +35,5 @@ export const checkIsEnterKey = (str: string): boolean => {
  * checkIsNotEnterKey('Enter'); // The string is exactly 'Enter'
  */
 export const checkIsNotEnterKey = (str: string): boolean => {
-    return !checkIsEnterKey(str);
-}
+  return !checkIsEnterKey(str);
+};

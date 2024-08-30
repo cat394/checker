@@ -15,9 +15,9 @@
  * checkIsUUIDFormat('invalid-uuid'); // The string is not a valid UUID format
  */
 export const checkIsUUIDFormat = (str: string): boolean => {
-	const uuidRegex =
-		/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-	return uuidRegex.test(str);
+  const uuidRegex =
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  return uuidRegex.test(str);
 };
 
 /**
@@ -37,5 +37,5 @@ export const checkIsUUIDFormat = (str: string): boolean => {
  * checkIsNotUUIDFormat('123e4567-e89b-12d3-a456-426614174000'); // Valid UUID
  */
 export const checkIsNotUUIDFormat = (str: string): boolean => {
-	return !checkIsUUIDFormat(str);
+  return !checkIsUUIDFormat(str);
 };
