@@ -95,6 +95,28 @@ checkIsBinary("hello"); // false
 checkIsBinary("1010"); // false
 ```
 
+### `checkIsEmailFormat`
+
+Checks if a given string is in email format.
+
+```ts
+checkIsEmailFormat("example@test.com"); // true
+
+checkIsEmailFormat("invalid-email"); // false
+checkIsEmailFormat("example@.com"); // false
+```
+
+### `checkIsNotEmailFormat`
+
+Checks if a given string is not in email format.
+
+```ts
+checkIsNotEmailFormat("invalid-email"); // true
+checkIsNotEmailFormat("example@.com"); // true
+
+checkIsNotEmailFormat("example@test.com"); // false
+```
+
 ### `checkIsEmptyString`
 
 Checks if a given string is empty.
@@ -113,6 +135,38 @@ Checks if a given string is not empty.
 checkIsNotEmptyString("hello"); // true
 
 checkIsNotEmptyString(""); // false
+```
+
+### `checkIsEnterKey`
+
+Checks if a given string represents the "Enter" key.
+
+This was created to check if the event.key of a DOM event is Enter.
+
+```ts
+checkIsEnterKey("Enter"); // true
+
+checkIsEnterKey("enter"); // false
+checkIsEnterKey("invalid-key"); // false
+```
+
+```ts
+inputElement.addEventListener("keydown", (event) => {
+	if (checkIsEnterKey(event.key)) {
+		// When the Enter key is pressed
+	}
+});
+```
+
+### `checkIsNotEnterKey`
+
+Checks if a given string does not represent the "Enter" key.
+
+```ts
+checkIsEnterKey("enter"); // true
+checkIsEnterKey("invalid-key"); // true
+
+checkIsEnterKey("Enter"); // false
 ```
 
 ### `checkIsExponentialNotation`
@@ -137,25 +191,25 @@ checkIsNotExponentialNotation("1e5"); // false
 checkIsNotExponentialNotation("3.14E-10"); // false
 ```
 
-### `checkIncludesSubstring`
+### `checkHasSubstring`
 
-Checks if a given string includes a specific substring.
-
-```ts
-checkIncludesSubstring("hello world", "world"); // true
-checkIncludesSubstring("hello world", "planet"); // false
-```
-
-### `checkDoesNotIncludeSubstring`
-
-Checks if a given string does not include a specific substring.
+Checks if a given string has a specific substring.
 
 ```ts
-checkDoesNotIncludeSubstring("hello world", "planet"); // true
-checkDoesNotIncludeSubstring("hello world", "world"); // false
+checkHasSubstring("hello world", "world"); // true
+checkHasSubstring("hello world", "planet"); // false
 ```
 
-### `checkIncludesSubstring`
+### `checkDoesNotHaveSubstring`
+
+Checks if a given string does not have a specific substring.
+
+```ts
+checkDoesNotHaveSubstring("hello world", "planet"); // true
+checkDoesNotHaveSubstring("hello world", "world"); // false
+```
+
+### `checkIsIndexFound`
 
 Checks if a given string includes a specific substring.
 
@@ -214,11 +268,11 @@ optional negative signs and decimal points. The string can represent an integer
 or a floating-point number.
 
 ```ts
-checkIsIntegerOrDecimal("123"); // true
-checkIsIntegerOrDecimal("1.1"); // true
+checkIsIntegerOrDecimalString("123"); // true
+checkIsIntegerOrDecimalString("1.1"); // true
 
-checkIsNotNumeric("123abc"); // false
-checkIsNotNumeric("hello"); // false
+checkIsIntegerOrDecimalString("123abc"); // false
+checkIsIntegerOrDecimalString("hello"); // false
 ```
 
 ### `checkIsNotIntegerOrDecimalString`
@@ -226,11 +280,23 @@ checkIsNotNumeric("hello"); // false
 Checks if a given string is not a numeric value.
 
 ```ts
-checkIsNotNumeric("123abc"); // true
-checkIsNotNumeric("hello"); // true
+checkIsNotIntegerOrDecimalString("123abc"); // true
+checkIsNotIntegerOrDecimalString("hello"); // true
 
-checkIsIntegerOrDecimal("123"); // false
-checkIsIntegerOrDecimal("1.1"); // false
+checkIsNotIntegerOrDecimalString("123"); // false
+checkIsNotIntegerOrDecimalString("1.1"); // false
+```
+
+### `checkIsISO8601Format`
+
+Checks if a given string is in ISO 8601 format.
+
+```ts
+checkIsISO8601Format("2023-08-30T10:30:00Z"); // true
+checkIsISO8601Format("2023-08-30T10:30:00+02:00"); // true
+
+checkIsISO8601Format("invalid-date"); // false
+checkIsISO8601Format("08/30/2023"); // false
 ```
 
 ### `checkHasPrefix`
@@ -240,7 +306,7 @@ Checks if a given string has a specific prefix.
 ```ts
 checkHasPrefix("hello world", "hello"); // true
 
-heckHasPrefix("hello world", "world"); // false
+checkHasPrefix("hello world", "world"); // false
 ```
 
 ### `checkDoesNotHavePrefix`
@@ -341,6 +407,54 @@ Checks if a given string does not end with a specific suffix.
 ```ts
 checkDoesNotHaveSuffix("hello world", "hello"); // true
 checkDoesNotHaveSuffix("hello world", "world"); // false
+```
+
+### `checkIsURLFormat`
+
+Checks if a given string is in URL format.
+
+```ts
+checkIsURLFormat("http://example.com"); // true
+checkIsURLFormat("https://example.com"); // true
+checkIsURLFormat("ftp://example.com"); // true
+
+checkIsURLFormat("invalid-url"); // false
+checkIsURLFormat("http://"); // false
+```
+
+### `checkIsNotURLFormat`
+
+Checks if a given string is not in URL format.
+
+```ts
+checkIsNotURLFormat("invalid-url"); // true
+checkIsNotURLFormat("http://"); // true
+
+checkIsNotURLFormat("http://example.com"); // false
+checkIsNotURLFormat("https://example.com"); // false
+checkIsNotURLFormat("ftp://example.com"); // false
+```
+
+### `checkIsUUIDFormat`
+
+Checks if a given string is in UUID format.
+
+```ts
+checkIsUUIDFormat("123e4567-e89b-12d3-a456-426614174000"); // true
+
+checkIsUUIDFormat("invalid-uuid"); // false
+checkIsUUIDFormat("123e4567-e89b-12d3-a456-426614"); // false, this string is short.
+```
+
+### `checkIsNotUUIDFormat`
+
+Checks if a given string is not in UUID format.
+
+```ts
+checkIsUUIDFormat("invalid-uuid"); // true
+checkIsUUIDFormat("123e4567-e89b-12d3-a456-42661417400"); // true
+
+checkIsUUIDFormat("123e4567-e89b-12d3-a456-426614174000"); // false
 ```
 
 ### Licence
