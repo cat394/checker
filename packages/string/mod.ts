@@ -48,6 +48,26 @@ import {
   checkIsInfinityString,
   checkIsNotInfinityString,
 } from "./src/checkInfinityString/main.ts";
+import {
+  checkIsEmailFormat,
+  checkIsNotEmailFormat,
+} from "./src/checkEmailFormat/main.ts";
+import {
+  checkIsEnterKey,
+  checkIsNotEnterKey,
+} from "./src/checkEnterKey/main.ts";
+import {
+  checkIsISO8601Format,
+  checkIsNotISO8601Format,
+} from "./src/checkISO8601Format/main.ts";
+import {
+  checkIsNotURLFormat,
+  checkIsURLFormat,
+} from "./src/checkURLFormat/main.ts";
+import {
+  checkIsNotUUIDFormat,
+  checkIsUUIDFormat,
+} from "./src/checkUUIDFormat/main.ts";
 
 export {
   checkDoesNotHavePrefix,
@@ -61,21 +81,31 @@ export {
   checkIsAlphanumeric,
   checkIsAnyNumeric,
   checkIsBinary,
+  checkIsEmailFormat,
   checkIsEmptryString,
+  checkIsEnterKey,
   checkIsExponentialNotation,
   checkIsIndexFound,
   checkIsIndexNotFound,
   checkIsInfinityString,
   checkIsIntegerOrDecimalString,
+  checkIsISO8601Format,
   checkIsNotAlphanumeric,
   checkIsNotAnyNumeric,
   checkIsNotBinary,
+  checkIsNotEmailFormat,
   checkIsNotEmptyString,
+  checkIsNotEnterKey,
   checkIsNotExponentialNotation,
   checkIsNotInfinityString,
   checkIsNotIntegerOrDecimalString,
+  checkIsNotISO8601Format,
   checkIsNotSpecialNumeric,
   checkIsNotString,
+  checkIsNotURLFormat,
+  checkIsNotUUIDFormat,
   checkIsSpecialNumeric,
   checkIsString,
+  checkIsURLFormat,
+  checkIsUUIDFormat,
 };
