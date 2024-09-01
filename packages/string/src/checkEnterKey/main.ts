@@ -1,3 +1,5 @@
+import type { EnterKey } from "../types.ts";
+
 /**
  * Checks if a given string represents the "Enter" key.
  *
@@ -14,7 +16,7 @@
  * // Returns false
  * checkIsEnterKey('enter'); // The string is not exactly 'Enter'
  */
-export const checkIsEnterKey = (str: string): boolean => {
+export const checkIsEnterKey = (str: string): str is EnterKey => {
   return str === "Enter";
 };
 
@@ -34,6 +36,6 @@ export const checkIsEnterKey = (str: string): boolean => {
  * // Returns false
  * checkIsNotEnterKey('Enter'); // The string is exactly 'Enter'
  */
-export const checkIsNotEnterKey = (str: string): boolean => {
+export const checkIsNotEnterKey = <T extends string>(str: T): str is Exclude<T, EnterKey> => {
   return !checkIsEnterKey(str);
 };

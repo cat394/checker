@@ -1,3 +1,5 @@
+import type { UUIDFormat } from "../types.ts";
+
 /**
  * Checks if a given string is in UUID format.
  *
@@ -14,10 +16,12 @@
  * // Returns false
  * checkIsUUIDFormat('invalid-uuid'); // The string is not a valid UUID format
  */
-export const checkIsUUIDFormat = (str: string): boolean => {
-  const uuidRegex =
-    /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-  return uuidRegex.test(str);
+export const checkIsUUIDFormat = (
+	str: string
+): str is UUIDFormat => {
+	const uuidRegex =
+		/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+	return uuidRegex.test(str);
 };
 
 /**
@@ -36,6 +40,8 @@ export const checkIsUUIDFormat = (str: string): boolean => {
  * // Returns false
  * checkIsNotUUIDFormat('123e4567-e89b-12d3-a456-426614174000'); // Valid UUID
  */
-export const checkIsNotUUIDFormat = (str: string): boolean => {
-  return !checkIsUUIDFormat(str);
+export const checkIsNotUUIDFormat = <T extends string>(
+	str: T
+): str is Exclude<T, UUIDFormat> => {
+	return !checkIsUUIDFormat(str);
 };
