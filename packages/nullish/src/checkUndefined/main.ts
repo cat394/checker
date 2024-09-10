@@ -6,34 +6,34 @@
  *
  * @example
  * // Returns true
- * checkIsUndefined(undefined); // The value is strictly undefined
+ * check_is_undefined(undefined); // The value is strictly undefined
  *
  * @example
  * // Returns false
- * checkIsUndefined(null); // The value is not undefined, but it's null
+ * check_is_undefined(null); // The value is not undefined, but it's null
  */
-export const checkIsUndefined = (value: unknown): value is undefined => {
-  return value === undefined;
+export const check_is_undefined = (value: unknown): value is undefined => {
+	return value === undefined;
 };
 
 /**
  * Checks if the given value is not strictly `undefined`.
  *
- * This is the inverse of `checkIsUndefined`.
+ * This is the inverse of `check_is_undefined`.
  *
  * @param {T} value - The value to check.
  * @returns {value is Exclude<T, undefined>} True if the value is not strictly `undefined`, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotUndefined(null); // The value is not undefined, it's null
+ * check_is_not_undefined(null); // The value is not undefined, it's null
  *
  * @example
  * // Returns false
- * checkIsNotUndefined(undefined); // The value is strictly undefined
+ * check_is_not_undefined(undefined); // The value is strictly undefined
  */
-export const checkIsNotUndefined = <T>(
-  value: T,
+export const check_is_not_undefined = <T>(
+	value: T
 ): value is Exclude<T, undefined> => {
-  return !checkIsUndefined(value);
+	return !check_is_undefined(value);
 };

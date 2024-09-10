@@ -41,497 +41,497 @@ bunx jsr add @checker/number
 
 ## Functions
 
-### `checkIsCleanlyDivisible`
+### `check_is_cleanly_disible`
 
 Checks if a given number is cleanly divisible by a divisor.
 
 ```ts
-checkIsCleanDisible(10, 2); // 10 % 2 = 0
-checkIsCleanDivible(10, 3); // 10 % 3 = 1
+check_is_cleanly_disible(10, 2); // 10 % 2 = 0
+check_is_cleanly_disible(10, 3); // 10 % 3 = 1
 ```
 
-### `checkIsNotCleanlyDivisible`
+### `check_is_not_cleanly_disible`
 
 Checks if a given number is not cleanly divisible by a divisor.
 
 ```ts
-checkIsNotCleanDisible(10, 3); // true, 10 % 3 = 1
-checkIsNotCleanDisible(10, 2); // false, 10 % 2 = 0
+check_is_not_cleanly_disible(10, 3); // true, 10 % 3 = 1
+check_is_not_cleanly_disible(10, 2); // false, 10 % 2 = 0
 ```
 
-### `checkIsCubeRoot`
+### `check_is_cube_root`
 
 Checks if a given number is the cube root of a target number.
 
 ```ts
-checkIsCubeRoot(3, 27); // true, 3 * 3 * 3 = 27
-checkIsCubeRoot(2, 27); // false, 2 * 2 * 2 = 8 ≠ 27
+check_is_cube_root(3, 27); // true, 3 * 3 * 3 = 27
+check_is_cube_root(2, 27); // false, 2 * 2 * 2 = 8 ≠ 27
 ```
 
-### `checkIsNotCubeRoot`
+### `check_is_not_cube_root`
 
 Checks if a given number is not the cube root of a target number.
 
 ```ts
-checkIsNotCubeRoot(2, 27); // true, 2 * 2 * 2 = 8 ≠ 27
-checkIsNotCubeRoot(3, 27); // false, 3 * 3 * 3 = 27
+check_is_not_cube_root(2, 27); // true, 2 * 2 * 2 = 8 ≠ 27
+check_is_not_cube_root(3, 27); // false, 3 * 3 * 3 = 27
 ```
 
-### `checkIsDivisor`
+### `check_is_divisor`
 
 Checks if the given number is a divisor of the target number.
 
 ```ts
-checkIsDivisor(3, 9);
+check_is_divisor(3, 9);
 // true, 9 % 3 = 0 => 3 is a divisor of 9
 
-checkIsDivisor(2, 9);
+check_is_divisor(2, 9);
 // false, 9 % 2 = 1 => 2 is not a divisor of 9
 ```
 
-### `checkIsNotDivisor`
+### `check_is_not_divisor`
 
 Checks if the given number is not a divisor of the target number.
 
 ```ts
-checkIsNotDivisor(2, 9); // true
-checkIsNotDivisor(3, 9); // false
+check_is_not_divisor(2, 9); // true
+check_is_not_divisor(3, 9); // false
 ```
 
-### `checkIsEven`
+### `check_is_even`
 
 Checks if a given number is even.
 
 ```ts
-checkIsEven(4); // true
-checkIsEven(3); // false
+check_is_even(4); // true
+check_is_even(3); // false
 ```
 
-### `checkIsNotEven`
+### `check_is_not_even`
 
 Checks if a given number is not even (odd).
 
 ```ts
-checkIsNotEven(3); // false
-checkIsNotEven(4); // true
+check_is_not_even(3); // false
+check_is_not_even(4); // true
 ```
 
-### `checkIsFibonacci`
+### `check_is_fibonacci`
 
 Checks if a given number is a Fibonacci number.
 
 ```ts
-checkIsFibonacci(3); // true
-checkIsFibonacci(5); // true
+check_is_fibonacci(3); // true
+check_is_fibonacci(5); // true
 
-checkIsFibonacci(4); //false
-checkIsFibonacci(6); // false
+check_is_fibonacci(4); //false
+check_is_fibonacci(6); // false
 ```
 
-### `checkIsNotFibonacci`
+### `check_is_not_fibonacci`
 
 Checks if a given number is not a Fibonacci number.
 
 ```ts
-checkIsNotFibonacci(4); // true
-checkIsNotFibonacci(6); // true
+check_is_not_fibonacci(4); // true
+check_is_not_fibonacci(6); // true
 
-checkIsNotFibonacci(3); // false
-checkIsNotFibonacci(5); // false
+check_is_not_fibonacci(3); // false
+check_is_not_fibonacci(5); // false
 ```
 
-### `checkIsFloat`
+### `check_is_float`
 
 Checks if the given number is a floating-point number.
 
 ```ts
-checkIsFloat(1.2); // true
+check_is_float(1.2); // true
 
-checkIsFloat(1); // false
-checkIsFloat(1.0); // 1.0 % 1 = 0 => false
+check_is_float(1); // false
+check_is_float(1.0); // 1.0 % 1 = 0 => false
 ```
 
-### `checkIsNotFloat`
+### `check_is_not_float`
 
 Checks if the given number is not a floating-point number.
 
 ```ts
-checkIsNotFloat(1); // true
-checkIsNotFloat(1.0); // true
+check_is_not_float(1); // true
+check_is_not_float(1.0); // true
 
-checkIsNotFloat(1.2); // false
+check_is_not_float(1.2); // false
 ```
 
-### `checkIsGeometricSequence`
+### `check_is_geometric_sequence`
 
 Checks if the given array of numbers forms a geometric sequence with the
 specified ratio.
 
 ```ts
-checkIsGeometricSequence([2, 4, 8], 2); // true
-checkIsGeometricSequence([2, 4, 9], 2); // false
+check_is_geometric_sequence([2, 4, 8], 2); // true
+check_is_geometric_sequence([2, 4, 9], 2); // false
 ```
 
-### `checkIsNotGeometricSequence`
+### `check_is_not_geometric_sequence`
 
 Checks if the given array of numbers does not form a geometric sequence with the
 specified ratio.
 
 ```ts
-checkIsNotGeometricSequence([2, 4, 9], 2); // false
-checkIsNotGeometricSequence([2, 4, 8], 2); // true
+check_is_not_geometric_sequence([2, 4, 9], 2); // false
+check_is_not_geometric_sequence([2, 4, 8], 2); // true
 ```
 
-### `checkIsGreaterThan`
+### `check_is_greater_than`
 
 Checks if the given number is greater than a specified threshold.
 
 ```ts
-checkIsGreaterThan(10, 5); // true, 10 is greater than 5
-checkIsGreaterThan(10, 15); // false, 10 is not greater than 15
+check_is_greater_than(10, 5); // true, 10 is greater than 5
+check_is_greater_than(10, 15); // false, 10 is not greater than 15
 ```
 
-### `checkIsNotGreaterThan`
+### `check_is_not_greater_than`
 
 Checks if the given number is not greater than a specified threshold.
 
 ```ts
-checkIsGreaterThan(10, 15); // true, 10 is not greater than 15
-checkIsGreterThan(10, 10); // false
-checkIsGreaterThan(10, 5); // false, 10 is greater than 5
+check_is_not_greater_than(10, 15); // true, 10 is not greater than 15
+check_is_not_greater_than(10, 10); // false
+check_is_not_greater_than(10, 5); // false, 10 is greater than 5
 ```
 
-### `checkIsGreaterThanOrEqual`
+### `check_is_greater_than_or_equal`
 
 Checks if a number is greater than or equal to a given threshold.
 
 ```ts
-checkIsGreaterThanOrEqual(10, 10); // true, 10 is equal 10
-checkIsGreaterThanOrEqual(10, 5); // true, 10 is greater than 5
+check_is_greater_than_or_equal(10, 10); // true, 10 is equal 10
+check_is_greater_than_or_equal(10, 5); // true, 10 is greater than 5
 
-checkIsGreaterThanOrEqual(10, 15); // false, 10 is not greater than 15
+check_is_greater_than_or_equal(10, 15); // false, 10 is not greater than 15
 ```
 
-### `checkIsNotGreaterThanOrEqual`
+### `check_is_not_greater_than_or_equal`
 
 Checks if a number is not greater than or equal to a given threshold.
 
 ```ts
-checkIsNotGreaterThanOrEqual(10, 15); // true
+check_is_not_greater_than_or_equal(10, 15); // true
 
-checkIsNotGreaterThanOrEqual(10, 10); // false
-checkIsGreaterThanOrEqual(10, 5); // false
+check_is_not_greater_than_or_equal(10, 10); // false
+check_is_not_greater_than_or_equal(10, 5); // false
 ```
 
-### `checkIsInfiniy`
+### `check_is_infinity`
 
 Checks if the given value is Infinity.
 
-If you want to know if a string is Infinity, use the `checkIsInifinityString()`
+If you want to know if a string is Infinity, use the `check_is_infinity_string()`
 function.
 
 ```ts
-checkIsInfinity(Infinity); // true
-checkIsInfinity(-Infinity); // true
+check_is_infinity(Infinity); // true
+check_is_infinity(-Infinity); // true
 
-checkIsInfinity("hello"); // false
-checkIsInifinity(123); // false
+check_is_infinity("hello"); // false
+check_is_infinity(123); // false
 ```
 
-### `checkIsNotInfinity`
+### `check_is_not_infinity`
 
 Checks if the given value is not Infinity.
 
 ```ts
-checkIsNotInfinity("hello"); // true
-checkIsNotInifinity(123); // true
+check_is_not_infinity("hello"); // true
+check_is_not_infinity(123); // true
 
-checkIsNotInfinity(Infinity); // false
-checkIsNotInfinity(-Infinity); // false
+check_is_not_infinity(Infinity); // false
+check_is_not_infinity(-Infinity); // false
 ```
 
-### `checkIsInterger`
+### `check_is_integer`
 
 Checks if the given number is an integer.
 
 ```ts
-checkIsInteger(1); // true
-checkIsInteger(1.1); // false
+check_is_integer(1); // true
+check_is_integer(1.1); // false
 ```
 
-### `checkIsNotInteger`
+### `check_is_not_integer`
 
 Checks if the given number is not an integer.
 
 ```ts
-checkIsNotInteger(1.1); // true
-checkIsNotInteger(1); // false
+check_is_not_integer(1.1); // true
+check_is_not_integer(1); // false
 ```
 
-### `checkIsLessThan`
+### `check_is_less_than`
 
 Checks if a number is less than a specified threshold.
 
 ```ts
-checkIsLessThan(5, 10); // true, 5 is less than 10
-checkIsLessThan(15, 10); // false, 15 is not less than 10
+check_is_less_than(5, 10); // true, 5 is less than 10
+check_is_less_than(15, 10); // false, 15 is not less than 10
 ```
 
-### `checkIsNotLessThan`
+### `check_is_not_less_than`
 
 Checks if a number is not less than a specified threshold.
 
 ```ts
-checkIsNotLessThan(15, 10); // true
-checkIsNotLessThan(5, 10); // false
+check_is_not_less_than(15, 10); // true
+check_is_not_less_than(5, 10); // false
 ```
 
-### `checkIsLessThanOrEqual`
+### `check_is_less_than_or_equal`
 
 Checks if the given number is less than or equal to the specified threshold.
 
 ```ts
-checkIsLessTHanOrEqual(10, 10); // true
-checkIsLessThanOrEqual(15, 10); // true
+check_is_less_than_or_equal(10, 10); // true
+check_is_less_than_or_equal(15, 10); // true
 
-checkIsLessThanOrEqual(5, 10); // false
+check_is_less_than_or_equal(5, 10); // false
 ```
 
-### `checkIsNotLessThanOrEqual`
+### `check_is_not_less_than_or_equal`
 
 Checks if the given number is not less than or equal to the specified threshold.
 
 ```ts
-checkIsNotLessThanOrEqual(5, 10); // true
+check_is_not_less_than_or_equal(5, 10); // true
 
 checkIsLessTHanOrEqual(10, 10); // true
-checkIsNotLessThanOrEqual(15, 5); // false
+check_is_not_less_than_or_equal(15, 5); // false
 ```
 
-### `checkIsLogarithm`
+### `check_is_logarithm`
 
 Checks if a given number matches the logarithm of a target with a specified
 base.
 
 ```ts
-checkIsLogarithm(4, 2, 16); // log2(16) = 4
-checkIsLogarithm(4, 2, 8); // log2(8) = 3 ≠ 4
+check_is_logarithm(4, 2, 16); // log2(16) = 4
+check_is_logarithm(4, 2, 8); // log2(8) = 3 ≠ 4
 ```
 
-### `checkIsNotLogarithm`
+### `check_is_not_logarithm`
 
 Checks if a given number does not match the logarithm of a target with a
 specified base.
 
 ```ts
-checkIsNotLogarithm(4, 2, 8); // true
-checkIsNotLogarithm(4, 2, 16); // false
+check_is_not_logarithm(4, 2, 8); // true
+check_is_not_logarithm(4, 2, 16); // false
 ```
 
-### `checkIsNegative`
+### `check_is_negative`
 
 Checks if a given number is negative.
 
 ```ts
-checkIsNegative(-1); // true
-checkIsNegative(1); // false
+check_is_negative(-1); // true
+check_is_negative(1); // false
 ```
 
-### `checkIsNotNegative`
+### check_is_not_negative
 
 Checks if a given number is not negative.
 
 ```ts
-checkIsNotNegative(1); // true
-checkIsNegative(-1); // true
+check_is_not_negative(1); // true
+check_is_not_negative(-1); // true
 ```
 
-### `checkIsNumber`
+### `check_is_number`
 
 Checks if the given value is of type `number`.
 
 ```ts
-checkIsNumber(1); // true
-checkIsNumber("string"); // false
+check_is_number(1); // true
+check_is_number("string"); // false
 ```
 
-### `checkIsNotNumber`
+### `check_is_not_number`
 
 Checks if the given value is not of type `number`.
 
 ```ts
-checkIsNotNumber("string"); // true
-checkIsNotNumber(1); // false
+check_is_not_number("string"); // true
+check_is_not_number(1); // false
 ```
 
-### `checkIsOdd`
+### `check_is_odd`
 
 Checks if a given number is odd.
 
 ```ts
-checkIsOdd(3); // true
-checkIsOdd(-3); // true
+check_is_odd(3); // true
+check_is_odd(-3); // true
 
-checkIsOdd(2); // false
-checkIsOdd(-2); // false
+check_is_odd(2); // false
+check_is_odd(-2); // false
 ```
 
-### `checkIsNotOdd`
+### `check_is_not_odd`
 
 Checks if a given number is not odd.
 
 ```ts
-checkIsNotOdd(2); // true
-checkIsNotOdd(-2); // true
+check_is_not_odd(2); // true
+check_is_not_odd(-2); // true
 
-checkIsOdd(3); // false
-checkIsOdd(-3); // false
+check_is_not_odd(3); // false
+check_is_not_odd(-3); // false
 ```
 
-### `checkIsPerfectNumber`
+### `check_is_perfect_number`
 
 Checks if a given number is a perfect number.
 
 ```ts
-checkIsPerfectNumber(28); // true, 1 + 2 + 4 + 7 + 14 = 28
-checkIsPerfectNumber(12); // false, 1 + 2 + 3 + 4 + 6 = 16
+check_is_perfect_number(28); // true, 1 + 2 + 4 + 7 + 14 = 28
+check_is_perfect_number(12); // false, 1 + 2 + 3 + 4 + 6 = 16
 ```
 
-### `checkIsNotPerfectNumber`
+### `check_is_not_perfect_number`
 
 Checks if a given number is not a perfect number.
 
 ```ts
-checkIsPerfectNumber(12); // true
-checkIsPerfectNumber(28); // false
+check_is_not_perfect_number(12); // true
+check_is_not_perfect_number(28); // false
 ```
 
-### `checkIsPerfectSquare`
+### `check_is_perfect_square`
 
 Checks if a given number is a perfect square.
 
 ```ts
-checkIsPerfectSquare(16); // true, 4 * 4 = 16
-checkIsPerfectSquare(8); // false, 2 * 2 = 4 ≠ 8
+check_is_perfect_square(16); // true, 4 * 4 = 16
+check_is_perfect_square(8); // false, 2 * 2 = 4 ≠ 8
 ```
 
-### `checkIsNotPerfectSquare`
+### `check_is_not_perfect_square`
 
 Checks if a given number is not a perfect square.
 
 ```ts
-checkIsNotPerfectSquare(8); // true
-checkIsNotPerfectSquare(16); // false
+check_is_not_perfect_square(8); // true
+check_is_not_perfect_square(16); // false
 ```
 
-### `checkIsPositive`
+### `check_is_positive`
 
 Checks if a given number is positive.
 
 ```ts
-checkIsPositive(1); // true
+check_is_positive(1); // true
 
-checkIsPositive(0); // false
-checkIsPositive(-1); // false
+check_is_positive(0); // false
+check_is_positive(-1); // false
 ```
 
-### `checkIsNotPositive`
+### `check_is_not_positive`
 
 Checks if a given number is not positive.
 
 ```ts
-checkIsNotPositive(0); // true
-checkIsNotPositive(-1); // true
+check_is_not_positive(0); // true
+check_is_not_positive(-1); // true
 
-checkIsNotPositive(1); // false
+check_is_not_positive(1); // false
 ```
 
-### `checkIsPower`
+### `check_is_power`
 
 Checks if a given number is a power of a specified base.
 
 ```ts
-checkIsPowerOf(8, 2); // true, 8 is 2^3, so it's a power of 2
-checkIsPower(10, 2); // false, 10 is not a power of 2
+check_is_power(8, 2); // true, 8 is 2^3, so it's a power of 2
+check_is_power(10, 2); // false, 10 is not a power of 2
 ```
 
-### `checkIsNotPower`
+### `check_is_not_power`
 
 Checks if a given number is not a power of a specified base.
 
 ```ts
-checkIsNotPower(10, 2); // true
-checkIsNotPower(8, 2); // false
+check_is_not_power(10, 2); // true
+check_is_not_power(8, 2); // false
 ```
 
-### `checkIsPrime`
+### `check_is_prime`
 
 Checks if a given number is a prime number.
 
 ```ts
-checkIsPrime(7); // true
-checkisPrime(10); // false, 10 is divisible by 2 and 5
+check_is_prime(7); // true
+check_is_prime(10); // false, 10 is divisible by 2 and 5
 ```
 
-### `checkIsNotPrime`
+### `check_is_not_prime`
 
 Checks if a given number is not a prime number.
 
 ```ts
-checkIsNotPrime(10); // true
-checkIsNotPrime(7); // false
+check_is_not_prime(10); // true
+check_is_not_prime(7); // false
 ```
 
-### `checkIsSquareRoot`
+### `check_is_square_root`
 
 Checks if a given number is the square root of the target number.
 
 ```ts
-checkIsSquareRootOf(3, 9); // true, 3 * 3 = 9
-checkIsSquareRootOf(4, 20); // false, 4 * 4 =16
+check_is_square_root(3, 9); // true, 3 * 3 = 9
+check_is_square_root(4, 20); // false, 4 * 4 =16
 ```
 
-### `checkIsNotSquareRoot`
+### `check_is_not_sequare_root`
 
 Checks if a given number is not the square root of the target number.
 
 ```ts
-checkIsNotSquareRootOf(4, 20); // true
-checkIsNotSquareRootOf(3, 9); // false, 3 * 3 = 9
+check_is_not_sequare_root(4, 20); // true
+check_is_not_sequare_root(3, 9); // false, 3 * 3 = 9
 ```
 
-### `checkIsWithinRange`
+### `check_within_range`
 
 Checks if a given number is within a specified range, inclusive.
 
 ```ts
-checkIsWithinRange(5, 1, 10); // true, 5 is within the range [1, 10]
-checkIsWithinRange(15, 1, 10); // false, 15 is not within the range [1, 10]
+check_within_range(5, 1, 10); // true, 5 is within the range [1, 10]
+check_within_range(15, 1, 10); // false, 15 is not within the range [1, 10]
 ```
 
-### `checkIsNotWithinRange`
+### `check_is_not_within_range`
 
 Checks if a given number is not within a specified range.
 
 ```ts
-checkIsNotWithinRange(15, 1, 10); //
-checkIsNotWithinRange(5, 1, 10);
+check_is_not_within_range(15, 1, 10); //
+check_is_not_within_range(5, 1, 10);
 ```
 
-### `checkIsZero`
+### `check_is_zero`
 
 Checks if the given number is zero.
 
 ```ts
-checkIsZero(0); // true
-checkIsZero(5); // false
+check_is_zero(0); // true
+check_is_zero(5); // false
 ```
 
-### `checkIsNotZero`
+### `check_is_not_zero`
 
 Checks if the given number is not zero.
 
 ```ts
-checkIsNotZero(5); // true
-checkIsNotZero(0); // false
+check_is_not_zero(5); // true
+check_is_not_zero(0); // false
 ```

@@ -8,20 +8,20 @@
  *
  * @example
  * // Returns true
- * checkIsString('hello world'); // The value is a string
+ * check_is_string('hello world'); // The value is a string
  *
  * @example
  * // Returns false
- * checkIsString(123); // The value is not a string, it is a number
+ * check_is_string(123); // The value is not a string, it is a number
  */
-export const checkIsString = (value: unknown): value is string => {
-  return typeof value === "string";
+export const check_is_string = (value: unknown): value is string => {
+	return typeof value === "string";
 };
 
 /**
  * Checks if a given value is not a string.
  *
- * This is the inverse of `checkIsString`.
+ * This is the inverse of `check_is_string`.
  *
  * @template T - The type of the value being checked.
  * @param {T} value - The value to check.
@@ -29,12 +29,14 @@ export const checkIsString = (value: unknown): value is string => {
  *
  * @example
  * // Returns true
- * checkIsNotString(123); // The value is not a string, it is a number
+ * check_is_not_string(123); // The value is not a string, it is a number
  *
  * @example
  * // Returns false
- * checkIsNotString('hello world'); // The value is a string
+ * check_is_not_string('hello world'); // The value is a string
  */
-export const checkIsNotString = <T>(value: T): value is Exclude<T, string> => {
-  return !checkIsString(value);
+export const check_is_not_string = <T>(
+	value: T
+): value is Exclude<T, string> => {
+	return !check_is_string(value);
 };

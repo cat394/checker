@@ -41,45 +41,45 @@ bunx jsr add @checker/object
 
 ## Functions
 
-### `checkIsDeepEqual`
+### `check_is_deep_equal`
 
 Checks if two objects are deeply equal.
 
 ```ts
-checkIsDeepEqual({ a: 1, b: 2 }, { a: 1, b: 2 }); // true
-checkIsDeepEqual({ a: 1, b: 2 }, { a: 2, b: 3 }); // false
+check_is_deep_equal({ a: 1, b: 2 }, { a: 1, b: 2 }); // true
+check_is_deep_equal({ a: 1, b: 2 }, { a: 2, b: 3 }); // false
 ```
 
-### `checkIsNotDeepEqual`
+### `check_is_not_deep_equal`
 
 ```ts
-checkIsDeepEqual({ a: 1, b: 2 }, { a: 2, b: 3 }); // true
-checkIsDeepEqual({ a: 1, b: 2 }, { a: 1, b: 2 }); // false
+check_is_not_deep_equal({ a: 1, b: 2 }, { a: 2, b: 3 }); // true
+check_is_not_deep_equal({ a: 1, b: 2 }, { a: 1, b: 2 }); // false
 ```
 
-### `checkIsEmptyObject`
+### `check_is_empty_object`
 
 Checks if a given object is an empty plain object.
 
 ```ts
-checkIsEmptyObject({}); // true
+check_is_empty_object({}); // true
 
-checkIsEmptyObject(new Date()); // false
-checkIsEmptyObject({ a: 1 }); // false
+check_is_empty_object(new Date()); // false
+check_is_empty_object({ a: 1 }); // false
 ```
 
-### `checkIsNotEmptyObject`
+### `check_is_not_empty_object`
 
 Checks if a given object is not an empty plain object.
 
 ```ts
-checkIsNotEmptyObject(new Date()); // true
-checkIsNotEmptyObject({ a: 1 }); // true
+check_is_not_empty_object(new Date()); // true
+check_is_not_empty_object({ a: 1 }); // true
 
-checkIsNotEmptyObject({}); // false
+check_is_not_empty_object({}); // false
 ```
 
-### `checkKeyExistsInObject`
+### `check_key_exists_in_object`
 
 Checks if a given key exists in an object.
 
@@ -88,8 +88,8 @@ Checks if a given key exists in an object.
 > `key in object` syntax.
 
 ```ts
-checkKeyExistsInObject({ a: 1, b: 2 }, "a"); // true, The key 'a' exists in the object
-checkKeyExistsInObject({ a: 1, b: 2 }, "c"); // false
+check_key_exists_in_object({ a: 1, b: 2 }, "a"); // true, The key 'a' exists in the object
+check_key_exists_in_object({ a: 1, b: 2 }, "c"); // false
 ```
 
 ```ts
@@ -98,78 +98,78 @@ type Obj = { a: 1; b: 2 } | { c: 3; d: 4 };
 const obj = {} as Obj;
 
 if ("c" in obj) {
-  obj; // obj type is { c: 3, d: 4 }
+	obj; // obj type is { c: 3, d: 4 }
 }
 
-if (checkKeyExistsInObject(obj, "c")) {
-  obj; // obj type is Obj
+if (check_key_exists_in_object(obj, "c")) {
+	obj; // obj type is Obj
 }
 ```
 
-### `checkKeyDoesNotExistInObject`
+### `check_key_does_not_exist_in_object`
 
 Checks if a given key does not exist in an object.
 
 ```ts
-checkKeyDoesNotExistInObject({ a: 1, b: 2 }, "c"); // true
-checkKeyDoesNotExistInObject({ a: 1, b: 2 }, "a"); // false
+check_key_does_not_exist_in_object({ a: 1, b: 2 }, "c"); // true
+check_key_does_not_exist_in_object({ a: 1, b: 2 }, "a"); // false
 ```
 
-### `checkIsFrozen`
+### `check_is_frozen`
 
 Checks if a given object is frozen.
 
 ```ts
-checkIsFrozen(Object.freeze({ a: 1 })); // true
-checkIsFrozen({ a: 1 }); // false
+check_is_frozen(Object.freeze({ a: 1 })); // true
+check_is_frozen({ a: 1 }); // false
 ```
 
-### `checkIsNotFrozen`
+### `check_is_not_frozen`
 
 Checks if a given object is not frozen.
 
 ```ts
-checkIsNotFrozen({ a: 1 }); // true
-checkIsNotFrozen(Object.freeze({ a: 1 })); // false
+check_is_not_frozen({ a: 1 }); // true
+check_is_not_frozen(Object.freeze({ a: 1 })); // false
 ```
 
-### `checkIsObject`
+### `check_is_object`
 
 Checks if a given value is an object.
 
 ```ts
-checkIsObject({ a: 1 }); // true
+check_is_object({ a: 1 }); // true
 
-checkIsObject(null); // false
-checkIsObject("string"); // false
+check_is_object(null); // false
+check_is_object("string"); // false
 ```
 
-### `checkIsNotObject`
+### `check_is_not_object`
 
 Checks if a given value is not an object.
 
 ```ts
-checkIsNotObject("string"); // true
+check_is_not_object("string"); // true
 
-checkIsNotObject({ a: 1 }); // false
+check_is_not_object({ a: 1 }); // false
 ```
 
-### `checkIsSealed`
+### `check_is_sealed`
 
 Checks if a given object is sealed.
 
 ```ts
-checkIsSealed(Object.seal({ a: 1 })); // true
-checkIsSealed({ a: 1 }); // false
+check_is_sealed(Object.seal({ a: 1 })); // true
+check_is_sealed({ a: 1 }); // false
 ```
 
-### `checkIsNotSealed`
+### `check_is_not_sealed`
 
 Checks if a given object is not sealed.
 
 ```ts
-checkIsNotSealed({ a: 1 }); // true
-checkIsSealed(Object.seal({ a: 1 })); // false
+check_is_not_sealed({ a: 1 }); // true
+check_is_not_sealed(Object.seal({ a: 1 })); // false
 ```
 
 ### Licence

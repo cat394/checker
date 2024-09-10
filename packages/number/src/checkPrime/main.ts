@@ -8,37 +8,37 @@
  *
  * @example
  * // Returns true
- * checkIsPrime(7); // 7 is a prime number
+ * check_is_prime(7); // 7 is a prime number
  *
  * @example
  * // Returns false
- * checkIsPrime(10); // 10 is not a prime number (divisible by 2 and 5)
+ * check_is_prime(10); // 10 is not a prime number (divisible by 2 and 5)
  */
-export const checkIsPrime = (num: number): boolean => {
-  if (num <= 1) return false;
-  if (num === 2) return true;
-  for (let i = 2; i < Math.sqrt(num) + 1; i++) {
-    if (num % i === 0) return false;
-  }
-  return true;
+export const check_is_prime = (num: number): boolean => {
+	if (num <= 1) return false;
+	if (num === 2) return true;
+	for (let i = 2; i < Math.sqrt(num) + 1; i++) {
+		if (num % i === 0) return false;
+	}
+	return true;
 };
 
 /**
  * Checks if a given number is not a prime number.
  *
- * This is the inverse of `checkIsPrime`.
+ * This is the inverse of `check_is_prime`.
  *
  * @param {number} num - The number to check.
  * @returns {boolean} True if the number is not a prime number, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotPrime(10); // 10 is not a prime number (divisible by 2 and 5)
+ * check_is_not_prime(10); // 10 is not a prime number (divisible by 2 and 5)
  *
  * @example
  * // Returns false
- * checkIsNotPrime(7); // 7 is a prime number
+ * check_is_not_prime(7); // 7 is a prime number
  */
-export const checkIsNotPrime = (num: number): boolean => {
-  return !checkIsPrime(num);
+export const check_is_not_prime = (num: number): boolean => {
+	return !check_is_prime(num);
 };

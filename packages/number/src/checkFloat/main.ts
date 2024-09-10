@@ -6,32 +6,32 @@
  *
  * @example
  * // Returns true
- * checkIsFloat(4.5); // 4.5 is a floating-point number
+ * check_is_float(4.5); // 4.5 is a floating-point number
  *
  * @example
  * // Returns false
- * checkIsFloat(4); // 4 is an integer, not a floating-point number
+ * check_is_float(4); // 4 is an integer, not a floating-point number
  */
-export const checkIsFloat = (num: number): boolean => {
-  return num % 1 !== 0;
+export const check_is_float = (num: number): boolean => {
+	return num % 1 !== 0;
 };
 
 /**
  * Checks if the given number is not a floating-point number (i.e., it is an integer).
  *
- * This is the inverse of `checkIsFloat`.
+ * This is the inverse of `check_is_float`.
  *
  * @param {number} num - The number to check.
  * @returns {boolean} True if the number is not a floating-point number, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotFloat(4); // 4 is an integer
+ * check_is_not_float(4); // 4 is an integer
  *
  * @example
  * // Returns false
- * checkIsNotFloat(4.5); // 4.5 is a floating-point number
+ * check_is_not_float(4.5); // 4.5 is a floating-point number
  */
-export const checkIsNotFloat = (num: number): boolean => {
-  return !checkIsFloat(num);
+export const check_is_not_float = (num: number): boolean => {
+	return !check_is_float(num);
 };

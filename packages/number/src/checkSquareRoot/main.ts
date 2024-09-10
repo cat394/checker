@@ -9,20 +9,20 @@
  *
  * @example
  * // Returns true
- * checkIsSquareRootOf(3, 9); // 3 is the square root of 9
+ * check_is_square_root(3, 9); // 3 is the square root of 9
  *
  * @example
  * // Returns false
- * checkIsSquareRootOf(4, 20); // 4 is not the square root of 20
+ * check_is_square_root(4, 20); // 4 is not the square root of 20
  */
-export const checkIsSquareRoot = (num: number, target: number): boolean => {
-  return num === Math.sqrt(target);
+export const check_is_square_root = (num: number, target: number): boolean => {
+	return num === Math.sqrt(target);
 };
 
 /**
  * Checks if a given number is not the square root of the target number.
  *
- * This is the inverse of `checkIsSquareRootOf`.
+ * This is the inverse of `check_is_square_root`.
  *
  * @param {number} num - The number to check.
  * @param {number} target - The target number to compare against.
@@ -30,12 +30,15 @@ export const checkIsSquareRoot = (num: number, target: number): boolean => {
  *
  * @example
  * // Returns true
- * checkIsNotSquareRootOf(4, 20); // 4 is not the square root of 20
+ * check_is_not_square_root(4, 20); // 4 is not the square root of 20
  *
  * @example
  * // Returns false
- * checkIsNotSquareRootOf(3, 9); // 3 is the square root of 9
+ * check_is_not_square_root(3, 9); // 3 is the square root of 9
  */
-export const checkIsNotSquareRoot = (num: number, target: number): boolean => {
-  return !checkIsSquareRoot(num, target);
+export const check_is_not_square_root = (
+	num: number,
+	target: number
+): boolean => {
+	return !check_is_square_root(num, target);
 };

@@ -11,23 +11,23 @@ import type { Constructor } from "../types.ts";
  *
  * @example
  * // Returns true
- * checkIsInstance(new Date(), Date); // The object is an instance of Date
+ * check_is_instace(new Date(), Date); // The object is an instance of Date
  *
  * @example
  * // Returns false
- * checkIsInstance({}, Date); // The object is not an instance of Date
+ * check_is_instace({}, Date); // The object is not an instance of Date
  */
-export const checkIsInstance = <T extends Constructor>(
-  value: unknown,
-  constructor: T,
+export const check_is_instace = <T extends Constructor>(
+	value: unknown,
+	constructor: T
 ): value is InstanceType<Constructor> => {
-  return value instanceof constructor;
+	return value instanceof constructor;
 };
 
 /**
  * Checks if a given object is not an instance of a specified constructor.
  *
- * This is the inverse of `checkIsInstance`.
+ * This is the inverse of `check_is_instace`.
  *
  * @param {unknown} value - The object to check.
  * @param {Constructor} constructor - The constructor function or class to check against.
@@ -35,15 +35,18 @@ export const checkIsInstance = <T extends Constructor>(
  *
  * @example
  * // Returns true
- * checkIsNotInstance({}, Date); // The object is not an instance of Date
+ * check_is_not_instance({}, Date); // The object is not an instance of Date
  *
  * @example
  * // Returns false
- * checkIsNotInstance(new Date(), Date); // The object is an instance of Date
+ * check_is_not_instance(new Date(), Date); // The object is an instance of Date
  */
-export const checkIsNotInstance = <T1 extends unknown, T2 extends Constructor>(
-  value: T1,
-  constructor: T2,
+export const check_is_not_instance = <
+	T1 extends unknown,
+	T2 extends Constructor
+>(
+	value: T1,
+	constructor: T2
 ): value is Exclude<T1, T2> => {
-  return !checkIsInstance(value, constructor);
+	return !check_is_instace(value, constructor);
 };

@@ -8,32 +8,32 @@
  *
  * @example
  * // Returns true
- * checkIsPositive(5); // 5 is a positive number
+ * check_is_positive(5); // 5 is a positive number
  *
  * @example
  * // Returns false
- * checkIsPositive(-3); // -3 is not a positive number
+ * check_is_positive(-3); // -3 is not a positive number
  */
-export const checkIsPositive = (num: number): boolean => {
-  return num > 0;
+export const check_is_positive = (num: number): boolean => {
+	return num > 0;
 };
 
 /**
  * Checks if a given number is not positive.
  *
- * This is the inverse of `checkIsPositive`.
+ * This is the inverse of `check_is_positive`.
  *
  * @param {number} num - The number to check.
  * @returns {boolean} True if the number is not positive, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotPositive(-3); // -3 is not a positive number
+ * check_is_not_positive(-3); // -3 is not a positive number
  *
  * @example
  * // Returns false
- * checkIsNotPositive(5); // 5 is a positive number
+ * check_is_not_positive(5); // 5 is a positive number
  */
-export const checkIsNotPositive = (num: number): boolean => {
-  return !checkIsPositive(num);
+export const check_is_not_positive = (num: number): boolean => {
+	return !check_is_positive(num);
 };

@@ -11,23 +11,23 @@
  *
  * @example
  * // Returns true
- * checkHasPrefix('hello world', 'hello'); // The string starts with 'hello'
+ * check_has_prefix('hello world', 'hello'); // The string starts with 'hello'
  *
  * @example
  * // Returns false
- * checkHasPrefix('hello world', 'world'); // The string does not start with 'world'
+ * check_has_prefix('hello world', 'world'); // The string does not start with 'world'
  */
-export const checkHasPrefix = <Prefix extends string>(
-  str: string,
-  prefix: Prefix,
+export const check_has_prefix = <Prefix extends string>(
+	str: string,
+	prefix: Prefix
 ): str is `${Prefix}${string}` => {
-  return str.startsWith(prefix);
+	return str.startsWith(prefix);
 };
 
 /**
  * Checks if a given string does not have a specific prefix.
  *
- * This is the inverse of `checkHasPrefix`.
+ * This is the inverse of `check_has_prefix`.
  *
  * @param {string} str - The string to check.
  * @param {string} prefix - The prefix to check against.
@@ -35,15 +35,15 @@ export const checkHasPrefix = <Prefix extends string>(
  *
  * @example
  * // Returns true
- * checkDoesNotHavePrefix('hello world', 'world'); // The string does not start with 'world'
+ * check_does_not_have_prefix('hello world', 'world'); // The string does not start with 'world'
  *
  * @example
  * // Returns false
- * checkDoesNotHavePrefix('hello world', 'hello'); // The string starts with 'hello'
+ * check_does_not_have_prefix('hello world', 'hello'); // The string starts with 'hello'
  */
-export const checkDoesNotHavePrefix = (
-  str: string,
-  prefix: string,
+export const check_does_not_have_prefix = (
+	str: string,
+	prefix: string
 ): boolean => {
-  return !checkHasPrefix(str, prefix);
+	return !check_has_prefix(str, prefix);
 };

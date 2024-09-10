@@ -7,20 +7,20 @@
  *
  * @example
  * // Returns true
- * checkArrayHasValue([1, 2, 3], 2); // The array contains the value 2
+ * check_array_has_value([1, 2, 3], 2); // The array contains the value 2
  *
  * @example
  * // Returns false
- * checkArrayHasValue([1, 2, 3], 4); // The array does not contain the value 4
+ * check_array_has_value([1, 2, 3], 4); // The array does not contain the value 4
  */
-export const checkArrayHasValue = <T>(array: T[], value: T): boolean => {
-  return array.includes(value);
+export const check_array_has_value = <T>(array: T[], value: T): boolean => {
+	return array.includes(value);
 };
 
 /**
  * Checks if an array does not contain a specific value.
  *
- * This is the inverse of `checkArrayContainsValue`.
+ * This is the inverse of `check_array_has_value`.
  *
  * @param {T[]} array - The array to check.
  * @param {T} value - The value to search for in the array.
@@ -28,15 +28,15 @@ export const checkArrayHasValue = <T>(array: T[], value: T): boolean => {
  *
  * @example
  * // Returns true
- * checkArrayDoesNotHaveValue([1, 2, 3], 4); // The array does not contain the value 4
+ * check_array_does_not_have_value([1, 2, 3], 4); // The array does not contain the value 4
  *
  * @example
  * // Returns false
- * checkArrayDoesNotHaveValue([1, 2, 3], 2); // The array contains the value 2
+ * check_array_does_not_have_value([1, 2, 3], 2); // The array contains the value 2
  */
-export const checkArrayDoesNotHaveValue = <T>(
-  array: T[],
-  value: T,
+export const check_array_does_not_have_value = <T>(
+	array: T[],
+	value: T
 ): boolean => {
-  return !checkArrayHasValue(array, value);
+	return !check_array_has_value(array, value);
 };

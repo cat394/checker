@@ -11,24 +11,24 @@
  *
  * @example
  * // Returns true
- * checkIsWithinRange(5, 1, 10); // 5 is within the range [1, 10]
+ * check_is_within_range(5, 1, 10); // 5 is within the range [1, 10]
  *
  * @example
  * // Returns false
- * checkIsWithinRange(15, 1, 10); // 15 is not within the range [1, 10]
+ * check_is_within_range(15, 1, 10); // 15 is not within the range [1, 10]
  */
-export const checkIsWithinRange = (
-  num: number,
-  min: number,
-  max: number,
+export const check_is_within_range = (
+	num: number,
+	min: number,
+	max: number
 ): boolean => {
-  return num >= min && num <= max;
+	return num >= min && num <= max;
 };
 
 /**
  * Checks if a given number is not within a specified range.
  *
- * This is the inverse of `checkIsWithinRange`.
+ * This is the inverse of `check_is_within_range`.
  *
  * The function evaluates whether `num` is less than `min` or greater than `max`.
  *
@@ -39,16 +39,16 @@ export const checkIsWithinRange = (
  *
  * @example
  * // Returns true
- * checkIsNotWithinRange(15, 1, 10); // 15 is not within the range [1, 10]
+ * check_is_not_within_range(15, 1, 10); // 15 is not within the range [1, 10]
  *
  * @example
  * // Returns false
- * checkIsNotWithinRange(5, 1, 10); // 5 is within the range [1, 10]
+ * check_is_not_within_range(5, 1, 10); // 5 is within the range [1, 10]
  */
-export const checkIsNotWithinRange = (
-  num: number,
-  min: number,
-  max: number,
+export const check_is_not_within_range = (
+	num: number,
+	min: number,
+	max: number
 ): boolean => {
-  return !checkIsWithinRange(num, min, max);
+	return !check_is_within_range(num, min, max);
 };

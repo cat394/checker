@@ -9,23 +9,23 @@
  *
  * @example
  * // Returns true
- * checkIsCleanlyDivisible(10, 2); // 10 is cleanly divisible by 2
+ * check_is_cleanly_disible(10, 2); // 10 is cleanly divisible by 2
  *
  * @example
  * // Returns false
- * checkIsCleanlyDivisible(10, 3); // 10 is not cleanly divisible by 3
+ * check_is_cleanly_disible(10, 3); // 10 is not cleanly divisible by 3
  */
-export const checkIsCleanlyDivisible = (
-  num: number,
-  divisor: number,
+export const check_is_cleanly_disible = (
+	num: number,
+	divisor: number
 ): boolean => {
-  return num % divisor === 0;
+	return num % divisor === 0;
 };
 
 /**
  * Checks if a given number is not cleanly divisible by a divisor.
  *
- * This is the inverse of `checkIsCleanlyDivisible`.
+ * This is the inverse of `check_is_cleanly_disible`.
  *
  * @param {number} num - The number to check.
  * @param {number} divisor - The divisor to check against.
@@ -33,15 +33,15 @@ export const checkIsCleanlyDivisible = (
  *
  * @example
  * // Returns true
- * checkIsNotCleanlyDivisible(10, 3); // 10 is not cleanly divisible by 3
+ * check_is_not_cleanly_disible(10, 3); // 10 is not cleanly divisible by 3
  *
  * @example
  * // Returns false
- * checkIsNotCleanlyDivisible(10, 2); // 10 is cleanly divisible by 2
+ * check_is_not_cleanly_disible(10, 2); // 10 is cleanly divisible by 2
  */
-export const checkIsNotCleanlyDivisible = (
-  num: number,
-  divisor: number,
+export const check_is_not_cleanly_disible = (
+	num: number,
+	divisor: number
 ): boolean => {
-  return !checkIsCleanlyDivisible(num, divisor);
+	return !check_is_cleanly_disible(num, divisor);
 };

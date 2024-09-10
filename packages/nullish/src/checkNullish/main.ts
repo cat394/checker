@@ -1,6 +1,6 @@
 import type { Nullish } from "../types.ts";
-import { checkIsNull } from "../checkNull/main.ts";
-import { checkIsUndefined } from "../checkUndefined/main.ts";
+import { check_is_null } from "../checkNull/main.ts";
+import { check_is_undefined } from "../checkUndefined/main.ts";
 
 /**
  * Checks if the given value is nullish (either `null` or `undefined`).
@@ -10,42 +10,42 @@ import { checkIsUndefined } from "../checkUndefined/main.ts";
  *
  * @example
  * // Returns true
- * checkIsNullish(null); // The value is null
+ * check_is_nullish(null); // The value is null
  *
  * @example
  * // Returns true
- * checkIsNullish(undefined); // The value is undefined
+ * check_is_nullish(undefined); // The value is undefined
  *
  * @example
  * // Returns false
- * checkIsNullish(0); // The value is not nullish, just falsy
+ * check_is_nullish(0); // The value is not nullish, just falsy
  */
-export const checkIsNullish = <T>(value: T): value is Extract<T, Nullish> => {
-  return checkIsNull(value) || checkIsUndefined(value);
+export const check_is_nullish = <T>(value: T): value is Extract<T, Nullish> => {
+	return check_is_null(value) || check_is_undefined(value);
 };
 
 /**
  * Checks if the given value is not nullish (neither `null` nor `undefined`).
  *
- * This is the inverse of `checkIsNullish`.
+ * This is the inverse of `check_is_nullish`.
  *
  * @param {T} value - The value to check.
  * @returns {value is Exclude<T, Nullish>} True if the value is neither `null` nor `undefined`, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotNullish(0); // The value is not nullish, even though it's falsy
+ * check_is_not_nullish(0); // The value is not nullish, even though it's falsy
  *
  * @example
  * // Returns false
- * checkIsNotNullish(null); // The value is null
+ * check_is_not_nullish(null); // The value is null
  *
  * @example
  * // Returns false
- * checkIsNotNullish(undefined); // The value is undefined
+ * check_is_not_nullish(undefined); // The value is undefined
  */
-export const checkIsNotNullish = <T>(
-  value: T,
+export const check_is_not_nullish = <T>(
+	value: T
 ): value is Exclude<T, Nullish> => {
-  return !checkIsNullish(value);
+	return !check_is_nullish(value);
 };

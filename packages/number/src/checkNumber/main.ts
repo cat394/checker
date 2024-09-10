@@ -6,14 +6,14 @@
  *
  * @example
  * // Returns true
- * checkIsNumber(42); // The value is a number
+ * check_is_number(42); // The value is a number
  *
  * @example
  * // Returns false
- * checkIsNumber("42"); // The value is a string, not a number
+ * check_is_number("42"); // The value is a string, not a number
  */
-export const checkIsNumber = (value: unknown): value is number => {
-  return typeof value === "number";
+export const check_is_number = (value: unknown): value is number => {
+	return typeof value === "number";
 };
 
 /**
@@ -26,12 +26,14 @@ export const checkIsNumber = (value: unknown): value is number => {
  *
  * @example
  * // Returns true
- * checkIsNotNumber("42"); // The value is a string, not a number
+ * check_is_not_number("42"); // The value is a string, not a number
  *
  * @example
  * // Returns false
- * checkIsNotNumber(42); // The value is a number
+ * check_is_not_number(42); // The value is a number
  */
-export const checkIsNotNumber = <T>(value: T): value is Exclude<T, number> => {
-  return !checkIsNumber(value);
+export const check_is_not_number = <T>(
+	value: T
+): value is Exclude<T, number> => {
+	return !check_is_number(value);
 };

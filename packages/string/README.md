@@ -40,226 +40,226 @@ bunx jsr add @checker/string
 
 ## Functions
 
-### `checkIsAlphanumeric`
+### `check_is_alphanumeric`
 
 Checks if a given string is alphanumeric.
 
 ```ts
-checkIsAlphanumeric("abc123"); // true, The string contains only letters and numbers
-checkIsAlphanumeric("abc123!"); // false, The string contains a special character '!'
+check_is_alphanumeric("abc123"); // true, The string contains only letters and numbers
+check_is_alphanumeric("abc123!"); // false, The string contains a special character '!'
 ```
 
-### `checkIsNotAlphanumeric`
+### `check_is_not_alphanumeric`
 
 Checks if a given string is not alphanumeric.
 
 ```ts
-checkIsNotAlphanumeric("abc123!"); // true, The string contains a special character '!'
-checkIsNotAlphanumeric("abc123"); // false
+check_is_not_alphanumeric("abc123!"); // true, The string contains a special character '!'
+check_is_not_alphanumeric("abc123"); // false
 ```
 
-### `checkIsAnyNumeric`
+### `check_is_any_numeric`
 
 Checks if a given string is numeric.
 
 ```ts
-checkIsAnyNumeric("123"); // true
-checkIsAnyNumeric("3.14"); // true
-checkIsAnyNumeric("Infinity"); // true
-checkIsAnyNumeric(""); // true
+check_is_any_numeric("123"); // true
+check_is_any_numeric("3.14"); // true
+check_is_any_numeric("Infinity"); // true
+check_is_any_numeric(""); // true
 
-checkIsAnyNumeric("abc"); // false
+check_is_any_numeric("abc"); // false
 ```
 
-### `checkIsNotAnyNumeric`
+### `check_is_not_any_numeric`
 
 Checks if a given string is not numeric.
 
 ```ts
-checkIsAnyNumeric("abc"); // true
+check_is_not_any_numeric("abc"); // true
 
-checkIsAnyNumeric("123"); // false
-checkIsAnyNumeric("3.14"); // false
-checkIsAnyNumeric("Infinity"); // false
-checkIsAnyNumeric(""); // false
+check_is_not_any_numeric("123"); // false
+check_is_not_any_numeric("3.14"); // false
+check_is_not_any_numeric("Infinity"); // false
+check_is_not_any_numeric(""); // false
 ```
 
-### `checkIsBinary`
+### `check_is_binary`
 
 Checks if a given string represents a binary number.
 
 ```ts
-checkIsBinary("0b1010"); // true
+check_is_binary("0b1010"); // true
 
-checkIsBinary("hello"); // false
-checkIsBinary("1010"); // false
+check_is_binary("hello"); // false
+check_is_binary("1010"); // false
 ```
 
-### `checkIsEmailFormat`
+### `check_is_email_format`
 
 Checks if a given string is in email format.
 
 ```ts
-checkIsEmailFormat("example@test.com"); // true
+check_is_email_format("example@test.com"); // true
 
-checkIsEmailFormat("invalid-email"); // false
-checkIsEmailFormat("example@.com"); // false
+check_is_email_format("invalid-email"); // false
+check_is_email_format("example@.com"); // false
 ```
 
-### `checkIsNotEmailFormat`
+### `check_is_not_email_format`
 
 Checks if a given string is not in email format.
 
 ```ts
-checkIsNotEmailFormat("invalid-email"); // true
-checkIsNotEmailFormat("example@.com"); // true
+check_is_not_email_format("invalid-email"); // true
+check_is_not_email_format("example@.com"); // true
 
-checkIsNotEmailFormat("example@test.com"); // false
+check_is_not_email_format("example@test.com"); // false
 ```
 
-### `checkIsEmptyString`
+### `check_is_empty_string`
 
 Checks if a given string is empty.
 
 ```ts
-checkIsEmptyString(""); // true
+check_is_empty_string(""); // true
 
-checkIsEmptyString("hello"); // false
+check_is_empty_string("hello"); // false
 ```
 
-### `checkIsNotEmptyString`
+### `check_is_not_empty_string`
 
 Checks if a given string is not empty.
 
 ```ts
-checkIsNotEmptyString("hello"); // true
+check_is_not_empty_string("hello"); // true
 
-checkIsNotEmptyString(""); // false
+check_is_not_empty_string(""); // false
 ```
 
-### `checkIsEnterKey`
+### `check_is_enter_key`
 
 Checks if a given string represents the "Enter" key.
 
 This was created to check if the event.key of a DOM event is Enter.
 
 ```ts
-checkIsEnterKey("Enter"); // true
+check_is_enter_key("Enter"); // true
 
-checkIsEnterKey("enter"); // false
-checkIsEnterKey("invalid-key"); // false
+check_is_enter_key("enter"); // false
+check_is_enter_key("invalid-key"); // false
 ```
 
 ```ts
 inputElement.addEventListener("keydown", (event) => {
-  if (checkIsEnterKey(event.key)) {
-    // When the Enter key is pressed
-  }
+	if (check_is_enter_key(event.key)) {
+		// When the Enter key is pressed
+	}
 });
 ```
 
-### `checkIsNotEnterKey`
+### `check_is_not_enter_key`
 
 Checks if a given string does not represent the "Enter" key.
 
 ```ts
-checkIsEnterKey("enter"); // true
-checkIsEnterKey("invalid-key"); // true
+check_is_not_enter_key("enter"); // true
+check_is_not_enter_key("invalid-key"); // true
 
-checkIsEnterKey("Enter"); // false
+check_is_not_enter_key("Enter"); // false
 ```
 
-### `checkIsExponentialNotation`
+### `check_is_exponential_notation`
 
 Checks if a given string is in exponential notation format.
 
 ```ts
-checkIsExponentialNotation("1e5"); // true
-checkIsExponentialNotation("3.14E-10"); // true
+check_is_exponential_notation("1e5"); // true
+check_is_exponential_notation("3.14E-10"); // true
 
-checkIsExponentialNotation("123"); // false
+check_is_exponential_notation("123"); // false
 ```
 
-### `checkIsNotExponentialNotation`
+### `check_is_not_exponential_notation`
 
 Checks if a given string is not in exponential notation format.
 
 ```ts
-checkIsNotExponentialNotation("123"); // true
+check_is_not_exponential_notation("123"); // true
 
-checkIsNotExponentialNotation("1e5"); // false
-checkIsNotExponentialNotation("3.14E-10"); // false
+check_is_not_exponential_notation("1e5"); // false
+check_is_not_exponential_notation("3.14E-10"); // false
 ```
 
-### `checkHasSubstring`
+### `check_has_substring`
 
 Checks if a given string has a specific substring.
 
 ```ts
-checkHasSubstring("hello world", "world"); // true
-checkHasSubstring("hello world", "planet"); // false
+check_has_substring("hello world", "world"); // true
+check_has_substring("hello world", "planet"); // false
 ```
 
-### `checkDoesNotHaveSubstring`
+### `check_does_not_have_substring`
 
 Checks if a given string does not have a specific substring.
 
 ```ts
-checkDoesNotHaveSubstring("hello world", "planet"); // true
-checkDoesNotHaveSubstring("hello world", "world"); // false
+check_does_not_have_substring("hello world", "planet"); // true
+check_does_not_have_substring("hello world", "world"); // false
 ```
 
-### `checkIsIndexFound`
+### `check_is_index_found`
 
 Checks if a given string includes a specific substring.
 
 ```ts
 const words = "hello world";
 const index = words.indexOf("world");
-checkIsIndexFound(index); // true
+check_is_index_found(index); // true
 
 const anotherIndex = words.indexOf("planet");
-checkIsIndexFound(anotherIndex); // false
+check_is_index_found(anotherIndex); // false
 ```
 
-### `checkIsIndexNotFound`
+### `check_is_not_index_found`
 
 Checks if a given index is not found.
 
 ```ts
 const words = "hello world";
 const index = words.indexOf("planet");
-checkIsIndexNotFound(index); // true
+check_is_not_index_found(index); // true
 
 const anotherIndex = words.indexOf("world");
-checkIsIndexFound(anotherIndex); // false
+check_is_index_found(anotherIndex); // false
 ```
 
-### `checkIsInfinityString`
+### `check_is_infinity_string`
 
 Checks if a given string represents infinity.
 
 ```ts
-checkIsInfinityString("Infinity"); // true
-checkIsInfinityString("-Infinity"); // true
+check_is_infinity_string("Infinity"); // true
+check_is_infinity_string("-Infinity"); // true
 
-checkIsInfinityString("infinity"); // false, the string is not exactly "Infinity" or "-Infinity"
-checkIsInfinityString("123"); // false
+check_is_infinity_string("infinity"); // false, the string is not exactly "Infinity" or "-Infinity"
+check_is_infinity_string("123"); // false
 ```
 
-### `checkIsNotInfinityString`
+### `check_is_not_infinity_string`
 
 Checks if a given string does not represent infinity.
 
 ```ts
-checkIsInfinityString("infinity"); // true
-checkIsInfinityString("123"); // true
+check_is_not_infinity_string("infinity"); // true
+check_is_not_infinity_string("123"); // true
 
-checkIsInfinityString("Infinity"); // false
-checkIsInfinityString("-Infinity"); // false
+check_is_not_infinity_string("Infinity"); // false
+check_is_not_infinity_string("-Infinity"); // false
 ```
 
-### `checkIsIntegerOrDecimalString`
+### `check_is_integer_or_decimal_string`
 
 Checks if a given string is a numeric value.
 
@@ -268,193 +268,205 @@ optional negative signs and decimal points. The string can represent an integer
 or a floating-point number.
 
 ```ts
-checkIsIntegerOrDecimalString("123"); // true
-checkIsIntegerOrDecimalString("1.1"); // true
+check_is_integer_or_decimal_string("123"); // true
+check_is_integer_or_decimal_string("1.1"); // true
 
-checkIsIntegerOrDecimalString("123abc"); // false
-checkIsIntegerOrDecimalString("hello"); // false
+check_is_integer_or_decimal_string("123abc"); // false
+check_is_integer_or_decimal_string("hello"); // false
 ```
 
-### `checkIsNotIntegerOrDecimalString`
+### `check_is_not_integer_or_decimal_string`
 
 Checks if a given string is not a numeric value.
 
 ```ts
-checkIsNotIntegerOrDecimalString("123abc"); // true
-checkIsNotIntegerOrDecimalString("hello"); // true
+check_is_not_integer_or_decimal_string("123abc"); // true
+check_is_not_integer_or_decimal_string("hello"); // true
 
-checkIsNotIntegerOrDecimalString("123"); // false
-checkIsNotIntegerOrDecimalString("1.1"); // false
+check_is_not_integer_or_decimal_string("123"); // false
+check_is_not_integer_or_decimal_string("1.1"); // false
 ```
 
-### `checkIsISO8601Format`
+### `check_is_ISO8601_format`
 
 Checks if a given string is in ISO 8601 format.
 
 ```ts
-checkIsISO8601Format("2023-08-30T10:30:00Z"); // true
-checkIsISO8601Format("2023-08-30T10:30:00+02:00"); // true
+check_is_ISO8601_format("2023-08-30T10:30:00Z"); // true
+check_is_ISO8601_format("2023-08-30T10:30:00+02:00"); // true
 
-checkIsISO8601Format("invalid-date"); // false
-checkIsISO8601Format("08/30/2023"); // false
+check_is_ISO8601_format("invalid-date"); // false
+check_is_ISO8601_format("08/30/2023"); // false
 ```
 
-### `checkHasPrefix`
+### `check_is_not_ISO8601_format`
+
+Checks if a given string is not in ISO 8601 format.
+
+```ts
+check_is_not_ISO8601_format("2023-08-30T10:30:00Z"); // true
+check_is_not_ISO8601_format("2023-08-30T10:30:00+02:00"); // true
+
+check_is_not_ISO8601_format("invalid-date"); // false
+check_is_Inot_SO8601_format("08/30/2023"); // false
+```
+
+### `check_has_prefix`
 
 Checks if a given string has a specific prefix.
 
 ```ts
-checkHasPrefix("hello world", "hello"); // true
+check_has_prefix("hello world", "hello"); // true
 
-checkHasPrefix("hello world", "world"); // false
+check_has_prefix("hello world", "world"); // false
 ```
 
-### `checkDoesNotHavePrefix`
+### `check_does_not_have_prefix`
 
 Checks if a given string does not have a specific prefix.
 
 ```ts
-checkDoesNotHavePrefix("hello world", "world"); // true
+check_does_not_have_prefix("hello world", "world"); // true
 
-checkDoesNotHavePrefix("hello world", "hello"); // false
+check_does_not_have_prefix("hello world", "hello"); // false
 ```
 
-### `checkHasSpecialCharacter`
+### `check_has_special_character`
 
 Checks if a given string contains any special characters.
 
 ```ts
-checkHasSpecialCharacter("hello@world"); // true
-checkHasSpecialCharacter("password123!"); // true
+check_has_special_character("hello@world"); // true
+check_has_special_character("password123!"); // true
 
-checkHasSpecialCharacter("hello world"); // false
-checkHasSpecialCharacter("123456"); // false
+check_has_special_character("hello world"); // false
+check_has_special_character("123456"); // false
 ```
 
-### `checkDoesNotHaveSpecialCharacter`
+### `check_does_not_have_special_character`
 
 Checks if a given string does not contain any special characters.
 
 ```ts
-checkDoesNotHasSpecialCharacter("hello world"); // true
-checkDoesNotHasSpecialCharacter("123456"); // true
+check_does_not_have_special_character("hello world"); // true
+check_does_not_have_special_character("123456"); // true
 
-checkDoesNotHaveSpecialCharacter("hello@world"); // false
-checkDoesNotHaveSpecialCharacter("password123!"); // false
+check_does_not_have_special_character("hello@world"); // false
+check_does_not_have_special_character("password123!"); // false
 ```
 
-### `checkIsSpecialNumeric`
+### `check_is_special_numeric`
 
 Checks if a given string is a special numeric value.
 
 ```ts
-checkIsSpecialNumeric("1e5"); // true
-checkIsSpecialNumeric("0b1010"); // true
-checkIsSpecialNumeric("Infinity"); // true
+check_is_special_numeric("1e5"); // true
+check_is_special_numeric("0b1010"); // true
+check_is_special_numeric("Infinity"); // true
 
-checkIsSpecialNumeric("123"); // false
-checkIsSpecialNumeric("hello"); // false
+check_is_special_numeric("123"); // false
+check_is_special_numeric("hello"); // false
 ```
 
-### `checkIsNotSpecialNumeric`
+### `check_is_not_special_numeric`
 
 Checks if a given string is not a special numeric value.
 
 ```ts
-checkIsNotSpecialNumeric("123"); // true
-checkIsNotSpecialNumeric("hello"); // true
+check_is_not_special_numeric("123"); // true
+check_is_not_special_numeric("hello"); // true
 
-checkIsNotSpecialNumeric("1e5"); // false
-checkIsNotSpecialNumeric("0b1010"); // false
-checkIsNotSpecialNumeric("Infinity"); // false
+check_is_not_special_numeric("1e5"); // false
+check_is_not_special_numeric("0b1010"); // false
+check_is_not_special_numeric("Infinity"); // false
 ```
 
-### `checkIsString`
+### `check_is_string`
 
 Checks if a given value is a string.
 
 ```ts
-checkIsString("hello world"); // true
+check_is_string("hello world"); // true
 
-checkIsString(123); // false
-checkIsString(true); // false
+check_is_string(123); // false
+check_is_string(true); // false
 ```
 
-### `checkIsNotString`
+### `check_is_not_string`
 
 Checks if a given value is not a string.
 
 ```ts
-checkIsNotString(123); // true
-checkIsNotString(true); // true
+check_is_not_string(123); // true
+check_is_not_string(true); // true
 
-checkIsNotString("hello world"); // false
+check_is_not_string("hello world"); // false
 ```
 
-### `checkHasSuffix`
+### `check_has_suffix`
 
 Checks if a given string ends with a specific suffix.
 
 ```ts
-checkHasSuffix("hello world", "world"); // true
-checkHasSuffix("hello world", "hello"); // false
+check_has_suffix("hello world", "world"); // true
+check_has_suffix("hello world", "hello"); // false
 ```
 
-### `checkDoesNotHaveSuffix`
+### `check_does_not_have_suffix`
 
 Checks if a given string does not end with a specific suffix.
 
 ```ts
-checkDoesNotHaveSuffix("hello world", "hello"); // true
-checkDoesNotHaveSuffix("hello world", "world"); // false
+check_does_not_have_suffix("hello world", "hello"); // true
+check_does_not_have_suffix("hello world", "world"); // false
 ```
 
-### `checkIsURLFormat`
+### `check_is_URL_format`
 
 Checks if a given string is in URL format.
 
 ```ts
-checkIsURLFormat("http://example.com"); // true
-checkIsURLFormat("https://example.com"); // true
-checkIsURLFormat("ftp://example.com"); // true
+check_is_URL_format("http://example.com"); // true
+check_is_URL_format("https://example.com"); // true
+check_is_URL_format("ftp://example.com"); // true
 
-checkIsURLFormat("invalid-url"); // false
-checkIsURLFormat("http://"); // false
+check_is_URL_format("invalid-url"); // false
+check_is_URL_format("http://"); // false
 ```
 
-### `checkIsNotURLFormat`
+### `check_is_not_URL_format`
 
 Checks if a given string is not in URL format.
 
 ```ts
-checkIsNotURLFormat("invalid-url"); // true
-checkIsNotURLFormat("http://"); // true
+check_is_not_URL_format("invalid-url"); // true
+check_is_not_URL_format("http://"); // true
 
-checkIsNotURLFormat("http://example.com"); // false
-checkIsNotURLFormat("https://example.com"); // false
-checkIsNotURLFormat("ftp://example.com"); // false
+check_is_not_URL_format("http://example.com"); // false
+check_is_not_URL_format("https://example.com"); // false
+check_is_not_URL_format("ftp://example.com"); // false
 ```
 
-### `checkIsUUIDFormat`
+### `check_is_UUID_format`
 
 Checks if a given string is in UUID format.
 
 ```ts
-checkIsUUIDFormat("123e4567-e89b-12d3-a456-426614174000"); // true
+check_is_UUID_format("123e4567-e89b-12d3-a456-426614174000"); // true
 
-checkIsUUIDFormat("invalid-uuid"); // false
-checkIsUUIDFormat("123e4567-e89b-12d3-a456-426614"); // false, this string is short.
+check_is_UUID_format("invalid-uuid"); // false
+check_is_UUID_format("123e4567-e89b-12d3-a456-426614"); // false, this string is short.
 ```
 
-### `checkIsNotUUIDFormat`
+### `check_is_not_UUID_format`
 
 Checks if a given string is not in UUID format.
 
 ```ts
-checkIsUUIDFormat("invalid-uuid"); // true
-checkIsUUIDFormat("123e4567-e89b-12d3-a456-42661417400"); // true
+check_is_not_UUID_format("invalid-uuid"); // true
+check_is_not_UUID_format("123e4567-e89b-12d3-a456-42661417400"); // true
 
-checkIsUUIDFormat("123e4567-e89b-12d3-a456-426614174000"); // false
+check_is_not_UUID_format("123e4567-e89b-12d3-a456-426614174000"); // false
 ```
 
 ### Licence

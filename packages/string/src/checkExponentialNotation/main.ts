@@ -9,33 +9,33 @@
  *
  * @example
  * // Returns true
- * checkIsExponentialNotation("1e5"); // The string "1e5" is in exponential notation
+ * check_is_exponential_notation("1e5"); // The string "1e5" is in exponential notation
  *
  * @example
  * // Returns false
- * checkIsExponentialNotation("123"); // The string "123" is not in exponential notation
+ * check_is_exponential_notation("123"); // The string "123" is not in exponential notation
  */
-export const checkIsExponentialNotation = (str: string): boolean => {
-  const exponentialRegex = /^[-+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)$/;
-  return exponentialRegex.test(str);
+export const check_is_exponential_notation = (str: string): boolean => {
+	const exponentialRegex = /^[-+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)$/;
+	return exponentialRegex.test(str);
 };
 
 /**
  * Checks if a given string is not in exponential notation format.
  *
- * This is the inverse of `checkIsExponentialNotation`.
+ * This is the inverse of `check_is_exponential_notation`.
  *
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is not in exponential notation, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotExponentialNotation("123"); // The string "123" is not in exponential notation
+ * check_is_not_exponential_notation("123"); // The string "123" is not in exponential notation
  *
  * @example
  * // Returns false
- * checkIsNotExponentialNotation("1e5"); // The string "1e5" is in exponential notation
+ * check_is_not_exponential_notation("1e5"); // The string "1e5" is in exponential notation
  */
-export const checkIsNotExponentialNotation = (str: string): boolean => {
-  return !checkIsExponentialNotation(str);
+export const check_is_not_exponential_notation = (str: string): boolean => {
+	return !check_is_exponential_notation(str);
 };

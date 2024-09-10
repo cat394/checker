@@ -1,50 +1,59 @@
 import { assertEquals } from "../../deps.ts";
-import { checkDoesNotHaveSubstring, checkHasSubstring } from "./main.ts";
+import { check_does_not_have_substring, check_has_substring } from "./main.ts";
 
-Deno.test("checkHasSubstring", async (t) => {
-  await t.step(
-    "should return true if the string includes the substring",
-    () => {
-      assertEquals(checkHasSubstring("hello world", "world"), true);
-      assertEquals(checkHasSubstring("hello", "ell"), true);
-      assertEquals(checkHasSubstring("typescript", "script"), true);
-      assertEquals(checkHasSubstring("openai", "pen"), true);
-      assertEquals(checkHasSubstring("check", "check"), true);
-    },
-  );
+Deno.test("check_has_substring", async (t) => {
+	await t.step(
+		"should return true if the string includes the substring",
+		() => {
+			assertEquals(check_has_substring("hello world", "world"), true);
+			assertEquals(check_has_substring("hello", "ell"), true);
+			assertEquals(check_has_substring("typescript", "script"), true);
+			assertEquals(check_has_substring("openai", "pen"), true);
+			assertEquals(check_has_substring("check", "check"), true);
+		}
+	);
 
-  await t.step(
-    "should return false if the string does not include the substring",
-    () => {
-      assertEquals(checkHasSubstring("hello world", "universe"), false);
-      assertEquals(checkHasSubstring("hello", "world"), false);
-      assertEquals(checkHasSubstring("typescript", "java"), false);
-      assertEquals(checkHasSubstring("openai", "closedai"), false);
-      assertEquals(checkHasSubstring("check", "cross"), false);
-    },
-  );
+	await t.step(
+		"should return false if the string does not include the substring",
+		() => {
+			assertEquals(check_has_substring("hello world", "universe"), false);
+			assertEquals(check_has_substring("hello", "world"), false);
+			assertEquals(check_has_substring("typescript", "java"), false);
+			assertEquals(check_has_substring("openai", "closedai"), false);
+			assertEquals(check_has_substring("check", "cross"), false);
+		}
+	);
 });
 
-Deno.test("checkDoesNotHaveSubstring", async (t) => {
-  await t.step(
-    "should return true if the string does not include the substring",
-    () => {
-      assertEquals(checkDoesNotHaveSubstring("hello world", "universe"), true);
-      assertEquals(checkDoesNotHaveSubstring("hello", "world"), true);
-      assertEquals(checkDoesNotHaveSubstring("typescript", "java"), true);
-      assertEquals(checkDoesNotHaveSubstring("openai", "closedai"), true);
-      assertEquals(checkDoesNotHaveSubstring("check", "cross"), true);
-    },
-  );
+Deno.test("check_does_not_have_substring", async (t) => {
+	await t.step(
+		"should return true if the string does not include the substring",
+		() => {
+			assertEquals(
+				check_does_not_have_substring("hello world", "universe"),
+				true
+			);
+			assertEquals(check_does_not_have_substring("hello", "world"), true);
+			assertEquals(check_does_not_have_substring("typescript", "java"), true);
+			assertEquals(check_does_not_have_substring("openai", "closedai"), true);
+			assertEquals(check_does_not_have_substring("check", "cross"), true);
+		}
+	);
 
-  await t.step(
-    "should return false if the string includes the substring",
-    () => {
-      assertEquals(checkDoesNotHaveSubstring("hello world", "world"), false);
-      assertEquals(checkDoesNotHaveSubstring("hello", "ell"), false);
-      assertEquals(checkDoesNotHaveSubstring("typescript", "script"), false);
-      assertEquals(checkDoesNotHaveSubstring("openai", "pen"), false);
-      assertEquals(checkDoesNotHaveSubstring("check", "check"), false);
-    },
-  );
+	await t.step(
+		"should return false if the string includes the substring",
+		() => {
+			assertEquals(
+				check_does_not_have_substring("hello world", "world"),
+				false
+			);
+			assertEquals(check_does_not_have_substring("hello", "ell"), false);
+			assertEquals(
+				check_does_not_have_substring("typescript", "script"),
+				false
+			);
+			assertEquals(check_does_not_have_substring("openai", "pen"), false);
+			assertEquals(check_does_not_have_substring("check", "check"), false);
+		}
+	);
 });

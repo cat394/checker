@@ -6,32 +6,32 @@
  *
  * @example
  * // Returns true
- * checkIsFalse(false); // The value is strictly false
+ * check_is_false(false); // The value is strictly false
  *
  * @example
  * // Returns false
- * checkIsFalse(0); // The value is not strictly false, but falsy
+ * check_is_false(0); // The value is not strictly false, but falsy
  */
-export const checkIsFalse = (value: unknown): value is false => {
-  return value === false;
+export const check_is_false = (value: unknown): value is false => {
+	return value === false;
 };
 
 /**
  * Checks if the given value is not strictly `false`.
  *
- * This is the inverse of `checkIsFalse`.
+ * This is the inverse of `check_is_false`.
  *
  * @param {T} value - The value to check.
  * @returns {value is Exclude<T, false>} True if the value is not strictly `false`, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotFalse(0); // The value is not strictly false, even though it's falsy
+ * check_is_not_false(0); // The value is not strictly false, even though it's falsy
  *
  * @example
  * // Returns false
- * checkIsNotFalse(false); // The value is strictly false
+ * check_is_not_false(false); // The value is strictly false
  */
-export const checkIsNotFalse = <T>(value: T): value is Exclude<T, false> => {
-  return !checkIsFalse(value);
+export const check_is_not_false = <T>(value: T): value is Exclude<T, false> => {
+	return !check_is_false(value);
 };

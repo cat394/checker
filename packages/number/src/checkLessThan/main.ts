@@ -7,20 +7,20 @@
  *
  * @example
  * // Returns true
- * checkIsLessThan(5, 10); // 5 is less than 10
+ * check_is_less_than(5, 10); // 5 is less than 10
  *
  * @example
  * // Returns false
- * checkIsLessThan(15, 10); // 15 is not less than 10
+ * check_is_less_than(15, 10); // 15 is not less than 10
  */
-export const checkIsLessThan = (num: number, threshold: number): boolean => {
-  return num < threshold;
+export const check_is_less_than = (num: number, threshold: number): boolean => {
+	return num < threshold;
 };
 
 /**
  * Checks if a number is not less than a specified threshold.
  *
- * This is the inverse of `checkIsLessThan`.
+ * This is the inverse of `check_is_less_than`.
  *
  * @param {number} num - The number to check.
  * @param {number} threshold - The threshold to compare against.
@@ -28,12 +28,15 @@ export const checkIsLessThan = (num: number, threshold: number): boolean => {
  *
  * @example
  * // Returns true
- * checkIsNotLessThan(15, 10); // 15 is not less than 10
+ * check_is_not_less_than(15, 10); // 15 is not less than 10
  *
  * @example
  * // Returns false
- * checkIsNotLessThan(5, 10); // 5 is less than 10
+ * check_is_not_less_than(5, 10); // 5 is less than 10
  */
-export const checkIsNotLessThan = (num: number, threshold: number): boolean => {
-  return !checkIsLessThan(num, threshold);
+export const check_is_not_less_than = (
+	num: number,
+	threshold: number
+): boolean => {
+	return !check_is_less_than(num, threshold);
 };

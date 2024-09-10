@@ -1,38 +1,41 @@
 import { assertEquals } from "../../deps.ts";
-import { checkIsNotSpecialNumeric, checkIsSpecialNumeric } from "./main.ts";
+import {
+	check_is_not_special_numeric,
+	check_is_special_numeric,
+} from "./main.ts";
 
-Deno.test("checkStringIsSpecialNumeric", async (t) => {
-  await t.step("should return true for special numeric strings", () => {
-    assertEquals(checkIsSpecialNumeric("1e5"), true); // exponential notation
-    assertEquals(checkIsSpecialNumeric("0b101"), true); // binary notation
-    assertEquals(checkIsSpecialNumeric("Infinity"), true); // infinity
-    assertEquals(checkIsSpecialNumeric("-Infinity"), true); // negative infinity
-  });
+Deno.test("check_is_special_numeric", async (t) => {
+	await t.step("should return true for special numeric strings", () => {
+		assertEquals(check_is_special_numeric("1e5"), true); // exponential notation
+		assertEquals(check_is_special_numeric("0b101"), true); // binary notation
+		assertEquals(check_is_special_numeric("Infinity"), true); // infinity
+		assertEquals(check_is_special_numeric("-Infinity"), true); // negative infinity
+	});
 
-  await t.step("should return false for non-special numeric strings", () => {
-    assertEquals(checkIsSpecialNumeric("123"), false);
-    assertEquals(checkIsSpecialNumeric("3.14"), false);
-    assertEquals(checkIsSpecialNumeric("abc"), false);
-    assertEquals(checkIsSpecialNumeric("0x1F"), false); // hexadecimal is not considered special here
-    assertEquals(checkIsSpecialNumeric(" "), false);
-    assertEquals(checkIsSpecialNumeric(""), false);
-  });
+	await t.step("should return false for non-special numeric strings", () => {
+		assertEquals(check_is_special_numeric("123"), false);
+		assertEquals(check_is_special_numeric("3.14"), false);
+		assertEquals(check_is_special_numeric("abc"), false);
+		assertEquals(check_is_special_numeric("0x1F"), false); // hexadecimal is not considered special here
+		assertEquals(check_is_special_numeric(" "), false);
+		assertEquals(check_is_special_numeric(""), false);
+	});
 });
 
-Deno.test("checkStringIsNotSpecialNumeric", async (t) => {
-  await t.step("should return true for non-special numeric strings", () => {
-    assertEquals(checkIsNotSpecialNumeric("123"), true);
-    assertEquals(checkIsNotSpecialNumeric("3.14"), true);
-    assertEquals(checkIsNotSpecialNumeric("abc"), true);
-    assertEquals(checkIsNotSpecialNumeric("0x1F"), true); // hexadecimal is not considered special here
-    assertEquals(checkIsNotSpecialNumeric(" "), true);
-    assertEquals(checkIsNotSpecialNumeric(""), true);
-  });
+Deno.test("check_is_not_special_numeric", async (t) => {
+	await t.step("should return true for non-special numeric strings", () => {
+		assertEquals(check_is_not_special_numeric("123"), true);
+		assertEquals(check_is_not_special_numeric("3.14"), true);
+		assertEquals(check_is_not_special_numeric("abc"), true);
+		assertEquals(check_is_not_special_numeric("0x1F"), true); // hexadecimal is not considered special here
+		assertEquals(check_is_not_special_numeric(" "), true);
+		assertEquals(check_is_not_special_numeric(""), true);
+	});
 
-  await t.step("should return false for special numeric strings", () => {
-    assertEquals(checkIsNotSpecialNumeric("1e5"), false); // exponential notation
-    assertEquals(checkIsNotSpecialNumeric("0b101"), false); // binary notation
-    assertEquals(checkIsNotSpecialNumeric("Infinity"), false); // infinity
-    assertEquals(checkIsNotSpecialNumeric("-Infinity"), false); // negative infinity
-  });
+	await t.step("should return false for special numeric strings", () => {
+		assertEquals(check_is_not_special_numeric("1e5"), false); // exponential notation
+		assertEquals(check_is_not_special_numeric("0b101"), false); // binary notation
+		assertEquals(check_is_not_special_numeric("Infinity"), false); // infinity
+		assertEquals(check_is_not_special_numeric("-Infinity"), false); // negative infinity
+	});
 });

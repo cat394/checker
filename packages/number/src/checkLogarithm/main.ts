@@ -10,24 +10,24 @@
  *
  * @example
  * // Returns true
- * checkIsLogarithm(4, 2, 16); // log2(16) equals 4
+ * check_is_logarithm(4, 2, 16); // log2(16) = 4
  *
  * @example
  * // Returns false
- * checkIsLogarithm(3, 2, 16); // log2(16) equals 4, so 3 does not match
+ * check_is_logarithm(3, 2, 16); // log2(16) = 4, so 3 does not match
  */
-export const checkIsLogarithm = (
-  num: number,
-  base: number,
-  target: number,
+export const check_is_logarithm = (
+	num: number,
+	base: number,
+	target: number
 ): boolean => {
-  return num === Math.log(target) / Math.log(base);
+	return num === Math.log(target) / Math.log(base);
 };
 
 /**
  * Checks if a given number does not match the logarithm of a target with a specified base.
  *
- * This is the inverse of `checkMatchesLogarithm`.
+ * This is the inverse of `check_is_logarithm`.
  *
  * @param {number} num - The number to check.
  * @param {number} base - The base of the logarithm.
@@ -36,16 +36,16 @@ export const checkIsLogarithm = (
  *
  * @example
  * // Returns true
- * checkIsNotLogarithm(3, 2, 16); // log2(16) equals 4, so 3 does not match
+ * check_is_not_logarithm(3, 2, 16); // log2(16) = 4, so 3 does not match
  *
  * @example
  * // Returns false
- * checkIsNotLogarithm(4, 2, 16); // log2(16) equals 4
+ * check_is_not_logarithm(4, 2, 16); // log2(16) = 4
  */
-export const checkIsNotLogarithm = (
-  num: number,
-  base: number,
-  target: number,
+export const check_is_not_logarithm = (
+	num: number,
+	base: number,
+	target: number
 ): boolean => {
-  return !checkIsLogarithm(num, base, target);
+	return !check_is_logarithm(num, base, target);
 };

@@ -9,21 +9,21 @@
  * @example
  * // Returns true
  * const sealedObj = Object.seal({a: 1});
- * checkIsSealed(sealedObj); // The object is sealed
+ * check_is_sealed(sealedObj); // The object is sealed
  *
  * @example
  * // Returns false
  * const obj = {a: 1};
- * checkIsSealed(obj); // The object is not sealed
+ * check_is_sealed(obj); // The object is not sealed
  */
-export const checkIsSealed = (obj: object): boolean => {
-  return Object.isSealed(obj);
+export const check_is_sealed = (obj: object): boolean => {
+	return Object.isSealed(obj);
 };
 
 /**
  * Checks if a given object is not sealed.
  *
- * This is the inverse of `checkIsSealed`.
+ * This is the inverse of `check_is_sealed`.
  *
  * @param {object} obj - The object to check.
  * @returns {boolean} True if the object is not sealed, otherwise false.
@@ -31,13 +31,13 @@ export const checkIsSealed = (obj: object): boolean => {
  * @example
  * // Returns true
  * const obj = {a: 1};
- * checkIsNotSealed(obj); // The object is not sealed
+ * check_is_not_sealed(obj); // The object is not sealed
  *
  * @example
  * // Returns false
  * const sealedObj = Object.seal({a: 1});
- * checkIsNotSealed(sealedObj); // The object is sealed
+ * check_is_not_sealed(sealedObj); // The object is sealed
  */
-export const checkIsNotSealed = (obj: object): boolean => {
-  return !checkIsSealed(obj);
+export const check_is_not_sealed = (obj: object): boolean => {
+	return !check_is_sealed(obj);
 };

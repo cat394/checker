@@ -6,20 +6,20 @@
  *
  * @example
  * // Returns true
- * checkIsBoolean(true); // The value is a boolean
+ * check_is_boolean(true); // The value is a boolean
  *
  * @example
  * // Returns false
- * checkIsBoolean("true"); // The value is not a boolean
+ * check_is_boolean("true"); // The value is not a boolean
  */
-export const checkIsBoolean = (value: unknown): value is boolean => {
-  return typeof value === "boolean";
+export const check_is_boolean = (value: unknown): value is boolean => {
+	return typeof value === "boolean";
 };
 
 /**
  * Checks if the given value is not a boolean.
  *
- * This is the inverse of `checkIsBoolean`.
+ * This is the inverse of `check_is_boolean`.
  *
  * @param {T} value - The value to check.
  * @returns {value is Exclude<T, boolean>} True if the value is not a boolean, otherwise false.
@@ -32,8 +32,8 @@ export const checkIsBoolean = (value: unknown): value is boolean => {
  * // Returns false
  * checkIsNotBoolean(true); // The value is a boolean
  */
-export const checkIsNotBoolean = <T>(
-  value: T,
+export const check_is_not_boolean = <T>(
+	value: T
 ): value is Exclude<T, boolean> => {
-  return !checkIsBoolean(value);
+	return !check_is_boolean(value);
 };
