@@ -26,11 +26,11 @@ Examples:
   let value: Value = null;
 
   if (someCondition) {
-  	value = "hello";
+    value = "hello";
   }
 
   if (check_is_string(value)) {
-  	value; // value is Hello and this type is string
+    value; // value is Hello and this type is string
   }
   ```
 
@@ -42,7 +42,7 @@ Examples:
   const index = words.indexOf("hello");
 
   if (check_is_index_found(index)) {
-  	// When index is not -1
+    // When index is not -1
   }
   ```
 
@@ -53,7 +53,7 @@ Examples:
   const trimmed = value.trim();
 
   if (check_is_empty_string(trimmed)) {
-  	// When value is empty string
+    // When value is empty string
   }
   ```
 
@@ -98,10 +98,10 @@ Examples:
   const array = [1, 2, 3];
 
   const mapped = array.map((item, index) => {
-  	if (check_is_last_iteration(index, array)) {
-  		return item + 1;
-  	}
-  	return item;
+    if (check_is_last_iteration(index, array)) {
+      return item + 1;
+    }
+    return item;
   });
   // mapped = [1, 2, 4]
   ```
@@ -118,11 +118,11 @@ Examples:
   const value: Value = {};
 
   if (someCondition) {
-  	value["key"] = true;
+    value["key"] = true;
   }
 
   if (check_is_empty_object(value)) {
-  	// When value is empty object
+    // When value is empty object
   }
   ```
 
@@ -130,11 +130,11 @@ Examples:
   import { check_is_instance } from "@checker/object";
 
   try {
-  	// some action
+    // some action
   } catch (err) {
-  	if (check_is_instance(err, DatabaseError)) {
-  		// err is DatabaseError instance
-  	}
+    if (check_is_instance(err, DatabaseError)) {
+      // err is DatabaseError instance
+    }
   }
   ```
 
