@@ -9,29 +9,29 @@
  *
  * @example
  * // Returns true
- * checkHasSpecialCharacter('hello@world'); // The string contains the special character '@'
+ * check_has_special_character('hello@world'); // The string contains the special character '@'
  *
  * @example
  * // Returns true
- * checkHasSpecialCharacter('password123!'); // The string contains the special character '!'
+ * check_has_special_character('password123!'); // The string contains the special character '!'
  *
  * @example
  * // Returns true
- * checkHasSpecialCharacter('C:\\Program Files\\'); // The string contains the special characters '\\'
+ * check_has_special_character('C:\\Program Files\\'); // The string contains the special characters '\\'
  *
  * @example
  * // Returns true
- * checkHasSpecialCharacter('welcome-home'); // The string contains the special character '-'
+ * check_has_special_character('welcome-home'); // The string contains the special character '-'
  *
  * @example
  * // Returns false
- * checkHasSpecialCharacter('helloworld'); // The string contains only letters and no special characters
+ * check_has_special_character('helloworld'); // The string contains only letters and no special characters
  *
  * @example
  * // Returns false
- * checkHasSpecialCharacter('123456'); // The string contains only numbers and no special characters
+ * check_has_special_character('123456'); // The string contains only numbers and no special characters
  */
-export const checkHasSpecialCharacter = (str: string): boolean => {
+export const check_has_special_character = (str: string): boolean => {
   const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>~`'\-_=+\[\];/\\]/;
   return specialCharacterRegex.test(str);
 };
@@ -39,19 +39,19 @@ export const checkHasSpecialCharacter = (str: string): boolean => {
 /**
  * Checks if a given string does not contain any special characters.
  *
- * This is the inverse of `checkStringHasSpecialCharacter`.
+ * This is the inverse of `check_has_special_character`.
  *
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string does not contain special characters, otherwise false.
  *
  * @example
  * // Returns true
- * checkDoesNotHaveSpecialCharacter('helloworld'); // The string contains only letters and no special characters
+ * check_does_not_have_special_character('helloworld'); // The string contains only letters and no special characters
  *
  * @example
  * // Returns false
- * checkDoesNotHaveSpecialCharacter('hello@world'); // The string contains the special character '@'
+ * check_does_not_have_special_character('hello@world'); // The string contains the special character '@'
  */
-export const checkDoesNotHaveSpecialCharacter = (str: string): boolean => {
-  return !checkHasSpecialCharacter(str);
+export const check_does_not_have_special_character = (str: string): boolean => {
+  return !check_has_special_character(str);
 };

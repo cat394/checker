@@ -1,37 +1,37 @@
 import { assertEquals, assertType, type IsExact } from "../../deps.ts";
 import type { EmptyObject } from "../types.ts";
-import { checkIsEmptyObject, checkIsNotEmptyObject } from "./main.ts";
+import { check_is_empty_object, check_is_not_empty_object } from "./main.ts";
 
-Deno.test("checkIsEmptyObject", async (t) => {
+Deno.test("check_is_empty_object", async (t) => {
   await t.step("should return true for empty objects", () => {
-    assertEquals(checkIsEmptyObject({}), true); // Regular empty object
-    assertEquals(checkIsEmptyObject(Object.create(null)), true); // Object with no prototype
+    assertEquals(check_is_empty_object({}), true); // Regular empty object
+    assertEquals(check_is_empty_object(Object.create(null)), true); // Object with no prototype
   });
 
   await t.step("should return false for non-empty objects", () => {
-    assertEquals(checkIsEmptyObject({ key: "value" }), false); // Object with a key-value pair
-    assertEquals(checkIsEmptyObject({ a: 1 }), false); // Another non-empty object
-    assertEquals(checkIsEmptyObject(new Date()), false); // Date instance, considered non-empty
+    assertEquals(check_is_empty_object({ key: "value" }), false); // Object with a key-value pair
+    assertEquals(check_is_empty_object({ a: 1 }), false); // Another non-empty object
+    assertEquals(check_is_empty_object(new Date()), false); // Date instance, considered non-empty
   });
 
   await t.step("should narrow non-empty object type", () => {
     const value: object = {};
-    if (checkIsEmptyObject(value)) {
+    if (check_is_empty_object(value)) {
       assertType<IsExact<typeof value, EmptyObject>>(true);
     }
   });
 });
 
-Deno.test("checkIsNotEmptyObject", async (t) => {
+Deno.test("check_is_not_empty_object", async (t) => {
   await t.step("should return true for non-empty objects", () => {
-    assertEquals(checkIsNotEmptyObject({ key: "value" }), true); // Object with a key-value pair
-    assertEquals(checkIsNotEmptyObject({ a: 1 }), true); // Another non-empty object
-    assertEquals(checkIsNotEmptyObject(new Date()), true); // Date instance, considered non-empty
+    assertEquals(check_is_not_empty_object({ key: "value" }), true); // Object with a key-value pair
+    assertEquals(check_is_not_empty_object({ a: 1 }), true); // Another non-empty object
+    assertEquals(check_is_not_empty_object(new Date()), true); // Date instance, considered non-empty
   });
 
   await t.step("should return false for empty objects", () => {
-    assertEquals(checkIsNotEmptyObject({}), false); // Regular empty object
-    assertEquals(checkIsNotEmptyObject(Object.create(null)), false); // Object with no prototype
+    assertEquals(check_is_not_empty_object({}), false); // Regular empty object
+    assertEquals(check_is_not_empty_object(Object.create(null)), false); // Object with no prototype
   });
 
   await t.step("should exclude non-empty object", () => {

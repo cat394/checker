@@ -38,56 +38,56 @@ bunx jsr add @checker/array
 
 ## Functions
 
-### `checkIsArray`
+### `check_is_array`
 
 Checks if the given value is an array.
 
 ```ts
-checkIsArray([1, 2, 3]); // true
-checkIsArray(42); // false
+check_is_array([1, 2, 3]); // true
+check_is_array(42); // false
 ```
 
-### `checkIsNotArray`
+### `check_is_not_array`
 
 Checks if the given value is not an array.
 
 ```ts
-checkIsNotArray(42); // true
-checkIsNotArray([1, 2, 3]); // false
+check_is_not_array(42); // true
+check_is_not_array([1, 2, 3]); // false
 ```
 
-### `checkIsEmptyArray`
+### `check_is_empty`
 
 Checks if the given array is empty.
 
 ```ts
-checkIsEmptyArray([]); // true
-checkIsEmptyArray([1, 2, 3]); // false
+check_is_empty([]); // true
+check_is_empty([1, 2, 3]); // false
 ```
 
-### `checkIsNotEmptyArray`
+### `check_is_not_empty`
 
 Checks if the given array is not empty.
 
 ```ts
-checkIsNotEmptyArray([1, 2, 3]); // true
-checkIsNotEmptyArray([]); // false
+check_is_not_empty([1, 2, 3]); // true
+check_is_not_empty([]); // false
 ```
 
-### `checkIsFirstIteration`
+### `check_is_first_iteration`
 
 Checks if the given index corresponds to the first iteration.
 
 ```ts
-checkIsFirstIteration(0); // true
-checkIsFirstIteration(1); // false
+check_is_first_iteration(0); // true
+check_is_first_iteration(1); // false
 ```
 
 ```ts
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-  if (checkIsFirstIteration(index)) {
+  if (check_is_first_iteration(index)) {
     return number + 1;
   }
   return number;
@@ -95,20 +95,20 @@ numbers.map((number, index) => {
 // => [2, 2, 3]
 ```
 
-### `checkIsNotFirstIteration`
+### `check_is_not_first_iteration`
 
 Checks if the given index does not correspond to the first iteration.
 
 ```ts
-checkIsNotFirstIteration(1); // true
-checkIsNotFirstIteration(0); // false
+check_is_not_first_iteration(1); // true
+check_is_not_first_iteration(0); // false
 ```
 
 ```ts
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-  if (checkIsNotFirstIteration(index)) {
+  if (check_is_not_first_iteration(index)) {
     return number + 1;
   }
   return number;
@@ -116,56 +116,56 @@ numbers.map((number, index) => {
 // => [1, 3, 4]
 ```
 
-### `checkArrayHasValue`
+### `check_array_has_value`
 
 Checks if an array contains a specific value.
 
 ```ts
-checkArrayHasValue([1, 2, 3], 2); // true
-checkArrayHasValue([1, 2, 3], 4); // false
+check_array_has_value([1, 2, 3], 2); // true
+check_array_has_value([1, 2, 3], 4); // false
 ```
 
-### `checkArrayDoesNotHaveValue`
+### `check_array_does_not_have_value`
 
 Checks if an array does not contain a specific value.
 
 ```ts
-checkArrayDoesNotHaveValue([1, 2, 3], 4); // true
-checkArrayDoesNotHaveValue([1, 2, 3], 2); // false
+check_array_does_not_have_value([1, 2, 3], 4); // true
+check_array_does_not_have_value([1, 2, 3], 2); // false
 ```
 
-### `checkIsLastIteration`
+### `check_is_last_iteration`
 
 Checks if the given index is the last iteration in the array.
 
 ```ts
-checkIsLastIteration(2, [10, 20, 30]); // true
-checkIsLastIteration(1, [10, 20, 30]); // false
+check_is_last_iteration(2, [10, 20, 30]); // true
+check_is_last_iteration(1, [10, 20, 30]); // false
 ```
 
-### `checkIsNotLastIteration`
+### `check_is_not_last_iteration`
 
 Checks if the given index is not the last iteration in the array.
 
 ```ts
-checkIsNotLastIteration(1, [10, 20, 30]); // true
-checkIsNotLastIteration(2, [10, 20, 30]); // false
+check_is_not_last_iteration(1, [10, 20, 30]); // true
+check_is_not_last_iteration(2, [10, 20, 30]); // false
 ```
 
-### `checkIsSpecificIteration`
+### `check_is_specific_iteration`
 
 Checks if the current iteration index matches a specific target index.
 
 ```ts
-checkIsSpecificIteration(3, 3); // true
-checkIsSpecificIteration(2, 3); // false
+check_is_specific_iteration(3, 3); // true
+check_is_specific_iteration(2, 3); // false
 ```
 
 ```ts
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-  if (checkIsSpecificIteration(index, 1)) {
+  if (check_is_specific_iteration(index, 1)) {
     return number + 1;
   }
   return number;
@@ -173,20 +173,20 @@ numbers.map((number, index) => {
 // => [1, 3, 3]
 ```
 
-### `checkIsNotSpecificIteration`
+### `check_is_not_specific_iteration`
 
 Checks if the current iteration index does not match a specific target index.
 
 ```ts
-checkIsNotSpecificIteration(2, 3); // true
-checkIsNotSpecificIteration(3, 3); // false
+check_is_not_specific_iteration(2, 3); // true
+check_is_not_specific_iteration(3, 3); // false
 ```
 
 ```ts
 const numbers = [1, 2, 3];
 
 numbers.map((number, index) => {
-  if (checkIsSpecificIteration(index, 1)) {
+  if (check_is_specific_iteration(index, 1)) {
     return number + 1;
   }
   return number;

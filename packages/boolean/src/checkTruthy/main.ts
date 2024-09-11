@@ -10,13 +10,13 @@ import type { Falsy } from "../types.ts";
  *
  * @example
  * // Returns true
- * checkIsTruthy(1); // 1 is truthy
+ * check_is_truthy(1); // 1 is truthy
  *
  * @example
  * // Returns false
- * checkIsTruthy(0); // 0 is falsy
+ * check_is_truthy(0); // 0 is falsy
  */
-export const checkIsTruthy = <T>(value: T): value is Exclude<T, Falsy> => {
+export const check_is_truthy = <T>(value: T): value is Exclude<T, Falsy> => {
   return Boolean(value) === true;
 };
 
@@ -30,12 +30,14 @@ export const checkIsTruthy = <T>(value: T): value is Exclude<T, Falsy> => {
  *
  * @example
  * // Returns true
- * checkIsNotTruthy(0); // 0 is falsy
+ * check_is_not_truthy(0); // 0 is falsy
  *
  * @example
  * // Returns false
- * checkIsNotTruthy(1); // 1 is truthy
+ * check_is_not_truthy(1); // 1 is truthy
  */
-export const checkIsNotTruthy = <T>(value: T): value is Extract<T, Falsy> => {
-  return !checkIsTruthy(value);
+export const check_is_not_truthy = <T>(
+  value: T,
+): value is Extract<T, Falsy> => {
+  return !check_is_truthy(value);
 };

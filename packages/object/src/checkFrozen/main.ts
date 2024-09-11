@@ -10,21 +10,21 @@
  * @example
  * // Returns true
  * const frozenObj = Object.freeze({ a: 1 });
- * checkIsFrozen(frozenObj); // The object is frozen
+ * check_is_frozen(frozenObj); // The object is frozen
  *
  * @example
  * // Returns false
  * const regularObj = { a: 1 };
- * checkIsFrozen(regularObj); // The object is not frozen
+ * check_is_frozen(regularObj); // The object is not frozen
  */
-export const checkIsFrozen = (obj: object): boolean => {
+export const check_is_frozen = (obj: object): boolean => {
   return Object.isFrozen(obj);
 };
 
 /**
  * Checks if a given object is not frozen.
  *
- * This is the inverse of `checkIsFrozen`.
+ * This is the inverse of `check_is_frozen`.
  *
  * @param {object} obj - The object to check.
  * @returns {boolean} True if the object is not frozen, otherwise false.
@@ -32,13 +32,13 @@ export const checkIsFrozen = (obj: object): boolean => {
  * @example
  * // Returns true
  * const regularObj = { a: 1 };
- * checkIsNotFrozen(regularObj); // The object is not frozen
+ * check_is_not_frozen(regularObj); // The object is not frozen
  *
  * @example
  * // Returns false
  * const frozenObj = Object.freeze({ a: 1 });
- * checkIsNotFrozen(frozenObj); // The object is frozen
+ * check_is_not_frozen(frozenObj); // The object is frozen
  */
-export const checkIsNotFrozen = (obj: object): boolean => {
-  return !checkIsFrozen(obj);
+export const check_is_not_frozen = (obj: object): boolean => {
+  return !check_is_frozen(obj);
 };

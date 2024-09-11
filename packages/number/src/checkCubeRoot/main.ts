@@ -7,20 +7,20 @@
  *
  * @example
  * // Returns true
- * checkIsCubeRoot(3, 27); // 3 is the cube root of 27
+ * check_is_cube_root(3, 27); // 3 is the cube root of 27
  *
  * @example
  * // Returns false
- * checkIsCubeRoot(2, 27); // 2 is not the cube root of 27
+ * check_is_cube_root(2, 27); // 2 is not the cube root of 27
  */
-export const checkIsCubeRoot = (num: number, target: number): boolean => {
+export const check_is_cube_root = (num: number, target: number): boolean => {
   return num === Math.cbrt(target);
 };
 
 /**
  * Checks if a given number is not the cube root of a target number.
  *
- * This is the inverse of `checkIsCubeRoot`.
+ * This is the inverse of `check_is_cube_root`.
  *
  * @param {number} num - The number to check.
  * @param {number} target - The target number to check against.
@@ -28,12 +28,15 @@ export const checkIsCubeRoot = (num: number, target: number): boolean => {
  *
  * @example
  * // Returns true
- * checkIsNotCubeRoot(2, 27); // 2 is not the cube root of 27
+ * check_is_not_cube_root(2, 27); // 2 is not the cube root of 27
  *
  * @example
  * // Returns false
- * checkIsNotCubeRoot(3, 27); // 3 is the cube root of 27
+ * check_is_not_cube_root(3, 27); // 3 is the cube root of 27
  */
-export const checkIsNotCubeRoot = (num: number, target: number): boolean => {
-  return !checkIsCubeRoot(num, target);
+export const check_is_not_cube_root = (
+  num: number,
+  target: number,
+): boolean => {
+  return !check_is_cube_root(num, target);
 };

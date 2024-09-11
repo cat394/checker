@@ -1,36 +1,36 @@
 import { assertEquals } from "../../deps.ts";
-import { checkIsNotSealed, checkIsSealed } from "./main.ts";
+import { check_is_not_sealed, check_is_sealed } from "./main.ts";
 
-Deno.test("checkIsSealed", async (t) => {
+Deno.test("check_is_sealed", async (t) => {
   await t.step("should return true for sealed objects", () => {
     const sealedObj = Object.seal({ key: "value" });
-    assertEquals(checkIsSealed(sealedObj), true);
+    assertEquals(check_is_sealed(sealedObj), true);
   });
 
   await t.step("should return false for non-sealed objects", () => {
     const obj = { key: "value" };
-    assertEquals(checkIsSealed(obj), false);
+    assertEquals(check_is_sealed(obj), false);
   });
 
   await t.step("should return true for sealed empty objects", () => {
     const sealedEmptyObj = Object.seal({});
-    assertEquals(checkIsSealed(sealedEmptyObj), true); // Sealed empty object
+    assertEquals(check_is_sealed(sealedEmptyObj), true); // Sealed empty object
   });
 });
 
-Deno.test("checkIsNotSealed", async (t) => {
+Deno.test("check_is_not_sealed", async (t) => {
   await t.step("should return true for non-sealed objects", () => {
     const obj = { key: "value" };
-    assertEquals(checkIsNotSealed(obj), true);
+    assertEquals(check_is_not_sealed(obj), true);
   });
 
   await t.step("should return false for sealed objects", () => {
     const sealedObj = Object.seal({ key: "value" });
-    assertEquals(checkIsNotSealed(sealedObj), false);
+    assertEquals(check_is_not_sealed(sealedObj), false);
   });
 
   await t.step("should return false for sealed empty objects", () => {
     const sealedEmptyObj = Object.seal({});
-    assertEquals(checkIsNotSealed(sealedEmptyObj), false); // Sealed empty object
+    assertEquals(check_is_not_sealed(sealedEmptyObj), false); // Sealed empty object
   });
 });

@@ -11,13 +11,13 @@
  *
  * @example
  * // Returns true
- * checkIsDeepEqual({ a: 1, b: 2 }, { a: 1, b: 2 }); // The objects have the same structure and values
+ * check_is_deep_equal({ a: 1, b: 2 }, { a: 1, b: 2 }); // The objects have the same structure and values
  *
  * @example
  * // Returns false
- * checkIsDeepEqual({ a: 1, b: 2 }, { a: 2, b: 3 }); // The objects have different values
+ * check_is_deep_equal({ a: 1, b: 2 }, { a: 2, b: 3 }); // The objects have different values
  */
-export const checkIsDeepEqual = <T1 extends object, T2 extends T1>(
+export const check_is_deep_equal = <T1 extends object, T2 extends T1>(
   obj1: T1,
   obj2: T2,
 ): obj1 is T2 => {
@@ -27,7 +27,7 @@ export const checkIsDeepEqual = <T1 extends object, T2 extends T1>(
 /**
  * Checks if two objects are not deeply equal.
  *
- * This is the inverse of `checkIsDeepEqual`.
+ * This is the inverse of `check_is_deep_equal`.
  *
  * @param {object} obj1 - The first object to compare.
  * @param {object} obj2 - The second object to compare.
@@ -35,12 +35,15 @@ export const checkIsDeepEqual = <T1 extends object, T2 extends T1>(
  *
  * @example
  * // Returns true
- * checkIsNotDeepEqual({ a: 1, b: 2 }, { a: 2, b: 3 }); // The objects have different values
+ * check_is_not_deep_equal({ a: 1, b: 2 }, { a: 2, b: 3 }); // The objects have different values
  *
  * @example
  * // Returns false
- * checkIsNotDeepEqual({ a: 1, b: 2 }, { a: 1, b: 2 }); // The objects have the same structure and values
+ * check_is_not_deep_equal({ a: 1, b: 2 }, { a: 1, b: 2 }); // The objects have the same structure and values
  */
-export const checkIsNotDeepEqual = (obj1: object, obj2: object): boolean => {
-  return !checkIsDeepEqual(obj1, obj2);
+export const check_is_not_deep_equal = (
+  obj1: object,
+  obj2: object,
+): boolean => {
+  return !check_is_deep_equal(obj1, obj2);
 };

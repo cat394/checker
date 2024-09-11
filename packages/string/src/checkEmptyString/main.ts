@@ -8,34 +8,34 @@
  *
  * @example
  * // Returns true
- * checkIsEmptryString(''); // The string is empty
+ * check_is_empty_string(''); // The string is empty
  *
  * @example
  * // Returns false
- * checkIsEmptryString(' '); // The string contains a space, so it is not empty
+ * check_is_empty_string(' '); // The string contains a space, so it is not empty
  */
-export const checkIsEmptryString = (str: string): str is "" => {
+export const check_is_empty_string = (str: string): str is "" => {
   return str === "";
 };
 
 /**
  * Checks if a given string is not empty.
  *
- * This is the inverse of `checkIsEmptryString`.
+ * This is the inverse of `check_is_empty_string`.
  *
  * @param {T extends string} str - The string to check.
  * @returns {str is Exclude<T, "">} True if the string is not empty, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotEmptyString('hello'); // The string is not empty
+ * check_is_not_empty_string('hello'); // The string is not empty
  *
  * @example
  * // Returns false
- * checkIsNotEmptyString(''); // The string is empty
+ * check_is_not_empty_string(''); // The string is empty
  */
-export const checkIsNotEmptyString = <T extends string>(
+export const check_is_not_empty_string = <T extends string>(
   str: T,
 ): str is Exclude<T, ""> => {
-  return !checkIsEmptryString(str);
+  return !check_is_empty_string(str);
 };

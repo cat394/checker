@@ -7,13 +7,13 @@
  *
  * @example
  * // Returns true
- * checkIsGreaterThanOrEqual(10, 5); // 10 is greater than or equal to 5
+ * check_is_greater_than_or_equal(10, 5); // 10 is greater than or equal to 5
  *
  * @example
  * // Returns false
- * checkIsGreaterThanOrEqual(3, 5); // 3 is not greater than or equal to 5
+ * check_is_greater_than_or_equal(3, 5); // 3 is not greater than or equal to 5
  */
-export const checkIsGreaterThanOrEqual = (
+export const check_is_greater_than_or_equal = (
   num: number,
   threshold: number,
 ): boolean => {
@@ -23,7 +23,7 @@ export const checkIsGreaterThanOrEqual = (
 /**
  * Checks if a number is not greater than or equal to a given threshold.
  *
- * This is the inverse of `checkIsGreaterThanOrEqual`.
+ * This is the inverse of `check_is_greater_than_or_equal`.
  *
  * @param {number} num - The number to check.
  * @param {number} threshold - The threshold to compare against.
@@ -31,15 +31,15 @@ export const checkIsGreaterThanOrEqual = (
  *
  * @example
  * // Returns true
- * checkIsNotGreaterThanOrEqual(3, 5); // 3 is not greater than or equal to 5
+ * check_is_not_greater_than_or_equal(3, 5); // 3 is not greater than or equal to 5
  *
  * @example
  * // Returns false
- * checkIsNotGreaterThanOrEqual(10, 5); // 10 is greater than or equal to 5
+ * check_is_not_greater_than_or_equal(10, 5); // 10 is greater than or equal to 5
  */
-export const checkIsNotGreaterThanOrEqual = (
+export const check_is_not_greater_than_or_equal = (
   num: number,
   threshold: number,
 ): boolean => {
-  return !checkIsGreaterThanOrEqual(num, threshold);
+  return !check_is_greater_than_or_equal(num, threshold);
 };

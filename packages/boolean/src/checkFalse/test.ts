@@ -1,47 +1,47 @@
 import { assertEquals, assertType, type IsExact } from "../../deps.ts";
-import { checkIsFalse, checkIsNotFalse } from "./main.ts";
+import { check_is_false, check_is_not_false } from "./main.ts";
 
-Deno.test("checkIsFalse", async (t) => {
+Deno.test("check_is_false", async (t) => {
   await t.step("should return true for false value", () => {
-    assertEquals(checkIsFalse(false), true);
+    assertEquals(check_is_false(false), true);
   });
 
   await t.step("should return false for non-false values", () => {
-    assertEquals(checkIsFalse(true), false);
-    assertEquals(checkIsFalse(null), false);
-    assertEquals(checkIsFalse(undefined), false);
-    assertEquals(checkIsFalse(0), false);
-    assertEquals(checkIsFalse(1), false);
-    assertEquals(checkIsFalse("false"), false);
+    assertEquals(check_is_false(true), false);
+    assertEquals(check_is_false(null), false);
+    assertEquals(check_is_false(undefined), false);
+    assertEquals(check_is_false(0), false);
+    assertEquals(check_is_false(1), false);
+    assertEquals(check_is_false("false"), false);
   });
 
   await t.step("should narrow false type", () => {
     type Value = string | false;
     const value = {} as Value;
-    if (checkIsFalse(value)) {
+    if (check_is_false(value)) {
       assertType<IsExact<typeof value, false>>(true);
     }
   });
 });
 
-Deno.test("checkIsNotFalse", async (t) => {
+Deno.test("check_is_not_false", async (t) => {
   await t.step("should return true for non-false values", () => {
-    assertEquals(checkIsNotFalse(true), true);
-    assertEquals(checkIsNotFalse(null), true);
-    assertEquals(checkIsNotFalse(undefined), true);
-    assertEquals(checkIsNotFalse(0), true);
-    assertEquals(checkIsNotFalse(1), true);
-    assertEquals(checkIsNotFalse("false"), true);
+    assertEquals(check_is_not_false(true), true);
+    assertEquals(check_is_not_false(null), true);
+    assertEquals(check_is_not_false(undefined), true);
+    assertEquals(check_is_not_false(0), true);
+    assertEquals(check_is_not_false(1), true);
+    assertEquals(check_is_not_false("false"), true);
   });
 
   await t.step("should return false for false value", () => {
-    assertEquals(checkIsNotFalse(false), false);
+    assertEquals(check_is_not_false(false), false);
   });
 
   await t.step("should exclude false type", () => {
     type Value = string | false;
     const value = {} as Value;
-    if (checkIsNotFalse(value)) {
+    if (check_is_not_false(value)) {
       assertType<IsExact<typeof value, string>>(true);
     }
   });

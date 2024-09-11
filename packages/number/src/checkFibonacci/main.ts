@@ -1,4 +1,4 @@
-import { checkIsPerfectSquare } from "../checkPerfectSquare/main.ts";
+import { check_is_perfect_square } from "../checkPerfectSquare/main.ts";
 
 /**
  * Checks if a given number is a Fibonacci number.
@@ -11,35 +11,35 @@ import { checkIsPerfectSquare } from "../checkPerfectSquare/main.ts";
  *
  * @example
  * // Returns true
- * checkIsFibonacci(8); // 8 is a Fibonacci number
+ * check_is_fibonacci(8); // 8 is a Fibonacci number
  *
  * @example
  * // Returns false
- * checkIsFibonacci(10); // 10 is not a Fibonacci number
+ * check_is_fibonacci(10); // 10 is not a Fibonacci number
  */
-export const checkIsFibonacci = (num: number): boolean => {
+export const check_is_fibonacci = (num: number): boolean => {
   return (
-    checkIsPerfectSquare(5 * num * num + 4) ||
-    checkIsPerfectSquare(5 * num * num - 4)
+    check_is_perfect_square(5 * num * num + 4) ||
+    check_is_perfect_square(5 * num * num - 4)
   );
 };
 
 /**
  * Checks if a given number is not a Fibonacci number.
  *
- * This is the inverse of `checkIsFibonacci`.
+ * This is the inverse of `check_is_fibonacci`.
  *
  * @param {number} num - The number to check.
  * @returns {boolean} True if the number is not a Fibonacci number, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotFibonacci(10); // 10 is not a Fibonacci number
+ * check_is_not_fibonacci(10); // 10 is not a Fibonacci number
  *
  * @example
  * // Returns false
- * checkIsNotFibonacci(8); // 8 is a Fibonacci number
+ * check_is_not_fibonacci(8); // 8 is a Fibonacci number
  */
-export const checkIsNotFibonacci = (num: number): boolean => {
-  return !checkIsFibonacci(num);
+export const check_is_not_fibonacci = (num: number): boolean => {
+  return !check_is_fibonacci(num);
 };

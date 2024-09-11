@@ -1,51 +1,51 @@
 import { assertEquals, assertType, type IsExact } from "../../deps.ts";
-import { checkIsNotString, checkIsString } from "./main.ts";
+import { check_is_not_string, check_is_string } from "./main.ts";
 
-Deno.test("checkIsString", async (t) => {
+Deno.test("check_is_string", async (t) => {
   await t.step("should return true for strings", () => {
-    assertEquals(checkIsString("hello"), true);
-    assertEquals(checkIsString(""), true);
-    assertEquals(checkIsString("123"), true);
+    assertEquals(check_is_string("hello"), true);
+    assertEquals(check_is_string(""), true);
+    assertEquals(check_is_string("123"), true);
   });
 
   await t.step("should return false for non-strings", () => {
-    assertEquals(checkIsString(123), false);
-    assertEquals(checkIsString(true), false);
-    assertEquals(checkIsString({}), false);
-    assertEquals(checkIsString([]), false);
-    assertEquals(checkIsString(null), false);
-    assertEquals(checkIsString(undefined), false);
+    assertEquals(check_is_string(123), false);
+    assertEquals(check_is_string(true), false);
+    assertEquals(check_is_string({}), false);
+    assertEquals(check_is_string([]), false);
+    assertEquals(check_is_string(null), false);
+    assertEquals(check_is_string(undefined), false);
   });
 
   await t.step("should narrow string type", () => {
     type Value = string | number;
     const value = {} as Value;
-    if (checkIsString(value)) {
+    if (check_is_string(value)) {
       assertType<IsExact<typeof value, string>>(true);
     }
   });
 });
 
-Deno.test("checkIsNotString", async (t) => {
+Deno.test("check_is_not_string", async (t) => {
   await t.step("should return true for non-strings", () => {
-    assertEquals(checkIsNotString(123), true);
-    assertEquals(checkIsNotString(true), true);
-    assertEquals(checkIsNotString({}), true);
-    assertEquals(checkIsNotString([]), true);
-    assertEquals(checkIsNotString(null), true);
-    assertEquals(checkIsNotString(undefined), true);
+    assertEquals(check_is_not_string(123), true);
+    assertEquals(check_is_not_string(true), true);
+    assertEquals(check_is_not_string({}), true);
+    assertEquals(check_is_not_string([]), true);
+    assertEquals(check_is_not_string(null), true);
+    assertEquals(check_is_not_string(undefined), true);
   });
 
   await t.step("should return false for strings", () => {
-    assertEquals(checkIsNotString("hello"), false);
-    assertEquals(checkIsNotString(""), false);
-    assertEquals(checkIsNotString("123"), false);
+    assertEquals(check_is_not_string("hello"), false);
+    assertEquals(check_is_not_string(""), false);
+    assertEquals(check_is_not_string("123"), false);
   });
 
   await t.step("should exclude string type", () => {
     type Value = string | number;
     const value = {} as Value;
-    if (checkIsNotString(value)) {
+    if (check_is_not_string(value)) {
       assertType<IsExact<typeof value, number>>(true);
     }
   });

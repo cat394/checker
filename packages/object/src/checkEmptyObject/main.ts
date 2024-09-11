@@ -12,17 +12,17 @@ import type { EmptyObject } from "../types.ts";
  *
  * @example
  * // Returns true
- * checkIsEmptyObject({}); // The object has no properties
+ * check_is_empty_object({}); // The object has no properties
  *
  * @example
  * // Returns false
- * checkIsEmptyObject({ key: 'value' }); // The object has a property
+ * check_is_empty_object({ key: 'value' }); // The object has a property
  *
  * @example
  * // Returns false
- * checkIsEmptyObject(new Date()); // A Date instance is not a plain object
+ * check_is_empty_object(new Date()); // A Date instance is not a plain object
  */
-export const checkIsEmptyObject = (obj: object): obj is EmptyObject => {
+export const check_is_empty_object = (obj: object): obj is EmptyObject => {
   // Check if the object is a plain object
   // This was added because new Date() objects were returning true
   if (Object.prototype.toString.call(obj) !== "[object Object]") {
@@ -34,25 +34,25 @@ export const checkIsEmptyObject = (obj: object): obj is EmptyObject => {
 /**
  * Checks if a given object is not an empty plain object.
  *
- * This is the inverse of `checkIsEmptyObject`.
+ * This is the inverse of `check_is_empty_object`.
  *
  * @param {T extends object} obj - The object to check.
  * @returns {obj is Exclude<T, EmptyObject>} True if the object is not an empty plain object, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotEmptyObject({ key: 'value' }); // The object has a property
+ * check_is_not_empty_object({ key: 'value' }); // The object has a property
  *
  * @example
  * // Returns false
- * checkIsNotEmptyObject({}); // The object has no properties
+ * check_is_not_empty_object({}); // The object has no properties
  *
  * @example
  * // Returns true
- * checkIsNotEmptyObject(new Date()); // A Date instance is not a plain object
+ * check_is_not_empty_object(new Date()); // A Date instance is not a plain object
  */
-export const checkIsNotEmptyObject = <T extends object>(
+export const check_is_not_empty_object = <T extends object>(
   obj: T,
 ): obj is Exclude<T, EmptyObject> => {
-  return !checkIsEmptyObject(obj);
+  return !check_is_empty_object(obj);
 };

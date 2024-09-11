@@ -7,20 +7,20 @@
  *
  * @example
  * // Returns true
- * checkIsDivisor(3, 9); // 3 is a divisor of 9
+ * check_is_divisor(3, 9); // 3 is a divisor of 9
  *
  * @example
  * // Returns false
- * checkIsDivisor(2, 9); // 2 is not a divisor of 9
+ * check_is_divisor(2, 9); // 2 is not a divisor of 9
  */
-export const checkIsDivisor = (num: number, target: number): boolean => {
+export const check_is_divisor = (num: number, target: number): boolean => {
   return target % num === 0;
 };
 
 /**
  * Checks if the given number is not a divisor of the target number.
  *
- * This is the inverse of `checkIsDivisor`.
+ * This is the inverse of `check_is_divisor`.
  *
  * @param {number} num - The number to check as not being a divisor.
  * @param {number} target - The target number to be divided.
@@ -28,12 +28,12 @@ export const checkIsDivisor = (num: number, target: number): boolean => {
  *
  * @example
  * // Returns true
- * checkIsNotDivisor(2, 9); // 2 is not a divisor of 9
+ * check_is_not_divisor(2, 9); // 2 is not a divisor of 9
  *
  * @example
  * // Returns false
- * checkIsNotDivisor(3, 9); // 3 is a divisor of 9
+ * check_is_not_divisor(3, 9); // 3 is a divisor of 9
  */
-export const checkIsNotDivisor = (num: number, target: number): boolean => {
-  return !checkIsDivisor(num, target);
+export const check_is_not_divisor = (num: number, target: number): boolean => {
+  return !check_is_divisor(num, target);
 };

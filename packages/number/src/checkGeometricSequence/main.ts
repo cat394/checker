@@ -12,13 +12,13 @@ import { Constants } from "../constants.ts";
  *
  * @example
  * // Returns true
- * checkIsGeometricSequence([2, 4, 8], 2); // The sequence [2, 4, 8] has a common ratio of 2
+ * check_is_geometric_sequence([2, 4, 8], 2); // The sequence [2, 4, 8] has a common ratio of 2
  *
  * @example
  * // Returns false
- * checkIsGeometricSequence([2, 4, 9], 2); // The sequence [2, 4, 9] does not have a common ratio of 2
+ * check_is_geometric_sequence([2, 4, 9], 2); // The sequence [2, 4, 9] does not have a common ratio of 2
  */
-export const checkIsGeometricSequence = (
+export const check_is_geometric_sequence = (
   nums: number[],
   ratio: number,
 ): boolean => {
@@ -35,7 +35,7 @@ export const checkIsGeometricSequence = (
 /**
  * Checks if the given array of numbers does not form a geometric sequence with the specified ratio.
  *
- * This is the inverse of `checkIsGeometricSequence`.
+ * This is the inverse of `check_is_geometric_sequence`.
  *
  * @param {number[]} nums - The array of numbers to check.
  * @param {number} ratio - The common ratio that should not match.
@@ -43,15 +43,15 @@ export const checkIsGeometricSequence = (
  *
  * @example
  * // Returns true
- * checkIsNotGeometricSequence([2, 4, 9], 2); // The sequence [2, 4, 9] does not have a common ratio of 2
+ * check_is_not_geometric_sequence([2, 4, 9], 2); // The sequence [2, 4, 9] does not have a common ratio of 2
  *
  * @example
  * // Returns false
- * checkIsNotGeometricSequence([2, 4, 8], 2); // The sequence [2, 4, 8] has a common ratio of 2
+ * check_is_not_geometric_sequence([2, 4, 8], 2); // The sequence [2, 4, 8] has a common ratio of 2
  */
-export const checkIsNotGeometricSequence = (
+export const check_is_not_geometric_sequence = (
   nums: number[],
   ratio: number,
 ): boolean => {
-  return !checkIsGeometricSequence(nums, ratio);
+  return !check_is_geometric_sequence(nums, ratio);
 };

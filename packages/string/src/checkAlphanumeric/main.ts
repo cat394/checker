@@ -8,13 +8,13 @@
  *
  * @example
  * // Returns true
- * checkIsAlphanumeric('abc123'); // The string contains only letters and numbers
+ * check_is_alphanumeric('abc123'); // The string contains only letters and numbers
  *
  * @example
  * // Returns false
- * checkIsAlphanumeric('abc123!'); // The string contains a special character '!'
+ * check_is_alphanumeric('abc123!'); // The string contains a special character '!'
  */
-export const checkIsAlphanumeric = (str: string): boolean => {
+export const check_is_alphanumeric = (str: string): boolean => {
   const alphanumericRegex = /^[a-z0-9]+$/i;
   return alphanumericRegex.test(str);
 };
@@ -22,19 +22,19 @@ export const checkIsAlphanumeric = (str: string): boolean => {
 /**
  * Checks if a given string is not alphanumeric.
  *
- * This is the inverse of `checkIsAlphanumeric`.
+ * This is the inverse of `check_is_alphanumeric`.
  *
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is not alphanumeric, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotAlphanumeric('abc123!'); // The string contains a special character '!'
+ * check_is_not_alphanumeric('abc123!'); // The string contains a special character '!'
  *
  * @example
  * // Returns false
- * checkIsNotAlphanumeric('abc123'); // The string contains only letters and numbers
+ * check_is_not_alphanumeric('abc123'); // The string contains only letters and numbers
  */
-export const checkIsNotAlphanumeric = (str: string): boolean => {
-  return !checkIsAlphanumeric(str);
+export const check_is_not_alphanumeric = (str: string): boolean => {
+  return !check_is_alphanumeric(str);
 };

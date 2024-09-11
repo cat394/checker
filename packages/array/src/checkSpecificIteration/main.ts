@@ -7,13 +7,13 @@
  *
  * @example
  * // Returns true
- * checkIsSpecificIteration(3, 3); // The current index is 3 and matches the target index
+ * check_is_specific_iteration(3, 3); // The current index is 3 and matches the target index
  *
  * @example
  * // Returns false
- * checkIsSpecificIteration(2, 3); // The current index is 2 and does not match the target index
+ * check_is_specific_iteration(2, 3); // The current index is 2 and does not match the target index
  */
-export const checkIsSpecificIteration = (
+export const check_is_specific_iteration = (
   index: number,
   targetIndex: number,
 ): boolean => {
@@ -23,7 +23,7 @@ export const checkIsSpecificIteration = (
 /**
  * Checks if the current iteration index does not match a specific target index.
  *
- * This is the inverse of `checkIsSpecificIteration`.
+ * This is the inverse of `check_is_specific_iteration`.
  *
  * @param {number} index - The current iteration index.
  * @param {number} targetIndex - The target index to check against.
@@ -31,15 +31,15 @@ export const checkIsSpecificIteration = (
  *
  * @example
  * // Returns true
- * checkIsNotSpecificIteration(2, 3); // The current index is 2 and does not match the target index
+ * check_is_not_specific_iteration(2, 3); // The current index is 2 and does not match the target index
  *
  * @example
  * // Returns false
- * checkIsNotSpecificIteration(3, 3); // The current index is 3 and matches the target index
+ * check_is_not_specific_iteration(3, 3); // The current index is 3 and matches the target index
  */
-export const checkIsNotSpecificIteration = (
+export const check_is_not_specific_iteration = (
   index: number,
   targetIndex: number,
 ): boolean => {
-  return !checkIsSpecificIteration(index, targetIndex);
+  return !check_is_specific_iteration(index, targetIndex);
 };

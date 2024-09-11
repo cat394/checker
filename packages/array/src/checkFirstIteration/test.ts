@@ -1,24 +1,27 @@
 import { assertEquals } from "../../deps.ts";
-import { checkIsFirstIteration, checkIsNotFirstIteration } from "./main.ts";
+import {
+  check_is_first_iteration,
+  check_is_not_first_iteration,
+} from "./main.ts";
 
-Deno.test("checkIsFirstIteration", async (t) => {
+Deno.test("check_is_first_iteration", async (t) => {
   await t.step("should return true for the first iteration", () => {
-    assertEquals(checkIsFirstIteration(0), true);
+    assertEquals(check_is_first_iteration(0), true);
   });
 
   await t.step("should return false for non-first iterations", () => {
-    assertEquals(checkIsFirstIteration(1), false);
-    assertEquals(checkIsFirstIteration(10), false);
+    assertEquals(check_is_first_iteration(1), false);
+    assertEquals(check_is_first_iteration(10), false);
   });
 });
 
-Deno.test("checkIsNotFirstIteration", async (t) => {
+Deno.test("check_is_not_first_iteration", async (t) => {
   await t.step("should return true for non-first iterations", () => {
-    assertEquals(checkIsNotFirstIteration(1), true);
-    assertEquals(checkIsNotFirstIteration(10), true);
+    assertEquals(check_is_not_first_iteration(1), true);
+    assertEquals(check_is_not_first_iteration(10), true);
   });
 
   await t.step("should return false for the first iteration", () => {
-    assertEquals(checkIsNotFirstIteration(0), false);
+    assertEquals(check_is_not_first_iteration(0), false);
   });
 });

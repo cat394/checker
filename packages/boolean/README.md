@@ -39,94 +39,94 @@ bunx jsr add @checker/boolean
 
 ## Functions
 
-### `checkIsBoolean`
+### `check_is_boolean`
 
 Checks if the given value is a boolean.
 
 ```ts
-checkIsBoolean(true); // true
-checkIsBoolean("string"); // false
+check_is_boolean(true); // true
+check_is_boolean("string"); // false
 ```
 
-### `checkIsNotBoolean`
+### `check_is_not_boolean`
 
 Checks if the given value is not a boolean.
 
 ```ts
-checkIsNotBoolean("string"); // true
-checkIsNotBoolean(true); // false
+check_is_not_boolean("string"); // true
+check_is_not_boolean(true); // false
 ```
 
-### `checkIsFalse`
+### `check_is_false`
 
 Checks if the given value is strictly `false`.
 
 ```ts
-checkIsFalse(false); // true
-checkIsFalse(0); // false
+check_is_false(false); // true
+check_is_false(0); // false
 ```
 
-### `checkIsNotFalse`
+### `check_is_not_false`
 
 Checks if the given value is not strictly `false`.
 
 ```ts
-checkIsNotFalse(0); // true
-checkIsNotFalse(false); // false
+check_is_not_false(0); // true
+check_is_not_false(false); // false
 ```
 
-### `checkIsTruthy`
+### `check_is_truthy`
 
 Checks if the given value is truthy.
 
 ```ts
-checkIsTruthy(1); // true
-checkIsTruthy(0); // false
+check_is_truthy(1); // true
+check_is_truthy(0); // false
 ```
 
-### `checkIsNotTruthy`
+### `check_is_not_truthy`
 
 Checks if the given value is not truthy (i.e., falsy).
 
 ```ts
-checkIsNotTruthy(0); // true
-checkIsNotTruthy(1); // false
+check_is_not_truthy(0); // true
+check_is_not_truthy(1); // false
 ```
 
-### `checkIsFalsy`
+### `check_is_falsy`
 
 Checks if the given value is falsy.
 
 ```ts
-checkIsFalsy(0); // true
-checkIsFalsy(1); // false
+check_is_falsy(0); // true
+check_is_falsy(1); // false
 ```
 
-### `checkIsNotFalsy`
+### `check_is_not_falsy`
 
 Checks if the given value is not falsy.
 
 ```ts
-checkIsNotFalsy(1); // true
-checkIsNotFalsy(0); // false
+check_is_not_falsy(1); // true
+check_is_not_falsy(0); // false
 ```
 
-### `checkIsTrue`
+### `check_is_true`
 
 Checks if the given value is strictly `true`.
 
 ```ts
-checkIsTrue(true); // true
-checkIsTrue(1); // false
+check_is_true(true); // true
+check_is_true(1); // false
 ```
 
-### `checkIsNotTrue`
+### `check_is_not_true`
 
 Checks if the given value is not strictly `true`.
 
 ```ts
-checkIsNotTrue(0); // true
-checkIsNotTrue(true); // false
+check_is_not_true(0); // true
+check_is_not_true(true); // false
 ```
 
 ## License

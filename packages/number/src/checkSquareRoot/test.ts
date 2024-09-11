@@ -1,16 +1,16 @@
 import { assertEquals } from "../../deps.ts";
-import { checkIsNotSquareRoot, checkIsSquareRoot } from "./main.ts";
+import { check_is_not_square_root, check_is_square_root } from "./main.ts";
 
-Deno.test("checkIsSquareRootOf", async (t) => {
+Deno.test("check_is_square_root", async (t) => {
   await t.step(
     "should return true if the number is the square root of the target",
     () => {
-      assertEquals(checkIsSquareRoot(2, 4), true);
-      assertEquals(checkIsSquareRoot(3, 9), true);
-      assertEquals(checkIsSquareRoot(5, 25), true);
-      assertEquals(checkIsSquareRoot(0, 0), true);
-      assertEquals(checkIsSquareRoot(1, 1), true);
-      assertEquals(checkIsSquareRoot(10, 100), true);
+      assertEquals(check_is_square_root(2, 4), true);
+      assertEquals(check_is_square_root(3, 9), true);
+      assertEquals(check_is_square_root(5, 25), true);
+      assertEquals(check_is_square_root(0, 0), true);
+      assertEquals(check_is_square_root(1, 1), true);
+      assertEquals(check_is_square_root(10, 100), true);
     },
   );
 
@@ -26,27 +26,27 @@ Deno.test("checkIsSquareRootOf", async (t) => {
   );
 });
 
-Deno.test("checkIsNotSquareRootOf", async (t) => {
+Deno.test("check_is_not_square_root", async (t) => {
   await t.step(
     "should return true if the number is not the square root of the target",
     () => {
-      assertEquals(checkIsNotSquareRoot(2, 5), true);
-      assertEquals(checkIsNotSquareRoot(3, 8), true);
-      assertEquals(checkIsNotSquareRoot(4, 20), true);
-      assertEquals(checkIsNotSquareRoot(7, 50), true);
-      assertEquals(checkIsNotSquareRoot(10, 99), true); // Incorrect square root
+      assertEquals(check_is_not_square_root(2, 5), true);
+      assertEquals(check_is_not_square_root(3, 8), true);
+      assertEquals(check_is_not_square_root(4, 20), true);
+      assertEquals(check_is_not_square_root(7, 50), true);
+      assertEquals(check_is_not_square_root(10, 99), true); // Incorrect square root
     },
   );
 
   await t.step(
     "should return false if the number is the square root of the target",
     () => {
-      assertEquals(checkIsNotSquareRoot(2, 4), false);
-      assertEquals(checkIsNotSquareRoot(3, 9), false);
-      assertEquals(checkIsNotSquareRoot(5, 25), false);
-      assertEquals(checkIsNotSquareRoot(0, 0), false);
-      assertEquals(checkIsNotSquareRoot(1, 1), false);
-      assertEquals(checkIsNotSquareRoot(10, 100), false);
+      assertEquals(check_is_not_square_root(2, 4), false);
+      assertEquals(check_is_not_square_root(3, 9), false);
+      assertEquals(check_is_not_square_root(5, 25), false);
+      assertEquals(check_is_not_square_root(0, 0), false);
+      assertEquals(check_is_not_square_root(1, 1), false);
+      assertEquals(check_is_not_square_root(10, 100), false);
     },
   );
 });

@@ -12,13 +12,13 @@ import { Constants } from "../constants.ts";
  *
  * @example
  * // Returns true
- * checkIsPower(8, 2); // 8 is 2^3, so it's a power of 2
+ * check_is_power(8, 2); // 8 is 2^3, so it's a power of 2
  *
  * @example
  * // Returns false
- * checkIsPower(10, 2); // 10 is not a power of 2
+ * check_is_power(10, 2); // 10 is not a power of 2
  */
-export const checkIsPower = (num: number, base: number): boolean => {
+export const check_is_power = (num: number, base: number): boolean => {
   const result = Math.log(num) / Math.log(base);
   return Math.abs(result - Math.round(result)) < Constants.TOLERANCE;
 };
@@ -26,7 +26,7 @@ export const checkIsPower = (num: number, base: number): boolean => {
 /**
  * Checks if a given number is not a power of a specified base.
  *
- * This is the inverse of `checkIsPowerOf`.
+ * This is the inverse of `check_is_power`.
  *
  * @param {number} num - The number to check.
  * @param {number} base - The base to use.
@@ -34,12 +34,12 @@ export const checkIsPower = (num: number, base: number): boolean => {
  *
  * @example
  * // Returns true
- * checkIsNotPower(10, 2); // 10 is not a power of 2
+ * check_is_not_power(10, 2); // 10 is not a power of 2
  *
  * @example
  * // Returns false
- * checkIsNotPower(8, 2); // 8 is 2^3, so it's a power of 2
+ * check_is_not_power(8, 2); // 8 is 2^3, so it's a power of 2
  */
-export const checkIsNotPower = (num: number, base: number): boolean => {
-  return !checkIsPower(num, base);
+export const check_is_not_power = (num: number, base: number): boolean => {
+  return !check_is_power(num, base);
 };

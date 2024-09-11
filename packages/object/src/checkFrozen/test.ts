@@ -1,36 +1,36 @@
 import { assertEquals } from "../../deps.ts";
-import { checkIsFrozen, checkIsNotFrozen } from "./main.ts";
+import { check_is_frozen, check_is_not_frozen } from "./main.ts";
 
-Deno.test("checkIsFrozen", async (t) => {
+Deno.test("check_is_frozen", async (t) => {
   await t.step("should return true for frozen objects", () => {
     const frozenObj = Object.freeze({ key: "value" });
-    assertEquals(checkIsFrozen(frozenObj), true);
+    assertEquals(check_is_frozen(frozenObj), true);
   });
 
   await t.step("should return false for non-frozen objects", () => {
     const obj = { key: "value" };
-    assertEquals(checkIsFrozen(obj), false);
+    assertEquals(check_is_frozen(obj), false);
   });
 
   await t.step("should return true for frozen empty objects", () => {
     const frozenEmptyObj = Object.freeze({});
-    assertEquals(checkIsFrozen(frozenEmptyObj), true); // Frozen empty object
+    assertEquals(check_is_frozen(frozenEmptyObj), true); // Frozen empty object
   });
 });
 
-Deno.test("checkIsNotFrozen", async (t) => {
+Deno.test("check_is_not_frozen", async (t) => {
   await t.step("should return true for non-frozen objects", () => {
     const obj = { key: "value" };
-    assertEquals(checkIsNotFrozen(obj), true);
+    assertEquals(check_is_not_frozen(obj), true);
   });
 
   await t.step("should return false for frozen objects", () => {
     const frozenObj = Object.freeze({ key: "value" });
-    assertEquals(checkIsNotFrozen(frozenObj), false);
+    assertEquals(check_is_not_frozen(frozenObj), false);
   });
 
   await t.step("should return false for frozen empty objects", () => {
     const frozenEmptyObj = Object.freeze({});
-    assertEquals(checkIsNotFrozen(frozenEmptyObj), false); // Frozen empty object
+    assertEquals(check_is_not_frozen(frozenEmptyObj), false); // Frozen empty object
   });
 });

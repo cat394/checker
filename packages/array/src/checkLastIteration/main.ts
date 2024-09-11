@@ -7,13 +7,13 @@
  *
  * @example
  * // Returns true
- * checkIsLastIteration(2, [10, 20, 30]); // The index 2 is the last iteration
+ * check_is_last_iteration(2, [10, 20, 30]); // The index 2 is the last iteration
  *
  * @example
  * // Returns false
- * checkIsLastIteration(1, [10, 20, 30]); // The index 1 is not the last iteration
+ * check_is_last_iteration(1, [10, 20, 30]); // The index 1 is not the last iteration
  */
-export const checkIsLastIteration = (
+export const check_is_last_iteration = (
   index: number,
   array: unknown[],
 ): boolean => {
@@ -23,7 +23,7 @@ export const checkIsLastIteration = (
 /**
  * Checks if the given index is not the last iteration in the array.
  *
- * This is the inverse of `checkIsLastIteration`.
+ * This is the inverse of `check_is_last_iteration`.
  *
  * @param {number} index - The index to check.
  * @param {unknown[]} array - The array to check against.
@@ -31,15 +31,15 @@ export const checkIsLastIteration = (
  *
  * @example
  * // Returns true
- * checkIsNotLastIteration(1, [10, 20, 30]); // The index 1 is not the last iteration
+ * check_is_not_last_iteration(1, [10, 20, 30]); // The index 1 is not the last iteration
  *
  * @example
  * // Returns false
- * checkIsNotLastIteration(2, [10, 20, 30]); // The index 2 is the last iteration
+ * check_is_not_last_iteration(2, [10, 20, 30]); // The index 2 is the last iteration
  */
-export const checkIsNotLastIteration = (
+export const check_is_not_last_iteration = (
   index: number,
   array: unknown[],
 ): boolean => {
-  return !checkIsLastIteration(index, array);
+  return !check_is_last_iteration(index, array);
 };

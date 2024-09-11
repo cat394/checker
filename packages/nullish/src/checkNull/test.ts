@@ -1,45 +1,45 @@
 import { assertEquals, assertType, type IsExact } from "../../deps.ts";
-import { checkIsNotNull, checkIsNull } from "./main.ts";
+import { check_is_not_null, check_is_null } from "./main.ts";
 
-Deno.test("checkIsNull", async (t) => {
+Deno.test("check_is_null", async (t) => {
   await t.step("should return true for null", () => {
-    assertEquals(checkIsNull(null), true);
+    assertEquals(check_is_null(null), true);
   });
 
   await t.step("should return false for non-null values", () => {
-    assertEquals(checkIsNull(undefined), false);
-    assertEquals(checkIsNull(0), false);
-    assertEquals(checkIsNull(""), false);
-    assertEquals(checkIsNull(false), false);
-    assertEquals(checkIsNull({}), false);
+    assertEquals(check_is_null(undefined), false);
+    assertEquals(check_is_null(0), false);
+    assertEquals(check_is_null(""), false);
+    assertEquals(check_is_null(false), false);
+    assertEquals(check_is_null({}), false);
   });
 
   await t.step("should narrow null type", () => {
     type Value = string | null;
     const value = {} as Value;
-    if (checkIsNull(value)) {
+    if (check_is_null(value)) {
       assertType<IsExact<typeof value, null>>(true);
     }
   });
 });
 
-Deno.test("checkIsNotNull", async (t) => {
+Deno.test("check_is_not_null", async (t) => {
   await t.step("should return true for non-null values", () => {
-    assertEquals(checkIsNotNull(undefined), true);
-    assertEquals(checkIsNotNull(0), true);
-    assertEquals(checkIsNotNull(""), true);
-    assertEquals(checkIsNotNull(false), true);
-    assertEquals(checkIsNotNull({}), true);
+    assertEquals(check_is_not_null(undefined), true);
+    assertEquals(check_is_not_null(0), true);
+    assertEquals(check_is_not_null(""), true);
+    assertEquals(check_is_not_null(false), true);
+    assertEquals(check_is_not_null({}), true);
   });
 
   await t.step("should return false for null", () => {
-    assertEquals(checkIsNotNull(null), false);
+    assertEquals(check_is_not_null(null), false);
   });
 
   await t.step("should exclude null type", () => {
     type Value = string | null;
     const value = {} as Value;
-    if (checkIsNotNull(value)) {
+    if (check_is_not_null(value)) {
       assertType<IsExact<typeof value, string>>(true);
     }
   });

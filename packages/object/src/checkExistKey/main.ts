@@ -9,13 +9,13 @@
  *
  * @example
  * // Returns true
- * checkKeyExistsInObject({a: 1, b: 2}, 'a'); // The key 'a' exists in the object
+ * check_key_exists_in_object({a: 1, b: 2}, 'a'); // The key 'a' exists in the object
  *
  * @example
  * // Returns false
- * checkKeyExistsInObject({a: 1, b: 2}, 'c'); // The key 'c' does not exist in the object
+ * check_key_exists_in_object({a: 1, b: 2}, 'c'); // The key 'c' does not exist in the object
  */
-export const checkKeyExistsInObject = (
+export const check_key_exists_in_object = (
   obj: object,
   key: PropertyKey,
 ): boolean => {
@@ -25,7 +25,7 @@ export const checkKeyExistsInObject = (
 /**
  * Checks if a given key does not exist in an object.
  *
- * This is the inverse of `checkKeyExistsInObject`.
+ * This is the inverse of `check_key_exists_in_object`.
  *
  * @param {object} obj - The object to check.
  * @param {PropertyKey} key - The key to check for in the object.
@@ -33,15 +33,15 @@ export const checkKeyExistsInObject = (
  *
  * @example
  * // Returns true
- * checkKeyDoesNotExistInObject({a: 1, b: 2}, 'c'); // The key 'c' does not exist in the object
+ * check_key_does_not_exist_in_object({a: 1, b: 2}, 'c'); // The key 'c' does not exist in the object
  *
  * @example
  * // Returns false
- * checkKeyDoesNotExistInObject({a: 1, b: 2}, 'a'); // The key 'a' exists in the object
+ * check_key_does_not_exist_in_object({a: 1, b: 2}, 'a'); // The key 'a' exists in the object
  */
-export const checkKeyDoesNotExistInObject = (
+export const check_key_does_not_exist_in_object = (
   obj: object,
   key: PropertyKey,
 ): boolean => {
-  return !checkKeyExistsInObject(obj, key);
+  return !check_key_exists_in_object(obj, key);
 };

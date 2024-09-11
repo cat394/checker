@@ -11,13 +11,13 @@
  *
  * @example
  * // Returns true
- * checkHasSuffix('hello world', 'world'); // The string ends with 'world'
+ * check_has_suffix('hello world', 'world'); // The string ends with 'world'
  *
  * @example
  * // Returns false
- * checkHasSuffix('hello world', 'hello'); // The string does not end with 'hello'
+ * check_has_suffix('hello world', 'hello'); // The string does not end with 'hello'
  */
-export const checkHasSuffix = <Suffix extends string>(
+export const check_has_suffix = <Suffix extends string>(
   str: string,
   suffix: Suffix,
 ): str is `${string}${Suffix}` => {
@@ -27,7 +27,7 @@ export const checkHasSuffix = <Suffix extends string>(
 /**
  * Checks if a given string does not end with a specific suffix.
  *
- * This is the inverse of `checkHasSuffix`.
+ * This is the inverse of `check_has_suffix`.
  *
  * @param {string} str - The string to check.
  * @param {string} suffix - The suffix to check against.
@@ -35,15 +35,15 @@ export const checkHasSuffix = <Suffix extends string>(
  *
  * @example
  * // Returns true
- * checkDoesNotHaveSuffix('hello world', 'hello'); // The string does not end with 'hello'
+ * check_does_not_have_suffix('hello world', 'hello'); // The string does not end with 'hello'
  *
  * @example
  * // Returns false
- * checkDoesNotHaveSuffix('hello world', 'world'); // The string ends with 'world'
+ * check_does_not_have_suffix('hello world', 'world'); // The string ends with 'world'
  */
-export const checkDoesNotHaveSuffix = (
+export const check_does_not_have_suffix = (
   str: string,
   suffix: string,
 ): boolean => {
-  return !checkHasSuffix(str, suffix);
+  return !check_has_suffix(str, suffix);
 };

@@ -8,13 +8,13 @@
  *
  * @example
  * // Returns true
- * checkIsEmailFormat('example@example.com'); // Valid email address
+ * check_is_email_format('example@example.com'); // Valid email address
  *
  * @example
  * // Returns false
- * checkIsEmailFormat('invalid-email'); // The string is not a valid email format
+ * check_is_email_format('invalid-email'); // The string is not a valid email format
  */
-export const checkIsEmailFormat = (str: string): boolean => {
+export const check_is_email_format = (str: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(str);
 };
@@ -22,19 +22,19 @@ export const checkIsEmailFormat = (str: string): boolean => {
 /**
  * Checks if a given string is not in email format.
  *
- * This is the inverse of `checkIsEmailFormat`.
+ * This is the inverse of `check_is_email_format`.
  *
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is not in email format, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotEmailFormat('invalid-email'); // The string is not a valid email format
+ * check_is_not_email_format('invalid-email'); // The string is not a valid email format
  *
  * @example
  * // Returns false
- * checkIsNotEmailFormat('example@example.com'); // Valid email address
+ * check_is_not_email_format('example@example.com'); // Valid email address
  */
-export const checkIsNotEmailFormat = (str: string): boolean => {
-  return !checkIsEmailFormat(str);
+export const check_is_not_email_format = (str: string): boolean => {
+  return !check_is_email_format(str);
 };

@@ -9,17 +9,17 @@
  *
  * @example
  * // Returns true
- * checkIsIntegerOrDecimalString('123'); // The string represents a positive integer
+ * check_is_integer_or_decimal_string('123'); // The string represents a positive integer
  *
  * @example
  * // Returns true
- * checkIsIntegerOrDecimalString('-123.45'); // The string represents a negative floating-point number
+ * check_is_integer_or_decimal_string('-123.45'); // The string represents a negative floating-point number
  *
  * @example
  * // Returns false
- * checkIsIntegerOrDecimalString('123abc'); // The string contains non-numeric characters
+ * check_is_integer_or_decimal_string('123abc'); // The string contains non-numeric characters
  */
-export const checkIsIntegerOrDecimalString = (str: string): boolean => {
+export const check_is_integer_or_decimal_string = (str: string): boolean => {
   const numericRegex = /^-?\d+(\.\d+)?$/;
   return numericRegex.test(str);
 };
@@ -27,19 +27,21 @@ export const checkIsIntegerOrDecimalString = (str: string): boolean => {
 /**
  * Checks if a given string is not a numeric value.
  *
- * This is the inverse of `checkIsIntegerOrDecimalString`.
+ * This is the inverse of `check_is_integer_or_decimal_string`.
  *
  * @param {string} str - The string to check.
  * @returns {boolean} True if the string is not numeric, otherwise false.
  *
  * @example
  * // Returns true
- * checkIsNotIntegerOrDecimalString('123abc'); // The string contains non-numeric characters
+ * check_is_not_integer_or_decimal_string('123abc'); // The string contains non-numeric characters
  *
  * @example
  * // Returns false
- * checkIsNotIntegerOrDecimalString('123'); // The string represents a positive integer
+ * check_is_not_integer_or_decimal_string('123'); // The string represents a positive integer
  */
-export const checkIsNotIntegerOrDecimalString = (str: string): boolean => {
-  return !checkIsIntegerOrDecimalString(str);
+export const check_is_not_integer_or_decimal_string = (
+  str: string,
+): boolean => {
+  return !check_is_integer_or_decimal_string(str);
 };

@@ -9,20 +9,23 @@
  *
  * @example
  * // Returns true
- * checkHasSubstring('hello world', 'world'); // The string contains the substring 'world'
+ * check_has_substring('hello world', 'world'); // The string contains the substring 'world'
  *
  * @example
  * // Returns false
- * checkHasSubstring('hello world', 'planet'); // The string does not contain the substring 'planet'
+ * check_has_substring('hello world', 'planet'); // The string does not contain the substring 'planet'
  */
-export const checkHasSubstring = (str: string, substring: string): boolean => {
+export const check_has_substring = (
+  str: string,
+  substring: string,
+): boolean => {
   return str.includes(substring);
 };
 
 /**
  * Checks if a given string does not include a specific substring.
  *
- * This is the inverse of `checkIncludesSubstring`.
+ * This is the inverse of `check_has_substring`.
  *
  * @param {string} str - The string to check.
  * @param {string} substring - The substring to check against.
@@ -30,15 +33,15 @@ export const checkHasSubstring = (str: string, substring: string): boolean => {
  *
  * @example
  * // Returns true
- * checkDoesNotHaveSubstring('hello world', 'planet'); // The string does not contain the substring 'planet'
+ * check_does_not_have_substring('hello world', 'planet'); // The string does not contain the substring 'planet'
  *
  * @example
  * // Returns false
- * checkDoesNotHaveSubstring('hello world', 'world'); // The string contains the substring 'world'
+ * check_does_not_have_substring('hello world', 'world'); // The string contains the substring 'world'
  */
-export const checkDoesNotHaveSubstring = (
+export const check_does_not_have_substring = (
   str: string,
   substring: string,
 ): boolean => {
-  return !checkHasSubstring(str, substring);
+  return !check_has_substring(str, substring);
 };
