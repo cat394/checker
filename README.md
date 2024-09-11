@@ -2,8 +2,8 @@
 
 This is a library of commonly used validation logic for Typescript.
 
-Every function has an inverse, for example `checkIsString` and
-`checkIsNotString`.
+Every function has an inverse, for example `check_is_string` and
+`check_is_not_string`.
 
 | **Data type** | **Library**                            |
 | ------------- | -------------------------------------- |
@@ -19,73 +19,73 @@ Examples:
 - **@checker/string**
 
   ```ts
-  import { checkIsString } from "@checker/string";
+  import { check_is_string } from "@checker/string";
 
   type Value = string | null;
 
   let value: Value = null;
 
   if (someCondition) {
-    value = "hello";
+  	value = "hello";
   }
 
-  if (checkIsString(value)) {
-    value; // value is Hello and this type is string
+  if (check_is_string(value)) {
+  	value; // value is Hello and this type is string
   }
   ```
 
   ```ts
-  import { checkIsIndexFound } from "@checker/string";
+  import { check_is_index_found } from "@checker/string";
 
   const words = "hello world";
 
   const index = words.indexOf("hello");
 
-  if (checkIsIndexFound(index)) {
-    // When index is not -1
+  if (check_is_index_found(index)) {
+  	// When index is not -1
   }
   ```
 
   ```ts
-  import { checkIsEmptyString } from "@checker/string";
+  import { check_is_empty_string } from "@checker/string";
 
   const value = "    ";
   const trimmed = value.trim();
 
-  if (checkIsEmptyString(trimmed)) {
-    // When value is empty string
+  if (check_is_empty_string(trimmed)) {
+  	// When value is empty string
   }
   ```
 
 - **@checker/number**
 
   ```ts
-  import { checkIsNumber, checkIsOdd } from "@checker/number";
+  import { check_is_number, check_is_odd } from "@checker/number";
 
   const array = ["a", 1, true, 2, 3, 4, 5];
 
-  const odds = array.filter(checkIsNumber).filter(checkIsOdd);
+  const odds = array.filter(check_is_number).filter(check_is_odd);
   // odds = [1, 3, 5]
   ```
 
 - **@checker/boolean**
 
   ```ts
-  import { checkIsTruthy } from "@checker/boolean";
+  import { check_is_truthy } from "@checker/boolean";
 
   const array = [null, undefined, 0, 1, , "", "hello", true];
 
-  const filtered = array.filter(checkIsTruthy); // [1, 'hello', true]
+  const filtered = array.filter(check_is_truthy); // [1, 'hello', true]
   ```
 
 - **@checker/nullish**
 
   ```ts
-  import { checkIsNotNullish } from "@checker/nullish";
+  import { check_is_not_nullish } from "@checker/nullish";
 
   const array = [null, undefined, 0, 1, '', 'hello' true];
 
-  const filtered = array.filter(checkIsNotNullish); // [0, 1, '', 'hello', true]
+  const filtered = array.filter(check_is_not_nullish); // [0, 1, '', 'hello', true]
   ```
 
 - **@checker/array**
@@ -93,15 +93,15 @@ Examples:
   Checks if the given index is the last iteration in the array.
 
   ```ts
-  import { checkIsLastIteration } from "@checker/array";
+  import { check_is_last_iteration } from "@checker/array";
 
   const array = [1, 2, 3];
 
   const mapped = array.map((item, index) => {
-    if (checkIsLastIteration(index, array)) {
-      return item + 1;
-    }
-    return item;
+  	if (check_is_last_iteration(index, array)) {
+  		return item + 1;
+  	}
+  	return item;
   });
   // mapped = [1, 2, 4]
   ```
@@ -111,30 +111,30 @@ Examples:
   Checks if the given index is not the last iteration in the array.
 
   ```ts
-  import { checkIsEmptyObject } from "@checker/object";
+  import { check_is_empty_object } from "@checker/object";
 
   type Value = Partial<{ [key: string]: boolean }>;
 
   const value: Value = {};
 
   if (someCondition) {
-    value["key"] = true;
+  	value["key"] = true;
   }
 
-  if (checkIsEmptyObject(value)) {
-    // When value is empty object
+  if (check_is_empty_object(value)) {
+  	// When value is empty object
   }
   ```
 
   ```ts
-  import { checkIsInstance } from "@checker/object";
+  import { check_is_instance } from "@checker/object";
 
   try {
-    // some action
+  	// some action
   } catch (err) {
-    if (checkIsInstance(err, DatabaseError)) {
-      // err is DatabaseError instance
-    }
+  	if (check_is_instance(err, DatabaseError)) {
+  		// err is DatabaseError instance
+  	}
   }
   ```
 
