@@ -13,7 +13,7 @@
  * check_is_zero(5); // 5 is not zero
  */
 export const check_is_zero = (num: number): num is 0 => {
-	return num === 0;
+  return num === 0;
 };
 
 /**
@@ -33,7 +33,7 @@ export const check_is_zero = (num: number): num is 0 => {
  * check_is_not_zero(0); // 0 is zero
  */
 export const check_is_not_zero = <T extends number>(
-	num: T
+  num: T,
 ): num is Exclude<T, 0> => {
-	return !check_is_zero(num);
+  return !check_is_zero(num);
 };

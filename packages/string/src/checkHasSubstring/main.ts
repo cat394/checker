@@ -16,10 +16,10 @@
  * check_has_substring('hello world', 'planet'); // The string does not contain the substring 'planet'
  */
 export const check_has_substring = (
-	str: string,
-	substring: string
+  str: string,
+  substring: string,
 ): boolean => {
-	return str.includes(substring);
+  return str.includes(substring);
 };
 
 /**
@@ -40,8 +40,8 @@ export const check_has_substring = (
  * check_does_not_have_substring('hello world', 'world'); // The string contains the substring 'world'
  */
 export const check_does_not_have_substring = (
-	str: string,
-	substring: string
+  str: string,
+  substring: string,
 ): boolean => {
-	return !check_has_substring(str, substring);
+  return !check_has_substring(str, substring);
 };

@@ -15,7 +15,7 @@
  * check_is_even(7); // 7 is not an even number
  */
 export const check_is_even = (num: number): boolean => {
-	return num % 2 === 0;
+  return num % 2 === 0;
 };
 
 /**
@@ -35,5 +35,5 @@ export const check_is_even = (num: number): boolean => {
  * check_is_not_even(4); // 4 is an even number
  */
 export const check_is_not_even = (num: number): boolean => {
-	return !check_is_even(num);
+  return !check_is_even(num);
 };

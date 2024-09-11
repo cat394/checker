@@ -21,7 +21,7 @@ import { check_is_undefined } from "../checkUndefined/main.ts";
  * check_is_nullish(0); // The value is not nullish, just falsy
  */
 export const check_is_nullish = <T>(value: T): value is Extract<T, Nullish> => {
-	return check_is_null(value) || check_is_undefined(value);
+  return check_is_null(value) || check_is_undefined(value);
 };
 
 /**
@@ -45,7 +45,7 @@ export const check_is_nullish = <T>(value: T): value is Extract<T, Nullish> => {
  * check_is_not_nullish(undefined); // The value is undefined
  */
 export const check_is_not_nullish = <T>(
-	value: T
+  value: T,
 ): value is Exclude<T, Nullish> => {
-	return !check_is_nullish(value);
+  return !check_is_nullish(value);
 };

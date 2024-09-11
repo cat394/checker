@@ -13,7 +13,7 @@
  * check_is_undefined(null); // The value is not undefined, but it's null
  */
 export const check_is_undefined = (value: unknown): value is undefined => {
-	return value === undefined;
+  return value === undefined;
 };
 
 /**
@@ -33,7 +33,7 @@ export const check_is_undefined = (value: unknown): value is undefined => {
  * check_is_not_undefined(undefined); // The value is strictly undefined
  */
 export const check_is_not_undefined = <T>(
-	value: T
+  value: T,
 ): value is Exclude<T, undefined> => {
-	return !check_is_undefined(value);
+  return !check_is_undefined(value);
 };

@@ -17,11 +17,11 @@
  * check_is_logarithm(3, 2, 16); // log2(16) = 4, so 3 does not match
  */
 export const check_is_logarithm = (
-	num: number,
-	base: number,
-	target: number
+  num: number,
+  base: number,
+  target: number,
 ): boolean => {
-	return num === Math.log(target) / Math.log(base);
+  return num === Math.log(target) / Math.log(base);
 };
 
 /**
@@ -43,9 +43,9 @@ export const check_is_logarithm = (
  * check_is_not_logarithm(4, 2, 16); // log2(16) = 4
  */
 export const check_is_not_logarithm = (
-	num: number,
-	base: number,
-	target: number
+  num: number,
+  base: number,
+  target: number,
 ): boolean => {
-	return !check_is_logarithm(num, base, target);
+  return !check_is_logarithm(num, base, target);
 };

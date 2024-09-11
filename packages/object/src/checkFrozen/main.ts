@@ -18,7 +18,7 @@
  * check_is_frozen(regularObj); // The object is not frozen
  */
 export const check_is_frozen = (obj: object): boolean => {
-	return Object.isFrozen(obj);
+  return Object.isFrozen(obj);
 };
 
 /**
@@ -40,5 +40,5 @@ export const check_is_frozen = (obj: object): boolean => {
  * check_is_not_frozen(frozenObj); // The object is frozen
  */
 export const check_is_not_frozen = (obj: object): boolean => {
-	return !check_is_frozen(obj);
+  return !check_is_frozen(obj);
 };

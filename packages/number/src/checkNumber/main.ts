@@ -13,7 +13,7 @@
  * check_is_number("42"); // The value is a string, not a number
  */
 export const check_is_number = (value: unknown): value is number => {
-	return typeof value === "number";
+  return typeof value === "number";
 };
 
 /**
@@ -33,7 +33,7 @@ export const check_is_number = (value: unknown): value is number => {
  * check_is_not_number(42); // The value is a number
  */
 export const check_is_not_number = <T>(
-	value: T
+  value: T,
 ): value is Exclude<T, number> => {
-	return !check_is_number(value);
+  return !check_is_number(value);
 };

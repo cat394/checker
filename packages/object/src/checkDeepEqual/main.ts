@@ -18,10 +18,10 @@
  * check_is_deep_equal({ a: 1, b: 2 }, { a: 2, b: 3 }); // The objects have different values
  */
 export const check_is_deep_equal = <T1 extends object, T2 extends T1>(
-	obj1: T1,
-	obj2: T2
+  obj1: T1,
+  obj2: T2,
 ): obj1 is T2 => {
-	return JSON.stringify(obj1) === JSON.stringify(obj2);
+  return JSON.stringify(obj1) === JSON.stringify(obj2);
 };
 
 /**
@@ -42,8 +42,8 @@ export const check_is_deep_equal = <T1 extends object, T2 extends T1>(
  * check_is_not_deep_equal({ a: 1, b: 2 }, { a: 1, b: 2 }); // The objects have the same structure and values
  */
 export const check_is_not_deep_equal = (
-	obj1: object,
-	obj2: object
+  obj1: object,
+  obj2: object,
 ): boolean => {
-	return !check_is_deep_equal(obj1, obj2);
+  return !check_is_deep_equal(obj1, obj2);
 };

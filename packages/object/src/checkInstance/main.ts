@@ -18,10 +18,10 @@ import type { Constructor } from "../types.ts";
  * check_is_instace({}, Date); // The object is not an instance of Date
  */
 export const check_is_instace = <T extends Constructor>(
-	value: unknown,
-	constructor: T
+  value: unknown,
+  constructor: T,
 ): value is InstanceType<Constructor> => {
-	return value instanceof constructor;
+  return value instanceof constructor;
 };
 
 /**
@@ -42,11 +42,11 @@ export const check_is_instace = <T extends Constructor>(
  * check_is_not_instance(new Date(), Date); // The object is an instance of Date
  */
 export const check_is_not_instance = <
-	T1 extends unknown,
-	T2 extends Constructor
+  T1 extends unknown,
+  T2 extends Constructor,
 >(
-	value: T1,
-	constructor: T2
+  value: T1,
+  constructor: T2,
 ): value is Exclude<T1, T2> => {
-	return !check_is_instace(value, constructor);
+  return !check_is_instace(value, constructor);
 };

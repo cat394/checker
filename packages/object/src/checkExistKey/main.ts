@@ -16,10 +16,10 @@
  * check_key_exists_in_object({a: 1, b: 2}, 'c'); // The key 'c' does not exist in the object
  */
 export const check_key_exists_in_object = (
-	obj: object,
-	key: PropertyKey
+  obj: object,
+  key: PropertyKey,
 ): boolean => {
-	return key in obj;
+  return key in obj;
 };
 
 /**
@@ -40,8 +40,8 @@ export const check_key_exists_in_object = (
  * check_key_does_not_exist_in_object({a: 1, b: 2}, 'a'); // The key 'a' exists in the object
  */
 export const check_key_does_not_exist_in_object = (
-	obj: object,
-	key: PropertyKey
+  obj: object,
+  key: PropertyKey,
 ): boolean => {
-	return !check_key_exists_in_object(obj, key);
+  return !check_key_exists_in_object(obj, key);
 };

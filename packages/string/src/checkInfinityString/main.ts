@@ -24,9 +24,9 @@
  * check_is_infinity_string('infinity'); // The string is not exactly "Infinity" or "-Infinity"
  */
 export const check_is_infinity_string = (
-	str: string
+  str: string,
 ): str is "Infinity" | "-Infinity" => {
-	return str === "Infinity" || str === "-Infinity";
+  return str === "Infinity" || str === "-Infinity";
 };
 
 /**
@@ -54,5 +54,5 @@ export const check_is_infinity_string = (
  * check_is_not_infinity_string('-Infinity'); // The string is "-Infinity"
  */
 export const check_is_not_infinity_string = (str: string): boolean => {
-	return !check_is_infinity_string(str);
+  return !check_is_infinity_string(str);
 };

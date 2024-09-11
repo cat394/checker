@@ -17,7 +17,7 @@ import type { Falsy } from "../types.ts";
  * check_is_truthy(0); // 0 is falsy
  */
 export const check_is_truthy = <T>(value: T): value is Exclude<T, Falsy> => {
-	return Boolean(value) === true;
+  return Boolean(value) === true;
 };
 
 /**
@@ -37,7 +37,7 @@ export const check_is_truthy = <T>(value: T): value is Exclude<T, Falsy> => {
  * check_is_not_truthy(1); // 1 is truthy
  */
 export const check_is_not_truthy = <T>(
-	value: T
+  value: T,
 ): value is Extract<T, Falsy> => {
-	return !check_is_truthy(value);
+  return !check_is_truthy(value);
 };

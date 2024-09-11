@@ -18,11 +18,11 @@
  * check_is_within_range(15, 1, 10); // 15 is not within the range [1, 10]
  */
 export const check_is_within_range = (
-	num: number,
-	min: number,
-	max: number
+  num: number,
+  min: number,
+  max: number,
 ): boolean => {
-	return num >= min && num <= max;
+  return num >= min && num <= max;
 };
 
 /**
@@ -46,9 +46,9 @@ export const check_is_within_range = (
  * check_is_not_within_range(5, 1, 10); // 5 is within the range [1, 10]
  */
 export const check_is_not_within_range = (
-	num: number,
-	min: number,
-	max: number
+  num: number,
+  min: number,
+  max: number,
 ): boolean => {
-	return !check_is_within_range(num, min, max);
+  return !check_is_within_range(num, min, max);
 };

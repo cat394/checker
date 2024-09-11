@@ -13,7 +13,7 @@
  * check_is_float(4); // 4 is an integer, not a floating-point number
  */
 export const check_is_float = (num: number): boolean => {
-	return num % 1 !== 0;
+  return num % 1 !== 0;
 };
 
 /**
@@ -33,5 +33,5 @@ export const check_is_float = (num: number): boolean => {
  * check_is_not_float(4.5); // 4.5 is a floating-point number
  */
 export const check_is_not_float = (num: number): boolean => {
-	return !check_is_float(num);
+  return !check_is_float(num);
 };

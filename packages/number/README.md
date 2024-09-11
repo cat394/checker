@@ -227,8 +227,8 @@ check_is_not_greater_than_or_equal(10, 5); // false
 
 Checks if the given value is Infinity.
 
-If you want to know if a string is Infinity, use the `check_is_infinity_string()`
-function.
+If you want to know if a string is Infinity, use the
+`check_is_infinity_string()` function.
 
 ```ts
 check_is_infinity(Infinity); // true

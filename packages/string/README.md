@@ -152,9 +152,9 @@ check_is_enter_key("invalid-key"); // false
 
 ```ts
 inputElement.addEventListener("keydown", (event) => {
-	if (check_is_enter_key(event.key)) {
-		// When the Enter key is pressed
-	}
+  if (check_is_enter_key(event.key)) {
+    // When the Enter key is pressed
+  }
 });
 ```
 

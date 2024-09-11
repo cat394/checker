@@ -14,10 +14,10 @@
  * check_is_last_iteration(1, [10, 20, 30]); // The index 1 is not the last iteration
  */
 export const check_is_last_iteration = (
-	index: number,
-	array: unknown[]
+  index: number,
+  array: unknown[],
 ): boolean => {
-	return index === array.length - 1;
+  return index === array.length - 1;
 };
 
 /**
@@ -38,8 +38,8 @@ export const check_is_last_iteration = (
  * check_is_not_last_iteration(2, [10, 20, 30]); // The index 2 is the last iteration
  */
 export const check_is_not_last_iteration = (
-	index: number,
-	array: unknown[]
+  index: number,
+  array: unknown[],
 ): boolean => {
-	return !check_is_last_iteration(index, array);
+  return !check_is_last_iteration(index, array);
 };

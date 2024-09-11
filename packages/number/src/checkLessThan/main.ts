@@ -14,7 +14,7 @@
  * check_is_less_than(15, 10); // 15 is not less than 10
  */
 export const check_is_less_than = (num: number, threshold: number): boolean => {
-	return num < threshold;
+  return num < threshold;
 };
 
 /**
@@ -35,8 +35,8 @@ export const check_is_less_than = (num: number, threshold: number): boolean => {
  * check_is_not_less_than(5, 10); // 5 is less than 10
  */
 export const check_is_not_less_than = (
-	num: number,
-	threshold: number
+  num: number,
+  threshold: number,
 ): boolean => {
-	return !check_is_less_than(num, threshold);
+  return !check_is_less_than(num, threshold);
 };

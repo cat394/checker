@@ -18,10 +18,10 @@ import { check_is_perfect_square } from "../checkPerfectSquare/main.ts";
  * check_is_fibonacci(10); // 10 is not a Fibonacci number
  */
 export const check_is_fibonacci = (num: number): boolean => {
-	return (
-		check_is_perfect_square(5 * num * num + 4) ||
-		check_is_perfect_square(5 * num * num - 4)
-	);
+  return (
+    check_is_perfect_square(5 * num * num + 4) ||
+    check_is_perfect_square(5 * num * num - 4)
+  );
 };
 
 /**
@@ -41,5 +41,5 @@ export const check_is_fibonacci = (num: number): boolean => {
  * check_is_not_fibonacci(8); // 8 is a Fibonacci number
  */
 export const check_is_not_fibonacci = (num: number): boolean => {
-	return !check_is_fibonacci(num);
+  return !check_is_fibonacci(num);
 };

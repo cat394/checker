@@ -23,7 +23,7 @@
  * check_is_odd(0); // 0 is considered even
  */
 export const check_is_odd = (num: number): boolean => {
-	return Math.abs(num) % 2 === 1;
+  return Math.abs(num) % 2 === 1;
 };
 
 /**
@@ -51,5 +51,5 @@ export const check_is_odd = (num: number): boolean => {
  * check_is_not_odd(-5); // -5 is an odd number
  */
 export const check_is_not_odd = (num: number): boolean => {
-	return !check_is_odd(num);
+  return !check_is_odd(num);
 };

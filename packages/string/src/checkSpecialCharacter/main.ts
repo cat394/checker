@@ -32,8 +32,8 @@
  * check_has_special_character('123456'); // The string contains only numbers and no special characters
  */
 export const check_has_special_character = (str: string): boolean => {
-	const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>~`'\-_=+\[\];/\\]/;
-	return specialCharacterRegex.test(str);
+  const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>~`'\-_=+\[\];/\\]/;
+  return specialCharacterRegex.test(str);
 };
 
 /**
@@ -53,5 +53,5 @@ export const check_has_special_character = (str: string): boolean => {
  * check_does_not_have_special_character('hello@world'); // The string contains the special character '@'
  */
 export const check_does_not_have_special_character = (str: string): boolean => {
-	return !check_has_special_character(str);
+  return !check_has_special_character(str);
 };

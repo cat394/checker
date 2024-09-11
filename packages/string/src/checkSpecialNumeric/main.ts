@@ -30,11 +30,11 @@ import { check_is_infinity_string } from "../checkInfinityString/main.ts";
  * check_is_special_numeric('123'); // The string is a regular number
  */
 export const check_is_special_numeric = (str: string): boolean => {
-	return (
-		check_is_exponential_notation(str) ||
-		check_is_binary(str) ||
-		check_is_infinity_string(str)
-	);
+  return (
+    check_is_exponential_notation(str) ||
+    check_is_binary(str) ||
+    check_is_infinity_string(str)
+  );
 };
 
 /**
@@ -54,5 +54,5 @@ export const check_is_special_numeric = (str: string): boolean => {
  * check_is_not_special_numeric('1e5'); // The string is in exponential notation
  */
 export const check_is_not_special_numeric = (str: string): boolean => {
-	return !check_is_special_numeric(str);
+  return !check_is_special_numeric(str);
 };

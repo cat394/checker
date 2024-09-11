@@ -13,7 +13,7 @@
  * check_is_first_iteration(1); // The index is not 0, not the first iteration
  */
 export const check_is_first_iteration = (index: number): boolean => {
-	return index === 0;
+  return index === 0;
 };
 
 /**
@@ -33,5 +33,5 @@ export const check_is_first_iteration = (index: number): boolean => {
  * check_is_not_first_iteration(0); // The index is 0, indicating the first iteration
  */
 export const check_is_not_first_iteration = (index: number): boolean => {
-	return !check_is_first_iteration(index);
+  return !check_is_first_iteration(index);
 };

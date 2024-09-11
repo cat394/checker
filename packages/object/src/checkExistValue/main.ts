@@ -16,10 +16,10 @@
  * check_value_exists_in_object({a: 1, b: 2, c: 3}, 4); // 4 is not a value in the object
  */
 export const check_value_exists_in_object = <T extends object>(
-	obj: T,
-	value: T[keyof T]
+  obj: T,
+  value: T[keyof T],
 ): boolean => {
-	return Object.values(obj).includes(value);
+  return Object.values(obj).includes(value);
 };
 
 /**
@@ -40,8 +40,8 @@ export const check_value_exists_in_object = <T extends object>(
  * check_value_does_not_exist_in_object({a: 1, b: 2, c: 3}, 2); // 2 is a value in the object
  */
 export const check_value_does_not_exist_in_object = <T extends object>(
-	obj: T,
-	value: T[keyof T]
+  obj: T,
+  value: T[keyof T],
 ): boolean => {
-	return !check_value_exists_in_object(obj, value);
+  return !check_value_exists_in_object(obj, value);
 };

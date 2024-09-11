@@ -14,7 +14,7 @@
  * check_is_cube_root(2, 27); // 2 is not the cube root of 27
  */
 export const check_is_cube_root = (num: number, target: number): boolean => {
-	return num === Math.cbrt(target);
+  return num === Math.cbrt(target);
 };
 
 /**
@@ -35,8 +35,8 @@ export const check_is_cube_root = (num: number, target: number): boolean => {
  * check_is_not_cube_root(3, 27); // 3 is the cube root of 27
  */
 export const check_is_not_cube_root = (
-	num: number,
-	target: number
+  num: number,
+  target: number,
 ): boolean => {
-	return !check_is_cube_root(num, target);
+  return !check_is_cube_root(num, target);
 };

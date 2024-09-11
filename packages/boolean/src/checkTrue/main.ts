@@ -13,7 +13,7 @@
  * check_is_true(1); // The value is not strictly true, but truthy
  */
 export const check_is_true = (value: unknown): value is true => {
-	return value === true;
+  return value === true;
 };
 
 /**
@@ -33,5 +33,5 @@ export const check_is_true = (value: unknown): value is true => {
  * check_is_not_true(true); // The value is strictly true
  */
 export const check_is_not_true = <T>(value: T): value is Exclude<T, true> => {
-	return !check_is_true(value);
+  return !check_is_true(value);
 };

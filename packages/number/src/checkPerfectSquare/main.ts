@@ -15,7 +15,7 @@
  * check_is_perfect_square(15); // 15 is not a perfect square
  */
 export const check_is_perfect_square = (num: number): boolean => {
-	return Number.isInteger(Math.sqrt(num));
+  return Number.isInteger(Math.sqrt(num));
 };
 
 /**
@@ -35,5 +35,5 @@ export const check_is_perfect_square = (num: number): boolean => {
  * check_is_not_perfect_square(16); // 16 is a perfect square (4 * 4 = 16)
  */
 export const check_is_not_perfect_square = (num: number): boolean => {
-	return !check_is_perfect_square(num);
+  return !check_is_perfect_square(num);
 };

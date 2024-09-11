@@ -17,7 +17,7 @@ import type { EnterKey } from "../types.ts";
  * check_is_enter_key('enter'); // The string is not exactly 'Enter'
  */
 export const check_is_enter_key = (str: string): str is EnterKey => {
-	return str === "Enter";
+  return str === "Enter";
 };
 
 /**
@@ -37,7 +37,7 @@ export const check_is_enter_key = (str: string): str is EnterKey => {
  * check_is_not_enter_key('Enter'); // The string is exactly 'Enter'
  */
 export const check_is_not_enter_key = <T extends string>(
-	str: T
+  str: T,
 ): str is Exclude<T, EnterKey> => {
-	return !check_is_enter_key(str);
+  return !check_is_enter_key(str);
 };

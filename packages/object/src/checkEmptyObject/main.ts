@@ -23,12 +23,12 @@ import type { EmptyObject } from "../types.ts";
  * check_is_empty_object(new Date()); // A Date instance is not a plain object
  */
 export const check_is_empty_object = (obj: object): obj is EmptyObject => {
-	// Check if the object is a plain object
-	// This was added because new Date() objects were returning true
-	if (Object.prototype.toString.call(obj) !== "[object Object]") {
-		return false;
-	}
-	return Object.keys(obj).length === 0;
+  // Check if the object is a plain object
+  // This was added because new Date() objects were returning true
+  if (Object.prototype.toString.call(obj) !== "[object Object]") {
+    return false;
+  }
+  return Object.keys(obj).length === 0;
 };
 
 /**
@@ -52,7 +52,7 @@ export const check_is_empty_object = (obj: object): obj is EmptyObject => {
  * check_is_not_empty_object(new Date()); // A Date instance is not a plain object
  */
 export const check_is_not_empty_object = <T extends object>(
-	obj: T
+  obj: T,
 ): obj is Exclude<T, EmptyObject> => {
-	return !check_is_empty_object(obj);
+  return !check_is_empty_object(obj);
 };

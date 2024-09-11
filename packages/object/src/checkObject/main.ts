@@ -19,7 +19,7 @@
  * check_is_object([1, 2, 3]); // The value is an array, not an object
  */
 export const check_is_object = <T>(value: T): value is T & object => {
-	return value !== null && typeof value === "object" && !Array.isArray(value);
+  return value !== null && typeof value === "object" && !Array.isArray(value);
 };
 
 /**
@@ -43,7 +43,7 @@ export const check_is_object = <T>(value: T): value is T & object => {
  * check_is_not_object(null); // The value is null, not an object
  */
 export const check_is_not_object = <T>(
-	value: T
+  value: T,
 ): value is Exclude<T, object> => {
-	return !check_is_object(value);
+  return !check_is_object(value);
 };

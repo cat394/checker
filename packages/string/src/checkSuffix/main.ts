@@ -18,10 +18,10 @@
  * check_has_suffix('hello world', 'hello'); // The string does not end with 'hello'
  */
 export const check_has_suffix = <Suffix extends string>(
-	str: string,
-	suffix: Suffix
+  str: string,
+  suffix: Suffix,
 ): str is `${string}${Suffix}` => {
-	return str.endsWith(suffix);
+  return str.endsWith(suffix);
 };
 
 /**
@@ -42,8 +42,8 @@ export const check_has_suffix = <Suffix extends string>(
  * check_does_not_have_suffix('hello world', 'world'); // The string ends with 'world'
  */
 export const check_does_not_have_suffix = (
-	str: string,
-	suffix: string
+  str: string,
+  suffix: string,
 ): boolean => {
-	return !check_has_suffix(str, suffix);
+  return !check_has_suffix(str, suffix);
 };

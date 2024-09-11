@@ -14,7 +14,7 @@
  * check_array_has_value([1, 2, 3], 4); // The array does not contain the value 4
  */
 export const check_array_has_value = <T>(array: T[], value: T): boolean => {
-	return array.includes(value);
+  return array.includes(value);
 };
 
 /**
@@ -35,8 +35,8 @@ export const check_array_has_value = <T>(array: T[], value: T): boolean => {
  * check_array_does_not_have_value([1, 2, 3], 2); // The array contains the value 2
  */
 export const check_array_does_not_have_value = <T>(
-	array: T[],
-	value: T
+  array: T[],
+  value: T,
 ): boolean => {
-	return !check_array_has_value(array, value);
+  return !check_array_has_value(array, value);
 };

@@ -15,8 +15,8 @@
  * check_is_alphanumeric('abc123!'); // The string contains a special character '!'
  */
 export const check_is_alphanumeric = (str: string): boolean => {
-	const alphanumericRegex = /^[a-z0-9]+$/i;
-	return alphanumericRegex.test(str);
+  const alphanumericRegex = /^[a-z0-9]+$/i;
+  return alphanumericRegex.test(str);
 };
 
 /**
@@ -36,5 +36,5 @@ export const check_is_alphanumeric = (str: string): boolean => {
  * check_is_not_alphanumeric('abc123'); // The string contains only letters and numbers
  */
 export const check_is_not_alphanumeric = (str: string): boolean => {
-	return !check_is_alphanumeric(str);
+  return !check_is_alphanumeric(str);
 };

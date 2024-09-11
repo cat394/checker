@@ -19,12 +19,12 @@
  * check_is_index_found(index); // The index is -1, as 'planet' is not found within the string
  */
 export const check_is_index_found = (index: number): boolean => {
-	return index !== -1;
+  return index !== -1;
 };
 
 /**
  * Checks if a given index is not found.
- * 
+ *
  * This is the inverse of `check_is_index_found`.
  *
  * This function is useful when working with string indices obtained from `str.indexOf()`.
@@ -45,5 +45,5 @@ export const check_is_index_found = (index: number): boolean => {
  * check_is_index_not_found(index); // The index is valid, as 'world' is found within the string
  */
 export const check_is_index_not_found = (index: number): boolean => {
-	return !check_is_index_found(index);
+  return !check_is_index_found(index);
 };

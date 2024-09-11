@@ -21,7 +21,7 @@
  * check_is_infinity("Infinity"); // String "Infinity" is not the same as Infinity
  */
 export const check_is_infinity = (value: unknown): boolean => {
-	return value === Infinity || value === -Infinity;
+  return value === Infinity || value === -Infinity;
 };
 
 /**
@@ -49,5 +49,5 @@ export const check_is_infinity = (value: unknown): boolean => {
  * check_is_not_infinity("Infinity"); // String "Infinity" is not the same as Infinity
  */
 export const check_is_not_infinity = (value: unknown): boolean => {
-	return !check_is_infinity(value);
+  return !check_is_infinity(value);
 };

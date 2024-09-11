@@ -14,7 +14,7 @@
  * check_is_divisor(2, 9); // 2 is not a divisor of 9
  */
 export const check_is_divisor = (num: number, target: number): boolean => {
-	return target % num === 0;
+  return target % num === 0;
 };
 
 /**
@@ -35,5 +35,5 @@ export const check_is_divisor = (num: number, target: number): boolean => {
  * check_is_not_divisor(3, 9); // 3 is a divisor of 9
  */
 export const check_is_not_divisor = (num: number, target: number): boolean => {
-	return !check_is_divisor(num, target);
+  return !check_is_divisor(num, target);
 };

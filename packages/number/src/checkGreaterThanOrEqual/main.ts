@@ -14,10 +14,10 @@
  * check_is_greater_than_or_equal(3, 5); // 3 is not greater than or equal to 5
  */
 export const check_is_greater_than_or_equal = (
-	num: number,
-	threshold: number
+  num: number,
+  threshold: number,
 ): boolean => {
-	return num >= threshold;
+  return num >= threshold;
 };
 
 /**
@@ -38,8 +38,8 @@ export const check_is_greater_than_or_equal = (
  * check_is_not_greater_than_or_equal(10, 5); // 10 is greater than or equal to 5
  */
 export const check_is_not_greater_than_or_equal = (
-	num: number,
-	threshold: number
+  num: number,
+  threshold: number,
 ): boolean => {
-	return !check_is_greater_than_or_equal(num, threshold);
+  return !check_is_greater_than_or_equal(num, threshold);
 };

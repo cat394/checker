@@ -13,7 +13,7 @@
  * check_is_null(undefined); // The value is not null
  */
 export const check_is_null = (value: unknown): value is null => {
-	return value === null;
+  return value === null;
 };
 
 /**
@@ -33,5 +33,5 @@ export const check_is_null = (value: unknown): value is null => {
  * check_is_not_null(null); // The value is strictly null
  */
 export const check_is_not_null = <T>(value: T): value is Exclude<T, null> => {
-	return !check_is_null(value);
+  return !check_is_null(value);
 };

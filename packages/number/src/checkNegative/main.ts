@@ -13,7 +13,7 @@
  * check_is_negative(3); // 3 is not a negative number
  */
 export const check_is_negative = (num: number): boolean => {
-	return num < 0;
+  return num < 0;
 };
 
 /**
@@ -33,5 +33,5 @@ export const check_is_negative = (num: number): boolean => {
  * check_is_not_negative(-5); // -5 is a negative number
  */
 export const check_is_not_negative = (num: number): boolean => {
-	return !check_is_negative(num);
+  return !check_is_negative(num);
 };

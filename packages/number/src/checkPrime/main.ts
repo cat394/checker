@@ -15,12 +15,12 @@
  * check_is_prime(10); // 10 is not a prime number (divisible by 2 and 5)
  */
 export const check_is_prime = (num: number): boolean => {
-	if (num <= 1) return false;
-	if (num === 2) return true;
-	for (let i = 2; i < Math.sqrt(num) + 1; i++) {
-		if (num % i === 0) return false;
-	}
-	return true;
+  if (num <= 1) return false;
+  if (num === 2) return true;
+  for (let i = 2; i < Math.sqrt(num) + 1; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
 };
 
 /**
@@ -40,5 +40,5 @@ export const check_is_prime = (num: number): boolean => {
  * check_is_not_prime(7); // 7 is a prime number
  */
 export const check_is_not_prime = (num: number): boolean => {
-	return !check_is_prime(num);
+  return !check_is_prime(num);
 };

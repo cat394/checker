@@ -13,7 +13,7 @@
  * check_is_boolean("true"); // The value is not a boolean
  */
 export const check_is_boolean = (value: unknown): value is boolean => {
-	return typeof value === "boolean";
+  return typeof value === "boolean";
 };
 
 /**
@@ -33,7 +33,7 @@ export const check_is_boolean = (value: unknown): value is boolean => {
  * checkIsNotBoolean(true); // The value is a boolean
  */
 export const check_is_not_boolean = <T>(
-	value: T
+  value: T,
 ): value is Exclude<T, boolean> => {
-	return !check_is_boolean(value);
+  return !check_is_boolean(value);
 };

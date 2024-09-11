@@ -13,7 +13,7 @@
  * check_is_integer(5.5); // 5.5 is not an integer
  */
 export const check_is_integer = (num: number): boolean => {
-	return Number.isInteger(num);
+  return Number.isInteger(num);
 };
 
 /**
@@ -33,5 +33,5 @@ export const check_is_integer = (num: number): boolean => {
  * check_is_not_integer(5); // 5 is an integer
  */
 export const check_is_not_integer = (num: number): boolean => {
-	return !check_is_integer(num);
+  return !check_is_integer(num);
 };

@@ -16,10 +16,10 @@
  * check_is_cleanly_disible(10, 3); // 10 is not cleanly divisible by 3
  */
 export const check_is_cleanly_disible = (
-	num: number,
-	divisor: number
+  num: number,
+  divisor: number,
 ): boolean => {
-	return num % divisor === 0;
+  return num % divisor === 0;
 };
 
 /**
@@ -40,8 +40,8 @@ export const check_is_cleanly_disible = (
  * check_is_not_cleanly_disible(10, 2); // 10 is cleanly divisible by 2
  */
 export const check_is_not_cleanly_disible = (
-	num: number,
-	divisor: number
+  num: number,
+  divisor: number,
 ): boolean => {
-	return !check_is_cleanly_disible(num, divisor);
+  return !check_is_cleanly_disible(num, divisor);
 };

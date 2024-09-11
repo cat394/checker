@@ -19,17 +19,17 @@ import { Constants } from "../constants.ts";
  * check_is_geometric_sequence([2, 4, 9], 2); // The sequence [2, 4, 9] does not have a common ratio of 2
  */
 export const check_is_geometric_sequence = (
-	nums: number[],
-	ratio: number
+  nums: number[],
+  ratio: number,
 ): boolean => {
-	if (nums.length < 2) return false;
-	for (let i = 1; i < nums.length; i++) {
-		// Small differences are acceptable
-		if (Math.abs(nums[i] / nums[i - 1] - ratio) > Constants.TOLERANCE) {
-			return false;
-		}
-	}
-	return true;
+  if (nums.length < 2) return false;
+  for (let i = 1; i < nums.length; i++) {
+    // Small differences are acceptable
+    if (Math.abs(nums[i] / nums[i - 1] - ratio) > Constants.TOLERANCE) {
+      return false;
+    }
+  }
+  return true;
 };
 
 /**
@@ -50,8 +50,8 @@ export const check_is_geometric_sequence = (
  * check_is_not_geometric_sequence([2, 4, 8], 2); // The sequence [2, 4, 8] has a common ratio of 2
  */
 export const check_is_not_geometric_sequence = (
-	nums: number[],
-	ratio: number
+  nums: number[],
+  ratio: number,
 ): boolean => {
-	return !check_is_geometric_sequence(nums, ratio);
+  return !check_is_geometric_sequence(nums, ratio);
 };

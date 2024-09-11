@@ -19,8 +19,8 @@
  * check_is_binary('1010'); // The string does not start with '0b' or '0B'
  */
 export const check_is_binary = (str: string): boolean => {
-	const binaryRegex = /^0[bB][01]+$/;
-	return binaryRegex.test(str);
+  const binaryRegex = /^0[bB][01]+$/;
+  return binaryRegex.test(str);
 };
 
 /**
@@ -40,5 +40,5 @@ export const check_is_binary = (str: string): boolean => {
  * check_is_not_binary('0b1010'); // The string is a valid binary number
  */
 export const check_is_not_binary = (str: string): boolean => {
-	return !check_is_binary(str);
+  return !check_is_binary(str);
 };

@@ -14,10 +14,10 @@
  * check_is_specific_iteration(2, 3); // The current index is 2 and does not match the target index
  */
 export const check_is_specific_iteration = (
-	index: number,
-	targetIndex: number
+  index: number,
+  targetIndex: number,
 ): boolean => {
-	return index === targetIndex;
+  return index === targetIndex;
 };
 
 /**
@@ -38,8 +38,8 @@ export const check_is_specific_iteration = (
  * check_is_not_specific_iteration(3, 3); // The current index is 3 and matches the target index
  */
 export const check_is_not_specific_iteration = (
-	index: number,
-	targetIndex: number
+  index: number,
+  targetIndex: number,
 ): boolean => {
-	return !check_is_specific_iteration(index, targetIndex);
+  return !check_is_specific_iteration(index, targetIndex);
 };

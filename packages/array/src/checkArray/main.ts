@@ -13,7 +13,7 @@
  * check_is_array(42); // The value is not an array
  */
 export const check_is_array = <T>(value: unknown): value is T[] => {
-	return Array.isArray(value);
+  return Array.isArray(value);
 };
 
 /**
@@ -33,5 +33,5 @@ export const check_is_array = <T>(value: unknown): value is T[] => {
  * check_is_not_array([1, 2, 3]); // The value is an array
  */
 export const check_is_not_array = <T>(value: T): value is Exclude<T, T[]> => {
-	return !check_is_array(value);
+  return !check_is_array(value);
 };

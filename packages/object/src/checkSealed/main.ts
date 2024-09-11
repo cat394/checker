@@ -17,7 +17,7 @@
  * check_is_sealed(obj); // The object is not sealed
  */
 export const check_is_sealed = (obj: object): boolean => {
-	return Object.isSealed(obj);
+  return Object.isSealed(obj);
 };
 
 /**
@@ -39,5 +39,5 @@ export const check_is_sealed = (obj: object): boolean => {
  * check_is_not_sealed(sealedObj); // The object is sealed
  */
 export const check_is_not_sealed = (obj: object): boolean => {
-	return !check_is_sealed(obj);
+  return !check_is_sealed(obj);
 };

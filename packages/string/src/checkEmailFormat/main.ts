@@ -15,8 +15,8 @@
  * check_is_email_format('invalid-email'); // The string is not a valid email format
  */
 export const check_is_email_format = (str: string): boolean => {
-	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	return emailRegex.test(str);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(str);
 };
 
 /**
@@ -36,5 +36,5 @@ export const check_is_email_format = (str: string): boolean => {
  * check_is_not_email_format('example@example.com'); // Valid email address
  */
 export const check_is_not_email_format = (str: string): boolean => {
-	return !check_is_email_format(str);
+  return !check_is_email_format(str);
 };

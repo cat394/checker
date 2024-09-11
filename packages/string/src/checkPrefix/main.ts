@@ -18,10 +18,10 @@
  * check_has_prefix('hello world', 'world'); // The string does not start with 'world'
  */
 export const check_has_prefix = <Prefix extends string>(
-	str: string,
-	prefix: Prefix
+  str: string,
+  prefix: Prefix,
 ): str is `${Prefix}${string}` => {
-	return str.startsWith(prefix);
+  return str.startsWith(prefix);
 };
 
 /**
@@ -42,8 +42,8 @@ export const check_has_prefix = <Prefix extends string>(
  * check_does_not_have_prefix('hello world', 'hello'); // The string starts with 'hello'
  */
 export const check_does_not_have_prefix = (
-	str: string,
-	prefix: string
+  str: string,
+  prefix: string,
 ): boolean => {
-	return !check_has_prefix(str, prefix);
+  return !check_has_prefix(str, prefix);
 };

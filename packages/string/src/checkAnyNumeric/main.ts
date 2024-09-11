@@ -29,7 +29,7 @@
  * check_is_any_numeric('abc'); // The string cannot be converted to a number
  */
 export const check_is_any_numeric = (str: string): boolean => {
-	return !isNaN(Number(str));
+  return !isNaN(Number(str));
 };
 
 /**
@@ -53,5 +53,5 @@ export const check_is_any_numeric = (str: string): boolean => {
  * check_is_not_any_numeric(''); // An empty string is evaluated as 0
  */
 export const check_is_not_any_numeric = (str: string): boolean => {
-	return !check_is_any_numeric(str);
+  return !check_is_any_numeric(str);
 };

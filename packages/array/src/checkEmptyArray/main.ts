@@ -13,7 +13,7 @@
  * check_is_empty_array([1, 2, 3]); // The array is not empty
  */
 export const check_is_empty_array = (array: unknown[]): array is [] => {
-	return array.length === 0;
+  return array.length === 0;
 };
 
 /**
@@ -33,7 +33,7 @@ export const check_is_empty_array = (array: unknown[]): array is [] => {
  * check_is_not_empty_array([]); // The array is empty
  */
 export const check_is_not_empty_array = <T extends unknown[]>(
-	array: T
+  array: T,
 ): array is Exclude<T, []> => {
-	return !check_is_empty_array(array);
+  return !check_is_empty_array(array);
 };

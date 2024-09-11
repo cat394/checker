@@ -16,7 +16,7 @@
  * check_is_square_root(4, 20); // 4 is not the square root of 20
  */
 export const check_is_square_root = (num: number, target: number): boolean => {
-	return num === Math.sqrt(target);
+  return num === Math.sqrt(target);
 };
 
 /**
@@ -37,8 +37,8 @@ export const check_is_square_root = (num: number, target: number): boolean => {
  * check_is_not_square_root(3, 9); // 3 is the square root of 9
  */
 export const check_is_not_square_root = (
-	num: number,
-	target: number
+  num: number,
+  target: number,
 ): boolean => {
-	return !check_is_square_root(num, target);
+  return !check_is_square_root(num, target);
 };

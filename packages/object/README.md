@@ -98,11 +98,11 @@ type Obj = { a: 1; b: 2 } | { c: 3; d: 4 };
 const obj = {} as Obj;
 
 if ("c" in obj) {
-	obj; // obj type is { c: 3, d: 4 }
+  obj; // obj type is { c: 3, d: 4 }
 }
 
 if (check_key_exists_in_object(obj, "c")) {
-	obj; // obj type is Obj
+  obj; // obj type is Obj
 }
 ```
 
