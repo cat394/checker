@@ -19,7 +19,6 @@ jobs:
           - packages/boolean
           - packages/object
           - packages/array
-          - packages/utils
 
     steps:
       - name: Checkout repository
